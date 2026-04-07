@@ -1,8 +1,7 @@
 aid: ping-identity
 name: Ping Identity
 description: >-
-  Identity for EnterprisesFlawless user experience with fortified enterprise
-  protection 
+  Identity for EnterprisesFlawless user experience with fortified enterprise protection.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -18,8 +17,7 @@ apis:
   - aid: ping-identity:ping-identity
     name: Ping Identity
     description: >-
-      Identity for EnterprisesFlawless user experience with fortified enterprise
-      protection 
+      Identity for EnterprisesFlawless user experience with fortified enterprise protection.
     humanURL: ' https://www.pingidentity.com/en.html'
     tags:
       - API
