@@ -1,0 +1,1813 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API
+  description: PingOne is a cloud-based framework for secure identity access management. The PingOne API gives developers
+    the tools to integrate enterprise and third-party applications with the PingOne platform.
+  tags:
+  - Ping
+  - Identity
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity
+    baseUri: https://api.pingone.com/v1
+    description: PingOne Platform API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{PING_IDENTITY_TOKEN}}'
+    resources:
+    - name: environments
+      path: /environments
+      operations:
+      - name: getenvironments
+        method: GET
+        description: GET /environments
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+        - name: order
+          in: query
+          type: string
+        - name: limit
+          in: query
+          type: integer
+        - name: cursor
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createenvironment
+        method: POST
+        description: POST /environments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid
+      path: /environments/{environmentID}
+      operations:
+      - name: getenvironmentbyid
+        method: GET
+        description: GET /environments/{environmentID}
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceenvironmentbyid
+        method: PUT
+        description: PUT /environments/{environmentID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteenvironmentbyid
+        method: DELETE
+        description: DELETE /environments/{environmentID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-billofmaterials
+      path: /environments/{environmentID}/billOfMaterials
+      operations:
+      - name: getbillofmaterialsbyenvironmentid
+        method: GET
+        description: GET /environments/{environmentID}/billOfMaterials
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacebillofmaterialsbyenvironmentid
+        method: PUT
+        description: PUT /environments/{environmentID}/billOfMaterials
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-connectorinstances
+      path: /environments/{environmentID}/connectorInstances
+      operations:
+      - name: getconnectorinstances
+        method: GET
+        description: GET /environments/{environmentID}/connectorInstances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconnectorinstance
+        method: POST
+        description: POST /environments/{environmentID}/connectorInstances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-connectorinstances-co
+      path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      operations:
+      - name: getconnectorinstancebyid
+        method: GET
+        description: GET /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconnectorinstancebyid
+        method: POST
+        description: POST /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceconnectorinstancebyid
+        method: PUT
+        description: PUT /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteconnectorinstancebyid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-connectors
+      path: /environments/{environmentID}/connectors
+      operations:
+      - name: getconnectors
+        method: GET
+        description: GET /environments/{environmentID}/connectors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-connectors-connectori
+      path: /environments/{environmentID}/connectors/{connectorID}
+      operations:
+      - name: getconnectorbyid
+        method: GET
+        description: GET /environments/{environmentID}/connectors/{connectorID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-connectors-connectori
+      path: /environments/{environmentID}/connectors/{connectorID}/details
+      operations:
+      - name: getdetailsbyconnectorid
+        method: GET
+        description: GET /environments/{environmentID}/connectors/{connectorID}/details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications
+      path: /environments/{environmentID}/davinciApplications
+      operations:
+      - name: getdavinciapplications
+        method: GET
+        description: GET /environments/{environmentID}/davinciApplications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createdavinciapplication
+        method: POST
+        description: POST /environments/{environmentID}/davinciApplications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      operations:
+      - name: getdavinciapplicationbyid
+        method: GET
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacedavinciapplicationbyid
+        method: PUT
+        description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletedavinciapplicationbyid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      operations:
+      - name: getflowpoliciesbydavinciapplicationid
+        method: GET
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createflowpolicybydavinciapplicationid
+        method: POST
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      operations:
+      - name: getflowpolicybyidusingdavinciapplicationid
+        method: GET
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceflowpolicybyidusingdavinciapplicationid
+        method: PUT
+        description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteflowpolicybyidusingdavinciapplicationid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+      operations:
+      - name: geteventsbydavinciapplicationidandflowpolicyid
+        method: GET
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+      operations:
+      - name: rotatekeybydavinciapplicationid
+        method: POST
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-davinciapplications-d
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+      operations:
+      - name: rotatesecretbydavinciapplicationid
+        method: POST
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flowpolicies-flowpoli
+      path: /environments/{environmentID}/flowPolicies/{flowPolicyID}
+      operations:
+      - name: getflowpolicybyid
+        method: GET
+        description: GET /environments/{environmentID}/flowPolicies/{flowPolicyID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows
+      path: /environments/{environmentID}/flows
+      operations:
+      - name: getflows
+        method: GET
+        description: GET /environments/{environmentID}/flows
+        inputParameters:
+        - name: attributes
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createflow
+        method: POST
+        description: POST /environments/{environmentID}/flows
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid
+      path: /environments/{environmentID}/flows/{flowID}
+      operations:
+      - name: getflowbyid
+        method: GET
+        description: GET /environments/{environmentID}/flows/{flowID}
+        inputParameters:
+        - name: attributes
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceflowbyid
+        method: PUT
+        description: PUT /environments/{environmentID}/flows/{flowID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteflowbyid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/flows/{flowID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-clone-js
+      path: /environments/{environmentID}/flows/{flowID}#clone+json
+      operations:
+      - name: cloneflowbyidasclonejson
+        method: POST
+        description: POST /environments/{environmentID}/flows/{flowID}#clone+json
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-deploy-j
+      path: /environments/{environmentID}/flows/{flowID}#deploy+json
+      operations:
+      - name: deployflowbyidasdeployjson
+        method: POST
+        description: POST /environments/{environmentID}/flows/{flowID}#deploy+json
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-validate
+      path: /environments/{environmentID}/flows/{flowID}#validate+json
+      operations:
+      - name: validateflowbyidasvalidatejson
+        method: POST
+        description: POST /environments/{environmentID}/flows/{flowID}#validate+json
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-enabled
+      path: /environments/{environmentID}/flows/{flowID}/enabled
+      operations:
+      - name: updateenabledbyflowid
+        method: PUT
+        description: PUT /environments/{environmentID}/flows/{flowID}/enabled
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-versions
+      path: /environments/{environmentID}/flows/{flowID}/versions
+      operations:
+      - name: getversionsbyflowid
+        method: GET
+        description: GET /environments/{environmentID}/flows/{flowID}/versions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-versions
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      operations:
+      - name: getversionbyidusingflowid
+        method: GET
+        description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteversionbyidusingflowid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-versions
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+      operations:
+      - name: replacealiasbyflowidandversionid
+        method: PUT
+        description: PUT /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-flows-flowid-versions
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+      operations:
+      - name: getdetailsbyflowidandversionid
+        method: GET
+        description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-snapshots
+      path: /environments/{environmentID}/snapshots
+      operations:
+      - name: createsnapshot
+        method: POST
+        description: POST /environments/{environmentID}/snapshots
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-snapshots-snapshotid
+      path: /environments/{environmentID}/snapshots/{snapshotID}
+      operations:
+      - name: getsnapshotbyid
+        method: GET
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-snapshots-snapshotid-
+      path: /environments/{environmentID}/snapshots/{snapshotID}/versions
+      operations:
+      - name: getversionsbysnapshotid
+        method: GET
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-snapshots-snapshotid-
+      path: /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+      operations:
+      - name: getversionbyidusingsnapshotid
+        method: GET
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: attributes
+          in: query
+          type: string
+          required: true
+        - name: filter
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-totalidentities
+      path: /environments/{environmentID}/totalIdentities
+      operations:
+      - name: gettotalidentities
+        method: GET
+        description: GET /environments/{environmentID}/totalIdentities
+        inputParameters:
+        - name: filter
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-variables
+      path: /environments/{environmentID}/variables
+      operations:
+      - name: getvariables
+        method: GET
+        description: GET /environments/{environmentID}/variables
+        inputParameters:
+        - name: limit
+          in: query
+          type: integer
+        - name: cursor
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createvariable
+        method: POST
+        description: POST /environments/{environmentID}/variables
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentid-variables-variableid
+      path: /environments/{environmentID}/variables/{variableID}
+      operations:
+      - name: getvariablebyid
+        method: GET
+        description: GET /environments/{environmentID}/variables/{variableID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacevariablebyid
+        method: PUT
+        description: PUT /environments/{environmentID}/variables/{variableID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletevariablebyid
+        method: DELETE
+        description: DELETE /environments/{environmentID}/variables/{variableID}
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: ping-identity-rest
+    description: REST adapter for PingOne Platform API.
+    resources:
+    - path: /environments
+      name: getenvironments
+      operations:
+      - method: GET
+        name: getenvironments
+        description: GET /environments
+        call: ping-identity.getenvironments
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments
+      name: createenvironment
+      operations:
+      - method: POST
+        name: createenvironment
+        description: POST /environments
+        call: ping-identity.createenvironment
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}
+      name: getenvironmentbyid
+      operations:
+      - method: GET
+        name: getenvironmentbyid
+        description: GET /environments/{environmentID}
+        call: ping-identity.getenvironmentbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}
+      name: replaceenvironmentbyid
+      operations:
+      - method: PUT
+        name: replaceenvironmentbyid
+        description: PUT /environments/{environmentID}
+        call: ping-identity.replaceenvironmentbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}
+      name: deleteenvironmentbyid
+      operations:
+      - method: DELETE
+        name: deleteenvironmentbyid
+        description: DELETE /environments/{environmentID}
+        call: ping-identity.deleteenvironmentbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/billOfMaterials
+      name: getbillofmaterialsbyenvironmentid
+      operations:
+      - method: GET
+        name: getbillofmaterialsbyenvironmentid
+        description: GET /environments/{environmentID}/billOfMaterials
+        call: ping-identity.getbillofmaterialsbyenvironmentid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/billOfMaterials
+      name: replacebillofmaterialsbyenvironmentid
+      operations:
+      - method: PUT
+        name: replacebillofmaterialsbyenvironmentid
+        description: PUT /environments/{environmentID}/billOfMaterials
+        call: ping-identity.replacebillofmaterialsbyenvironmentid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances
+      name: getconnectorinstances
+      operations:
+      - method: GET
+        name: getconnectorinstances
+        description: GET /environments/{environmentID}/connectorInstances
+        call: ping-identity.getconnectorinstances
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances
+      name: createconnectorinstance
+      operations:
+      - method: POST
+        name: createconnectorinstance
+        description: POST /environments/{environmentID}/connectorInstances
+        call: ping-identity.createconnectorinstance
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      name: getconnectorinstancebyid
+      operations:
+      - method: GET
+        name: getconnectorinstancebyid
+        description: GET /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        call: ping-identity.getconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      name: createconnectorinstancebyid
+      operations:
+      - method: POST
+        name: createconnectorinstancebyid
+        description: POST /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        call: ping-identity.createconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      name: replaceconnectorinstancebyid
+      operations:
+      - method: PUT
+        name: replaceconnectorinstancebyid
+        description: PUT /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        call: ping-identity.replaceconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      name: deleteconnectorinstancebyid
+      operations:
+      - method: DELETE
+        name: deleteconnectorinstancebyid
+        description: DELETE /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+        call: ping-identity.deleteconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectors
+      name: getconnectors
+      operations:
+      - method: GET
+        name: getconnectors
+        description: GET /environments/{environmentID}/connectors
+        call: ping-identity.getconnectors
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectors/{connectorID}
+      name: getconnectorbyid
+      operations:
+      - method: GET
+        name: getconnectorbyid
+        description: GET /environments/{environmentID}/connectors/{connectorID}
+        call: ping-identity.getconnectorbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/connectors/{connectorID}/details
+      name: getdetailsbyconnectorid
+      operations:
+      - method: GET
+        name: getdetailsbyconnectorid
+        description: GET /environments/{environmentID}/connectors/{connectorID}/details
+        call: ping-identity.getdetailsbyconnectorid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications
+      name: getdavinciapplications
+      operations:
+      - method: GET
+        name: getdavinciapplications
+        description: GET /environments/{environmentID}/davinciApplications
+        call: ping-identity.getdavinciapplications
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications
+      name: createdavinciapplication
+      operations:
+      - method: POST
+        name: createdavinciapplication
+        description: POST /environments/{environmentID}/davinciApplications
+        call: ping-identity.createdavinciapplication
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      name: getdavinciapplicationbyid
+      operations:
+      - method: GET
+        name: getdavinciapplicationbyid
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        call: ping-identity.getdavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      name: replacedavinciapplicationbyid
+      operations:
+      - method: PUT
+        name: replacedavinciapplicationbyid
+        description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        call: ping-identity.replacedavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      name: deletedavinciapplicationbyid
+      operations:
+      - method: DELETE
+        name: deletedavinciapplicationbyid
+        description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+        call: ping-identity.deletedavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      name: getflowpoliciesbydavinciapplicationid
+      operations:
+      - method: GET
+        name: getflowpoliciesbydavinciapplicationid
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+        call: ping-identity.getflowpoliciesbydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      name: createflowpolicybydavinciapplicationid
+      operations:
+      - method: POST
+        name: createflowpolicybydavinciapplicationid
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+        call: ping-identity.createflowpolicybydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      name: getflowpolicybyidusingdavinciapplicationid
+      operations:
+      - method: GET
+        name: getflowpolicybyidusingdavinciapplicationid
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        call: ping-identity.getflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      name: replaceflowpolicybyidusingdavinciapplicationid
+      operations:
+      - method: PUT
+        name: replaceflowpolicybyidusingdavinciapplicationid
+        description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        call: ping-identity.replaceflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      name: deleteflowpolicybyidusingdavinciapplicationid
+      operations:
+      - method: DELETE
+        name: deleteflowpolicybyidusingdavinciapplicationid
+        description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+        call: ping-identity.deleteflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+      name: geteventsbydavinciapplicationidandflowpolicyid
+      operations:
+      - method: GET
+        name: geteventsbydavinciapplicationidandflowpolicyid
+        description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+        call: ping-identity.geteventsbydavinciapplicationidandflowpolicyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+      name: rotatekeybydavinciapplicationid
+      operations:
+      - method: POST
+        name: rotatekeybydavinciapplicationid
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+        call: ping-identity.rotatekeybydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+      name: rotatesecretbydavinciapplicationid
+      operations:
+      - method: POST
+        name: rotatesecretbydavinciapplicationid
+        description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+        call: ping-identity.rotatesecretbydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flowPolicies/{flowPolicyID}
+      name: getflowpolicybyid
+      operations:
+      - method: GET
+        name: getflowpolicybyid
+        description: GET /environments/{environmentID}/flowPolicies/{flowPolicyID}
+        call: ping-identity.getflowpolicybyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows
+      name: getflows
+      operations:
+      - method: GET
+        name: getflows
+        description: GET /environments/{environmentID}/flows
+        call: ping-identity.getflows
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows
+      name: createflow
+      operations:
+      - method: POST
+        name: createflow
+        description: POST /environments/{environmentID}/flows
+        call: ping-identity.createflow
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}
+      name: getflowbyid
+      operations:
+      - method: GET
+        name: getflowbyid
+        description: GET /environments/{environmentID}/flows/{flowID}
+        call: ping-identity.getflowbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}
+      name: replaceflowbyid
+      operations:
+      - method: PUT
+        name: replaceflowbyid
+        description: PUT /environments/{environmentID}/flows/{flowID}
+        call: ping-identity.replaceflowbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}
+      name: deleteflowbyid
+      operations:
+      - method: DELETE
+        name: deleteflowbyid
+        description: DELETE /environments/{environmentID}/flows/{flowID}
+        call: ping-identity.deleteflowbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}#clone+json
+      name: cloneflowbyidasclonejson
+      operations:
+      - method: POST
+        name: cloneflowbyidasclonejson
+        description: POST /environments/{environmentID}/flows/{flowID}#clone+json
+        call: ping-identity.cloneflowbyidasclonejson
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}#deploy+json
+      name: deployflowbyidasdeployjson
+      operations:
+      - method: POST
+        name: deployflowbyidasdeployjson
+        description: POST /environments/{environmentID}/flows/{flowID}#deploy+json
+        call: ping-identity.deployflowbyidasdeployjson
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}#validate+json
+      name: validateflowbyidasvalidatejson
+      operations:
+      - method: POST
+        name: validateflowbyidasvalidatejson
+        description: POST /environments/{environmentID}/flows/{flowID}#validate+json
+        call: ping-identity.validateflowbyidasvalidatejson
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/enabled
+      name: updateenabledbyflowid
+      operations:
+      - method: PUT
+        name: updateenabledbyflowid
+        description: PUT /environments/{environmentID}/flows/{flowID}/enabled
+        call: ping-identity.updateenabledbyflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/versions
+      name: getversionsbyflowid
+      operations:
+      - method: GET
+        name: getversionsbyflowid
+        description: GET /environments/{environmentID}/flows/{flowID}/versions
+        call: ping-identity.getversionsbyflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      name: getversionbyidusingflowid
+      operations:
+      - method: GET
+        name: getversionbyidusingflowid
+        description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+        call: ping-identity.getversionbyidusingflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      name: deleteversionbyidusingflowid
+      operations:
+      - method: DELETE
+        name: deleteversionbyidusingflowid
+        description: DELETE /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+        call: ping-identity.deleteversionbyidusingflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+      name: replacealiasbyflowidandversionid
+      operations:
+      - method: PUT
+        name: replacealiasbyflowidandversionid
+        description: PUT /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+        call: ping-identity.replacealiasbyflowidandversionid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+      name: getdetailsbyflowidandversionid
+      operations:
+      - method: GET
+        name: getdetailsbyflowidandversionid
+        description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+        call: ping-identity.getdetailsbyflowidandversionid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/snapshots
+      name: createsnapshot
+      operations:
+      - method: POST
+        name: createsnapshot
+        description: POST /environments/{environmentID}/snapshots
+        call: ping-identity.createsnapshot
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/snapshots/{snapshotID}
+      name: getsnapshotbyid
+      operations:
+      - method: GET
+        name: getsnapshotbyid
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}
+        call: ping-identity.getsnapshotbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/snapshots/{snapshotID}/versions
+      name: getversionsbysnapshotid
+      operations:
+      - method: GET
+        name: getversionsbysnapshotid
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions
+        call: ping-identity.getversionsbysnapshotid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+      name: getversionbyidusingsnapshotid
+      operations:
+      - method: GET
+        name: getversionbyidusingsnapshotid
+        description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+        call: ping-identity.getversionbyidusingsnapshotid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/totalIdentities
+      name: gettotalidentities
+      operations:
+      - method: GET
+        name: gettotalidentities
+        description: GET /environments/{environmentID}/totalIdentities
+        call: ping-identity.gettotalidentities
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/variables
+      name: getvariables
+      operations:
+      - method: GET
+        name: getvariables
+        description: GET /environments/{environmentID}/variables
+        call: ping-identity.getvariables
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/variables
+      name: createvariable
+      operations:
+      - method: POST
+        name: createvariable
+        description: POST /environments/{environmentID}/variables
+        call: ping-identity.createvariable
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/variables/{variableID}
+      name: getvariablebyid
+      operations:
+      - method: GET
+        name: getvariablebyid
+        description: GET /environments/{environmentID}/variables/{variableID}
+        call: ping-identity.getvariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/variables/{variableID}
+      name: replacevariablebyid
+      operations:
+      - method: PUT
+        name: replacevariablebyid
+        description: PUT /environments/{environmentID}/variables/{variableID}
+        call: ping-identity.replacevariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /environments/{environmentID}/variables/{variableID}
+      name: deletevariablebyid
+      operations:
+      - method: DELETE
+        name: deletevariablebyid
+        description: DELETE /environments/{environmentID}/variables/{variableID}
+        call: ping-identity.deletevariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: ping-identity-mcp
+    transport: http
+    description: MCP adapter for PingOne Platform API for AI agent use.
+    tools:
+    - name: getenvironments
+      description: GET /environments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getenvironments
+      with:
+        expand: tools.expand
+        filter: tools.filter
+        order: tools.order
+        limit: tools.limit
+        cursor: tools.cursor
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      - name: filter
+        type: string
+        description: filter
+      - name: order
+        type: string
+        description: order
+      - name: limit
+        type: integer
+        description: limit
+      - name: cursor
+        type: string
+        description: cursor
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createenvironment
+      description: POST /environments
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createenvironment
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getenvironmentbyid
+      description: GET /environments/{environmentID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getenvironmentbyid
+      with:
+        expand: tools.expand
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceenvironmentbyid
+      description: PUT /environments/{environmentID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replaceenvironmentbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteenvironmentbyid
+      description: DELETE /environments/{environmentID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deleteenvironmentbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getbillofmaterialsbyenvironmentid
+      description: GET /environments/{environmentID}/billOfMaterials
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getbillofmaterialsbyenvironmentid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacebillofmaterialsbyenvironmentid
+      description: PUT /environments/{environmentID}/billOfMaterials
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replacebillofmaterialsbyenvironmentid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorinstances
+      description: GET /environments/{environmentID}/connectorInstances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getconnectorinstances
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconnectorinstance
+      description: POST /environments/{environmentID}/connectorInstances
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createconnectorinstance
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorinstancebyid
+      description: GET /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconnectorinstancebyid
+      description: POST /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceconnectorinstancebyid
+      description: PUT /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replaceconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteconnectorinstancebyid
+      description: DELETE /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deleteconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectors
+      description: GET /environments/{environmentID}/connectors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getconnectors
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorbyid
+      description: GET /environments/{environmentID}/connectors/{connectorID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getconnectorbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdetailsbyconnectorid
+      description: GET /environments/{environmentID}/connectors/{connectorID}/details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getdetailsbyconnectorid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdavinciapplications
+      description: GET /environments/{environmentID}/davinciApplications
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getdavinciapplications
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createdavinciapplication
+      description: POST /environments/{environmentID}/davinciApplications
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createdavinciapplication
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdavinciapplicationbyid
+      description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getdavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacedavinciapplicationbyid
+      description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replacedavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletedavinciapplicationbyid
+      description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deletedavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpoliciesbydavinciapplicationid
+      description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getflowpoliciesbydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createflowpolicybydavinciapplicationid
+      description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createflowpolicybydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpolicybyidusingdavinciapplicationid
+      description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceflowpolicybyidusingdavinciapplicationid
+      description: PUT /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replaceflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteflowpolicybyidusingdavinciapplicationid
+      description: DELETE /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deleteflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: geteventsbydavinciapplicationidandflowpolicyid
+      description: GET /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.geteventsbydavinciapplicationidandflowpolicyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatekeybydavinciapplicationid
+      description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.rotatekeybydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatesecretbydavinciapplicationid
+      description: POST /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.rotatesecretbydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpolicybyid
+      description: GET /environments/{environmentID}/flowPolicies/{flowPolicyID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getflowpolicybyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflows
+      description: GET /environments/{environmentID}/flows
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getflows
+      with:
+        attributes: tools.attributes
+      inputParameters:
+      - name: attributes
+        type: string
+        description: attributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createflow
+      description: POST /environments/{environmentID}/flows
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createflow
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowbyid
+      description: GET /environments/{environmentID}/flows/{flowID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getflowbyid
+      with:
+        attributes: tools.attributes
+      inputParameters:
+      - name: attributes
+        type: string
+        description: attributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceflowbyid
+      description: PUT /environments/{environmentID}/flows/{flowID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replaceflowbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteflowbyid
+      description: DELETE /environments/{environmentID}/flows/{flowID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deleteflowbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: cloneflowbyidasclonejson
+      description: POST /environments/{environmentID}/flows/{flowID}#clone+json
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.cloneflowbyidasclonejson
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deployflowbyidasdeployjson
+      description: POST /environments/{environmentID}/flows/{flowID}#deploy+json
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.deployflowbyidasdeployjson
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: validateflowbyidasvalidatejson
+      description: POST /environments/{environmentID}/flows/{flowID}#validate+json
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.validateflowbyidasvalidatejson
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateenabledbyflowid
+      description: PUT /environments/{environmentID}/flows/{flowID}/enabled
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.updateenabledbyflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionsbyflowid
+      description: GET /environments/{environmentID}/flows/{flowID}/versions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getversionsbyflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionbyidusingflowid
+      description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getversionbyidusingflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteversionbyidusingflowid
+      description: DELETE /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deleteversionbyidusingflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacealiasbyflowidandversionid
+      description: PUT /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replacealiasbyflowidandversionid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdetailsbyflowidandversionid
+      description: GET /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getdetailsbyflowidandversionid
+      with:
+        expand: tools.expand
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createsnapshot
+      description: POST /environments/{environmentID}/snapshots
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createsnapshot
+      with:
+        expand: tools.expand
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsnapshotbyid
+      description: GET /environments/{environmentID}/snapshots/{snapshotID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getsnapshotbyid
+      with:
+        expand: tools.expand
+        filter: tools.filter
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      - name: filter
+        type: string
+        description: filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionsbysnapshotid
+      description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getversionsbysnapshotid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionbyidusingsnapshotid
+      description: GET /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getversionbyidusingsnapshotid
+      with:
+        expand: tools.expand
+        attributes: tools.attributes
+        filter: tools.filter
+      inputParameters:
+      - name: expand
+        type: string
+        description: expand
+      - name: attributes
+        type: string
+        description: attributes
+        required: true
+      - name: filter
+        type: string
+        description: filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: gettotalidentities
+      description: GET /environments/{environmentID}/totalIdentities
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.gettotalidentities
+      with:
+        filter: tools.filter
+      inputParameters:
+      - name: filter
+        type: string
+        description: filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvariables
+      description: GET /environments/{environmentID}/variables
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getvariables
+      with:
+        limit: tools.limit
+        cursor: tools.cursor
+        filter: tools.filter
+      inputParameters:
+      - name: limit
+        type: integer
+        description: limit
+      - name: cursor
+        type: string
+        description: cursor
+      - name: filter
+        type: string
+        description: filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createvariable
+      description: POST /environments/{environmentID}/variables
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity.createvariable
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvariablebyid
+      description: GET /environments/{environmentID}/variables/{variableID}
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity.getvariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacevariablebyid
+      description: PUT /environments/{environmentID}/variables/{variableID}
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity.replacevariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletevariablebyid
+      description: DELETE /environments/{environmentID}/variables/{variableID}
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity.deletevariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_TOKEN: PING_IDENTITY_TOKEN
