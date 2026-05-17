@@ -58,7 +58,7 @@ common:
     url: https://www.pingidentity.com/en/resources/blog.html
   - type: GitHub
     url: https://github.com/pingidentity
-  - type: Status
+  - type: StatusPage
     url: https://status.pingidentity.com/
   - type: TermsOfService
     url: https://www.pingidentity.com/en/legal.html
