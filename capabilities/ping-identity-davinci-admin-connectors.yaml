@@ -1,0 +1,134 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — DaVinci Admin Connectors
+  description: 'PingOne Platform API — DaVinci Admin Connectors. 3 operations. Lead operation: DaVinci Admin Connectors. Self-contained
+    Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - DaVinci Admin Connectors
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-davinci-admin-connectors
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — DaVinci Admin Connectors business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-connectors
+      path: /environments/{environmentID}/connectors
+      operations:
+      - name: getconnectors
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-connectors-connectorID
+      path: /environments/{environmentID}/connectors/{connectorID}
+      operations:
+      - name: getconnectorbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-connectors-connectorID-details
+      path: /environments/{environmentID}/connectors/{connectorID}/details
+      operations:
+      - name: getdetailsbyconnectorid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-davinci-admin-connectors-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — DaVinci Admin Connectors. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/connectors
+      name: environments-environmentid-connectors
+      description: REST surface for environments-environmentID-connectors.
+      operations:
+      - method: GET
+        name: getconnectors
+        description: getconnectors
+        call: ping-identity-davinci-admin-connectors.getconnectors
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectors/{connectorid}
+      name: environments-environmentid-connectors-connectorid
+      description: REST surface for environments-environmentID-connectors-connectorID.
+      operations:
+      - method: GET
+        name: getconnectorbyid
+        description: getconnectorbyid
+        call: ping-identity-davinci-admin-connectors.getconnectorbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectors/{connectorid}/details
+      name: environments-environmentid-connectors-connectorid-details
+      description: REST surface for environments-environmentID-connectors-connectorID-details.
+      operations:
+      - method: GET
+        name: getdetailsbyconnectorid
+        description: getdetailsbyconnectorid
+        call: ping-identity-davinci-admin-connectors.getdetailsbyconnectorid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-davinci-admin-connectors-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — DaVinci Admin Connectors. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: getconnectors
+      description: getconnectors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-connectors.getconnectors
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorbyid
+      description: getconnectorbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-connectors.getconnectorbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdetailsbyconnectorid
+      description: getdetailsbyconnectorid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-connectors.getdetailsbyconnectorid
+      outputParameters:
+      - type: object
+        mapping: $.

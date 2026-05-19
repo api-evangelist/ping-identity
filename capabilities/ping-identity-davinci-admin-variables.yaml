@@ -1,0 +1,215 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — DaVinci Admin Variables
+  description: 'PingOne Platform API — DaVinci Admin Variables. 5 operations. Lead operation: DaVinci Admin Variables. Self-contained
+    Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - DaVinci Admin Variables
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-davinci-admin-variables
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — DaVinci Admin Variables business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-variables
+      path: /environments/{environmentID}/variables
+      operations:
+      - name: getvariables
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: limit
+          in: query
+          type: integer
+        - name: cursor
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+      - name: createvariable
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-variables-variableID
+      path: /environments/{environmentID}/variables/{variableID}
+      operations:
+      - name: getvariablebyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacevariablebyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletevariablebyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-davinci-admin-variables-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — DaVinci Admin Variables. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/variables
+      name: environments-environmentid-variables
+      description: REST surface for environments-environmentID-variables.
+      operations:
+      - method: GET
+        name: getvariables
+        description: getvariables
+        call: ping-identity-davinci-admin-variables.getvariables
+        with:
+          limit: rest.limit
+          cursor: rest.cursor
+          filter: rest.filter
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createvariable
+        description: createvariable
+        call: ping-identity-davinci-admin-variables.createvariable
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/variables/{variableid}
+      name: environments-environmentid-variables-variableid
+      description: REST surface for environments-environmentID-variables-variableID.
+      operations:
+      - method: GET
+        name: getvariablebyid
+        description: getvariablebyid
+        call: ping-identity-davinci-admin-variables.getvariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacevariablebyid
+        description: replacevariablebyid
+        call: ping-identity-davinci-admin-variables.replacevariablebyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletevariablebyid
+        description: deletevariablebyid
+        call: ping-identity-davinci-admin-variables.deletevariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-davinci-admin-variables-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — DaVinci Admin Variables. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: getvariables
+      description: getvariables
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-variables.getvariables
+      with:
+        limit: tools.limit
+        cursor: tools.cursor
+        filter: tools.filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createvariable
+      description: createvariable
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-variables.createvariable
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvariablebyid
+      description: getvariablebyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-variables.getvariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacevariablebyid
+      description: replacevariablebyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-variables.replacevariablebyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletevariablebyid
+      description: deletevariablebyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-variables.deletevariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.

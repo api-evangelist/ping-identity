@@ -1,0 +1,300 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — Environments
+  description: 'PingOne Platform API — Environments. 7 operations. Lead operation: Environments. Self-contained Naftiko capability
+    covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - Environments
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-environments
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — Environments business capability. Self-contained, no shared references.
+    resources:
+    - name: environments
+      path: /environments
+      operations:
+      - name: getenvironments
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+        - name: order
+          in: query
+          type: string
+        - name: limit
+          in: query
+          type: integer
+        - name: cursor
+          in: query
+          type: string
+      - name: createenvironment
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID
+      path: /environments/{environmentID}
+      operations:
+      - name: getenvironmentbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+      - name: replaceenvironmentbyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteenvironmentbyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-billOfMaterials
+      path: /environments/{environmentID}/billOfMaterials
+      operations:
+      - name: getbillofmaterialsbyenvironmentid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacebillofmaterialsbyenvironmentid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-environments-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — Environments. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/environments
+      name: environments
+      description: REST surface for environments.
+      operations:
+      - method: GET
+        name: getenvironments
+        description: getenvironments
+        call: ping-identity-environments.getenvironments
+        with:
+          expand: rest.expand
+          filter: rest.filter
+          order: rest.order
+          limit: rest.limit
+          cursor: rest.cursor
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createenvironment
+        description: createenvironment
+        call: ping-identity-environments.createenvironment
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}
+      name: environments-environmentid
+      description: REST surface for environments-environmentID.
+      operations:
+      - method: GET
+        name: getenvironmentbyid
+        description: getenvironmentbyid
+        call: ping-identity-environments.getenvironmentbyid
+        with:
+          expand: rest.expand
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replaceenvironmentbyid
+        description: replaceenvironmentbyid
+        call: ping-identity-environments.replaceenvironmentbyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteenvironmentbyid
+        description: deleteenvironmentbyid
+        call: ping-identity-environments.deleteenvironmentbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/billofmaterials
+      name: environments-environmentid-billofmaterials
+      description: REST surface for environments-environmentID-billOfMaterials.
+      operations:
+      - method: GET
+        name: getbillofmaterialsbyenvironmentid
+        description: getbillofmaterialsbyenvironmentid
+        call: ping-identity-environments.getbillofmaterialsbyenvironmentid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacebillofmaterialsbyenvironmentid
+        description: replacebillofmaterialsbyenvironmentid
+        call: ping-identity-environments.replacebillofmaterialsbyenvironmentid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-environments-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — Environments. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: getenvironments
+      description: getenvironments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-environments.getenvironments
+      with:
+        expand: tools.expand
+        filter: tools.filter
+        order: tools.order
+        limit: tools.limit
+        cursor: tools.cursor
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createenvironment
+      description: createenvironment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-environments.createenvironment
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getenvironmentbyid
+      description: getenvironmentbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-environments.getenvironmentbyid
+      with:
+        expand: tools.expand
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceenvironmentbyid
+      description: replaceenvironmentbyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-environments.replaceenvironmentbyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteenvironmentbyid
+      description: deleteenvironmentbyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-environments.deleteenvironmentbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getbillofmaterialsbyenvironmentid
+      description: getbillofmaterialsbyenvironmentid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-environments.getbillofmaterialsbyenvironmentid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacebillofmaterialsbyenvironmentid
+      description: replacebillofmaterialsbyenvironmentid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-environments.replacebillofmaterialsbyenvironmentid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

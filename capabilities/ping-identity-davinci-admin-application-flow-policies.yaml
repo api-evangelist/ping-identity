@@ -1,0 +1,230 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — DaVinci Admin Application Flow Policies
+  description: 'PingOne Platform API — DaVinci Admin Application Flow Policies. 6 operations. Lead operation: DaVinci Admin
+    Application Flow Policies. Self-contained Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - DaVinci Admin Application Flow Policies
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-davinci-admin-application-flow-policies
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — DaVinci Admin Application Flow Policies business capability. Self-contained, no shared
+      references.
+    resources:
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      operations:
+      - name: getflowpoliciesbydavinciapplicationid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createflowpolicybydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      operations:
+      - name: getflowpolicybyidusingdavinciapplicationid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceflowpolicybyidusingdavinciapplicationid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteflowpolicybyidusingdavinciapplicationid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+      operations:
+      - name: geteventsbydavinciapplicationidandflowpolicyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-davinci-admin-application-flow-policies-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — DaVinci Admin Application Flow Policies. One Spectral-compliant resource
+      per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: getflowpoliciesbydavinciapplicationid
+        description: getflowpoliciesbydavinciapplicationid
+        call: ping-identity-davinci-admin-application-flow-policies.getflowpoliciesbydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createflowpolicybydavinciapplicationid
+        description: createflowpolicybydavinciapplicationid
+        call: ping-identity-davinci-admin-application-flow-policies.createflowpolicybydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies/{flowpolicyid}
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: getflowpolicybyidusingdavinciapplicationid
+        description: getflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-application-flow-policies.getflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replaceflowpolicybyidusingdavinciapplicationid
+        description: replaceflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-application-flow-policies.replaceflowpolicybyidusingdavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteflowpolicybyidusingdavinciapplicationid
+        description: deleteflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-application-flow-policies.deleteflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies/{flowpolicyid}/events
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: geteventsbydavinciapplicationidandflowpolicyid
+        description: geteventsbydavinciapplicationidandflowpolicyid
+        call: ping-identity-davinci-admin-application-flow-policies.geteventsbydavinciapplicationidandflowpolicyid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-davinci-admin-application-flow-policies-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — DaVinci Admin Application Flow Policies. One tool per consumed operation,
+      routed inline through this capability's consumes block.
+    tools:
+    - name: getflowpoliciesbydavinciapplicationid
+      description: getflowpoliciesbydavinciapplicationid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-application-flow-policies.getflowpoliciesbydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createflowpolicybydavinciapplicationid
+      description: createflowpolicybydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-application-flow-policies.createflowpolicybydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpolicybyidusingdavinciapplicationid
+      description: getflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-application-flow-policies.getflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceflowpolicybyidusingdavinciapplicationid
+      description: replaceflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-application-flow-policies.replaceflowpolicybyidusingdavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteflowpolicybyidusingdavinciapplicationid
+      description: deleteflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-application-flow-policies.deleteflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: geteventsbydavinciapplicationidandflowpolicyid
+      description: geteventsbydavinciapplicationidandflowpolicyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-application-flow-policies.geteventsbydavinciapplicationidandflowpolicyid
+      outputParameters:
+      - type: object
+        mapping: $.

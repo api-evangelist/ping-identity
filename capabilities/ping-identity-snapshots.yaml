@@ -1,0 +1,213 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — Snapshots
+  description: 'PingOne Platform API — Snapshots. 4 operations. Lead operation: Snapshots. Self-contained Naftiko capability
+    covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - Snapshots
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-snapshots
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — Snapshots business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-snapshots
+      path: /environments/{environmentID}/snapshots
+      operations:
+      - name: createsnapshot
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-snapshots-snapshotID
+      path: /environments/{environmentID}/snapshots/{snapshotID}
+      operations:
+      - name: getsnapshotbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+    - name: environments-environmentID-snapshots-snapshotID-versions
+      path: /environments/{environmentID}/snapshots/{snapshotID}/versions
+      operations:
+      - name: getversionsbysnapshotid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-snapshots-snapshotID-versions-versionID
+      path: /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+      operations:
+      - name: getversionbyidusingsnapshotid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+        - name: attributes
+          in: query
+          type: string
+          required: true
+        - name: filter
+          in: query
+          type: string
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-snapshots-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — Snapshots. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/snapshots
+      name: environments-environmentid-snapshots
+      description: REST surface for environments-environmentID-snapshots.
+      operations:
+      - method: POST
+        name: createsnapshot
+        description: createsnapshot
+        call: ping-identity-snapshots.createsnapshot
+        with:
+          expand: rest.expand
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/snapshots/{snapshotid}
+      name: environments-environmentid-snapshots-snapshotid
+      description: REST surface for environments-environmentID-snapshots-snapshotID.
+      operations:
+      - method: GET
+        name: getsnapshotbyid
+        description: getsnapshotbyid
+        call: ping-identity-snapshots.getsnapshotbyid
+        with:
+          expand: rest.expand
+          filter: rest.filter
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/snapshots/{snapshotid}/versions
+      name: environments-environmentid-snapshots-snapshotid-versions
+      description: REST surface for environments-environmentID-snapshots-snapshotID-versions.
+      operations:
+      - method: GET
+        name: getversionsbysnapshotid
+        description: getversionsbysnapshotid
+        call: ping-identity-snapshots.getversionsbysnapshotid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/snapshots/{snapshotid}/versions/{versionid}
+      name: environments-environmentid-snapshots-snapshotid-versions-versionid
+      description: REST surface for environments-environmentID-snapshots-snapshotID-versions-versionID.
+      operations:
+      - method: GET
+        name: getversionbyidusingsnapshotid
+        description: getversionbyidusingsnapshotid
+        call: ping-identity-snapshots.getversionbyidusingsnapshotid
+        with:
+          expand: rest.expand
+          attributes: rest.attributes
+          filter: rest.filter
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-snapshots-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — Snapshots. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: createsnapshot
+      description: createsnapshot
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-snapshots.createsnapshot
+      with:
+        expand: tools.expand
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsnapshotbyid
+      description: getsnapshotbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-snapshots.getsnapshotbyid
+      with:
+        expand: tools.expand
+        filter: tools.filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionsbysnapshotid
+      description: getversionsbysnapshotid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-snapshots.getversionsbysnapshotid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionbyidusingsnapshotid
+      description: getversionbyidusingsnapshotid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-snapshots.getversionbyidusingsnapshotid
+      with:
+        expand: tools.expand
+        attributes: tools.attributes
+        filter: tools.filter
+      outputParameters:
+      - type: object
+        mapping: $.

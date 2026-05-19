@@ -1,0 +1,1453 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — DaVinci Admin APIs
+  description: 'PingOne Platform API — DaVinci Admin APIs. 41 operations. Lead operation: DaVinci Admin APIs. Self-contained
+    Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - DaVinci Admin APIs
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-davinci-admin-apis
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — DaVinci Admin APIs business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-connectorInstances
+      path: /environments/{environmentID}/connectorInstances
+      operations:
+      - name: getconnectorinstances
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconnectorinstance
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-connectorInstances-connectorInstanceID
+      path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+      operations:
+      - name: getconnectorinstancebyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createconnectorinstancebyid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: replaceconnectorinstancebyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteconnectorinstancebyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-connectors
+      path: /environments/{environmentID}/connectors
+      operations:
+      - name: getconnectors
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-connectors-connectorID
+      path: /environments/{environmentID}/connectors/{connectorID}
+      operations:
+      - name: getconnectorbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-connectors-connectorID-details
+      path: /environments/{environmentID}/connectors/{connectorID}/details
+      operations:
+      - name: getdetailsbyconnectorid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications
+      path: /environments/{environmentID}/davinciApplications
+      operations:
+      - name: getdavinciapplications
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createdavinciapplication
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      operations:
+      - name: getdavinciapplicationbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacedavinciapplicationbyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletedavinciapplicationbyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+      operations:
+      - name: getflowpoliciesbydavinciapplicationid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createflowpolicybydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+      operations:
+      - name: getflowpolicybyidusingdavinciapplicationid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replaceflowpolicybyidusingdavinciapplicationid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteflowpolicybyidusingdavinciapplicationid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}/events
+      operations:
+      - name: geteventsbydavinciapplicationidandflowpolicyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-key
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+      operations:
+      - name: rotatekeybydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-secret
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+      operations:
+      - name: rotatesecretbydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows
+      path: /environments/{environmentID}/flows
+      operations:
+      - name: getflows
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: attributes
+          in: query
+          type: string
+      - name: createflow
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID
+      path: /environments/{environmentID}/flows/{flowID}
+      operations:
+      - name: getflowbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: attributes
+          in: query
+          type: string
+      - name: replaceflowbyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteflowbyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-flows-flowID}#clone+json
+      path: /environments/{environmentID}/flows/{flowID}#clone+json
+      operations:
+      - name: cloneflowbyidasclonejson
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID}#deploy+json
+      path: /environments/{environmentID}/flows/{flowID}#deploy+json
+      operations:
+      - name: deployflowbyidasdeployjson
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID}#validate+json
+      path: /environments/{environmentID}/flows/{flowID}#validate+json
+      operations:
+      - name: validateflowbyidasvalidatejson
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID-enabled
+      path: /environments/{environmentID}/flows/{flowID}/enabled
+      operations:
+      - name: updateenabledbyflowid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID-versions
+      path: /environments/{environmentID}/flows/{flowID}/versions
+      operations:
+      - name: getversionsbyflowid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-flows-flowID-versions-versionID
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+      operations:
+      - name: getversionbyidusingflowid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteversionbyidusingflowid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-flows-flowID-versions-versionID-alias
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+      operations:
+      - name: replacealiasbyflowidandversionid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-flows-flowID-versions-versionID-details
+      path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/details
+      operations:
+      - name: getdetailsbyflowidandversionid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: expand
+          in: query
+          type: string
+    - name: environments-environmentID-variables
+      path: /environments/{environmentID}/variables
+      operations:
+      - name: getvariables
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: limit
+          in: query
+          type: integer
+        - name: cursor
+          in: query
+          type: string
+        - name: filter
+          in: query
+          type: string
+      - name: createvariable
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-variables-variableID
+      path: /environments/{environmentID}/variables/{variableID}
+      operations:
+      - name: getvariablebyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacevariablebyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletevariablebyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-davinci-admin-apis-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — DaVinci Admin APIs. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/connectorinstances
+      name: environments-environmentid-connectorinstances
+      description: REST surface for environments-environmentID-connectorInstances.
+      operations:
+      - method: GET
+        name: getconnectorinstances
+        description: getconnectorinstances
+        call: ping-identity-davinci-admin-apis.getconnectorinstances
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createconnectorinstance
+        description: createconnectorinstance
+        call: ping-identity-davinci-admin-apis.createconnectorinstance
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectorinstances/{connectorinstanceid}
+      name: environments-environmentid-connectorinstances-connectorinstanceid
+      description: REST surface for environments-environmentID-connectorInstances-connectorInstanceID.
+      operations:
+      - method: GET
+        name: getconnectorinstancebyid
+        description: getconnectorinstancebyid
+        call: ping-identity-davinci-admin-apis.getconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createconnectorinstancebyid
+        description: createconnectorinstancebyid
+        call: ping-identity-davinci-admin-apis.createconnectorinstancebyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replaceconnectorinstancebyid
+        description: replaceconnectorinstancebyid
+        call: ping-identity-davinci-admin-apis.replaceconnectorinstancebyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteconnectorinstancebyid
+        description: deleteconnectorinstancebyid
+        call: ping-identity-davinci-admin-apis.deleteconnectorinstancebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectors
+      name: environments-environmentid-connectors
+      description: REST surface for environments-environmentID-connectors.
+      operations:
+      - method: GET
+        name: getconnectors
+        description: getconnectors
+        call: ping-identity-davinci-admin-apis.getconnectors
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectors/{connectorid}
+      name: environments-environmentid-connectors-connectorid
+      description: REST surface for environments-environmentID-connectors-connectorID.
+      operations:
+      - method: GET
+        name: getconnectorbyid
+        description: getconnectorbyid
+        call: ping-identity-davinci-admin-apis.getconnectorbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/connectors/{connectorid}/details
+      name: environments-environmentid-connectors-connectorid-details
+      description: REST surface for environments-environmentID-connectors-connectorID-details.
+      operations:
+      - method: GET
+        name: getdetailsbyconnectorid
+        description: getdetailsbyconnectorid
+        call: ping-identity-davinci-admin-apis.getdetailsbyconnectorid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications
+      name: environments-environmentid-davinciapplications
+      description: REST surface for environments-environmentID-davinciApplications.
+      operations:
+      - method: GET
+        name: getdavinciapplications
+        description: getdavinciapplications
+        call: ping-identity-davinci-admin-apis.getdavinciapplications
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createdavinciapplication
+        description: createdavinciapplication
+        call: ping-identity-davinci-admin-apis.createdavinciapplication
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}
+      name: environments-environmentid-davinciapplications-davinciapplicationid
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID.
+      operations:
+      - method: GET
+        name: getdavinciapplicationbyid
+        description: getdavinciapplicationbyid
+        call: ping-identity-davinci-admin-apis.getdavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacedavinciapplicationbyid
+        description: replacedavinciapplicationbyid
+        call: ping-identity-davinci-admin-apis.replacedavinciapplicationbyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletedavinciapplicationbyid
+        description: deletedavinciapplicationbyid
+        call: ping-identity-davinci-admin-apis.deletedavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: getflowpoliciesbydavinciapplicationid
+        description: getflowpoliciesbydavinciapplicationid
+        call: ping-identity-davinci-admin-apis.getflowpoliciesbydavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createflowpolicybydavinciapplicationid
+        description: createflowpolicybydavinciapplicationid
+        call: ping-identity-davinci-admin-apis.createflowpolicybydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies/{flowpolicyid}
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: getflowpolicybyidusingdavinciapplicationid
+        description: getflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-apis.getflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replaceflowpolicybyidusingdavinciapplicationid
+        description: replaceflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-apis.replaceflowpolicybyidusingdavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteflowpolicybyidusingdavinciapplicationid
+        description: deleteflowpolicybyidusingdavinciapplicationid
+        call: ping-identity-davinci-admin-apis.deleteflowpolicybyidusingdavinciapplicationid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/flowpolicies/{flowpolicyid}/events
+      name: environments-environmentid-davinciapplications-davinciapplicationid-flowpolicies
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-flowPolicies.
+      operations:
+      - method: GET
+        name: geteventsbydavinciapplicationidandflowpolicyid
+        description: geteventsbydavinciapplicationidandflowpolicyid
+        call: ping-identity-davinci-admin-apis.geteventsbydavinciapplicationidandflowpolicyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/key
+      name: environments-environmentid-davinciapplications-davinciapplicationid-key
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-key.
+      operations:
+      - method: POST
+        name: rotatekeybydavinciapplicationid
+        description: rotatekeybydavinciapplicationid
+        call: ping-identity-davinci-admin-apis.rotatekeybydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/secret
+      name: environments-environmentid-davinciapplications-davinciapplicationid-secret
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-secret.
+      operations:
+      - method: POST
+        name: rotatesecretbydavinciapplicationid
+        description: rotatesecretbydavinciapplicationid
+        call: ping-identity-davinci-admin-apis.rotatesecretbydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows
+      name: environments-environmentid-flows
+      description: REST surface for environments-environmentID-flows.
+      operations:
+      - method: GET
+        name: getflows
+        description: getflows
+        call: ping-identity-davinci-admin-apis.getflows
+        with:
+          attributes: rest.attributes
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createflow
+        description: createflow
+        call: ping-identity-davinci-admin-apis.createflow
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}
+      name: environments-environmentid-flows-flowid
+      description: REST surface for environments-environmentID-flows-flowID.
+      operations:
+      - method: GET
+        name: getflowbyid
+        description: getflowbyid
+        call: ping-identity-davinci-admin-apis.getflowbyid
+        with:
+          attributes: rest.attributes
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replaceflowbyid
+        description: replaceflowbyid
+        call: ping-identity-davinci-admin-apis.replaceflowbyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteflowbyid
+        description: deleteflowbyid
+        call: ping-identity-davinci-admin-apis.deleteflowbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/flowid-clone-json
+      name: environments-environmentid-flows-flowid-clone-json
+      description: REST surface for environments-environmentID-flows-flowID}#clone+json.
+      operations:
+      - method: POST
+        name: cloneflowbyidasclonejson
+        description: cloneflowbyidasclonejson
+        call: ping-identity-davinci-admin-apis.cloneflowbyidasclonejson
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/flowid-deploy-json
+      name: environments-environmentid-flows-flowid-deploy-json
+      description: REST surface for environments-environmentID-flows-flowID}#deploy+json.
+      operations:
+      - method: POST
+        name: deployflowbyidasdeployjson
+        description: deployflowbyidasdeployjson
+        call: ping-identity-davinci-admin-apis.deployflowbyidasdeployjson
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/flowid-validate-json
+      name: environments-environmentid-flows-flowid-validate-json
+      description: REST surface for environments-environmentID-flows-flowID}#validate+json.
+      operations:
+      - method: POST
+        name: validateflowbyidasvalidatejson
+        description: validateflowbyidasvalidatejson
+        call: ping-identity-davinci-admin-apis.validateflowbyidasvalidatejson
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}/enabled
+      name: environments-environmentid-flows-flowid-enabled
+      description: REST surface for environments-environmentID-flows-flowID-enabled.
+      operations:
+      - method: PUT
+        name: updateenabledbyflowid
+        description: updateenabledbyflowid
+        call: ping-identity-davinci-admin-apis.updateenabledbyflowid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}/versions
+      name: environments-environmentid-flows-flowid-versions
+      description: REST surface for environments-environmentID-flows-flowID-versions.
+      operations:
+      - method: GET
+        name: getversionsbyflowid
+        description: getversionsbyflowid
+        call: ping-identity-davinci-admin-apis.getversionsbyflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}/versions/{versionid}
+      name: environments-environmentid-flows-flowid-versions-versionid
+      description: REST surface for environments-environmentID-flows-flowID-versions-versionID.
+      operations:
+      - method: GET
+        name: getversionbyidusingflowid
+        description: getversionbyidusingflowid
+        call: ping-identity-davinci-admin-apis.getversionbyidusingflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteversionbyidusingflowid
+        description: deleteversionbyidusingflowid
+        call: ping-identity-davinci-admin-apis.deleteversionbyidusingflowid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}/versions/{versionid}/alias
+      name: environments-environmentid-flows-flowid-versions-versionid-alias
+      description: REST surface for environments-environmentID-flows-flowID-versions-versionID-alias.
+      operations:
+      - method: PUT
+        name: replacealiasbyflowidandversionid
+        description: replacealiasbyflowidandversionid
+        call: ping-identity-davinci-admin-apis.replacealiasbyflowidandversionid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/flows/{flowid}/versions/{versionid}/details
+      name: environments-environmentid-flows-flowid-versions-versionid-details
+      description: REST surface for environments-environmentID-flows-flowID-versions-versionID-details.
+      operations:
+      - method: GET
+        name: getdetailsbyflowidandversionid
+        description: getdetailsbyflowidandversionid
+        call: ping-identity-davinci-admin-apis.getdetailsbyflowidandversionid
+        with:
+          expand: rest.expand
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/variables
+      name: environments-environmentid-variables
+      description: REST surface for environments-environmentID-variables.
+      operations:
+      - method: GET
+        name: getvariables
+        description: getvariables
+        call: ping-identity-davinci-admin-apis.getvariables
+        with:
+          limit: rest.limit
+          cursor: rest.cursor
+          filter: rest.filter
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createvariable
+        description: createvariable
+        call: ping-identity-davinci-admin-apis.createvariable
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/variables/{variableid}
+      name: environments-environmentid-variables-variableid
+      description: REST surface for environments-environmentID-variables-variableID.
+      operations:
+      - method: GET
+        name: getvariablebyid
+        description: getvariablebyid
+        call: ping-identity-davinci-admin-apis.getvariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacevariablebyid
+        description: replacevariablebyid
+        call: ping-identity-davinci-admin-apis.replacevariablebyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletevariablebyid
+        description: deletevariablebyid
+        call: ping-identity-davinci-admin-apis.deletevariablebyid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-davinci-admin-apis-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — DaVinci Admin APIs. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: getconnectorinstances
+      description: getconnectorinstances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getconnectorinstances
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconnectorinstance
+      description: createconnectorinstance
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createconnectorinstance
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorinstancebyid
+      description: getconnectorinstancebyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createconnectorinstancebyid
+      description: createconnectorinstancebyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createconnectorinstancebyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceconnectorinstancebyid
+      description: replaceconnectorinstancebyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replaceconnectorinstancebyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteconnectorinstancebyid
+      description: deleteconnectorinstancebyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deleteconnectorinstancebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectors
+      description: getconnectors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getconnectors
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getconnectorbyid
+      description: getconnectorbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getconnectorbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdetailsbyconnectorid
+      description: getdetailsbyconnectorid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getdetailsbyconnectorid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdavinciapplications
+      description: getdavinciapplications
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getdavinciapplications
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createdavinciapplication
+      description: createdavinciapplication
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createdavinciapplication
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdavinciapplicationbyid
+      description: getdavinciapplicationbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getdavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacedavinciapplicationbyid
+      description: replacedavinciapplicationbyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replacedavinciapplicationbyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletedavinciapplicationbyid
+      description: deletedavinciapplicationbyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deletedavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpoliciesbydavinciapplicationid
+      description: getflowpoliciesbydavinciapplicationid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getflowpoliciesbydavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createflowpolicybydavinciapplicationid
+      description: createflowpolicybydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createflowpolicybydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowpolicybyidusingdavinciapplicationid
+      description: getflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceflowpolicybyidusingdavinciapplicationid
+      description: replaceflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replaceflowpolicybyidusingdavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteflowpolicybyidusingdavinciapplicationid
+      description: deleteflowpolicybyidusingdavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deleteflowpolicybyidusingdavinciapplicationid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: geteventsbydavinciapplicationidandflowpolicyid
+      description: geteventsbydavinciapplicationidandflowpolicyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.geteventsbydavinciapplicationidandflowpolicyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatekeybydavinciapplicationid
+      description: rotatekeybydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.rotatekeybydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatesecretbydavinciapplicationid
+      description: rotatesecretbydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.rotatesecretbydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflows
+      description: getflows
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getflows
+      with:
+        attributes: tools.attributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createflow
+      description: createflow
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createflow
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getflowbyid
+      description: getflowbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getflowbyid
+      with:
+        attributes: tools.attributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replaceflowbyid
+      description: replaceflowbyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replaceflowbyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteflowbyid
+      description: deleteflowbyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deleteflowbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: cloneflowbyidasclonejson
+      description: cloneflowbyidasclonejson
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.cloneflowbyidasclonejson
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deployflowbyidasdeployjson
+      description: deployflowbyidasdeployjson
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.deployflowbyidasdeployjson
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: validateflowbyidasvalidatejson
+      description: validateflowbyidasvalidatejson
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.validateflowbyidasvalidatejson
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updateenabledbyflowid
+      description: updateenabledbyflowid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.updateenabledbyflowid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionsbyflowid
+      description: getversionsbyflowid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getversionsbyflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getversionbyidusingflowid
+      description: getversionbyidusingflowid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getversionbyidusingflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deleteversionbyidusingflowid
+      description: deleteversionbyidusingflowid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deleteversionbyidusingflowid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacealiasbyflowidandversionid
+      description: replacealiasbyflowidandversionid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replacealiasbyflowidandversionid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdetailsbyflowidandversionid
+      description: getdetailsbyflowidandversionid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getdetailsbyflowidandversionid
+      with:
+        expand: tools.expand
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvariables
+      description: getvariables
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getvariables
+      with:
+        limit: tools.limit
+        cursor: tools.cursor
+        filter: tools.filter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createvariable
+      description: createvariable
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-apis.createvariable
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getvariablebyid
+      description: getvariablebyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.getvariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacevariablebyid
+      description: replacevariablebyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.replacevariablebyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletevariablebyid
+      description: deletevariablebyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-apis.deletevariablebyid
+      outputParameters:
+      - type: object
+        mapping: $.

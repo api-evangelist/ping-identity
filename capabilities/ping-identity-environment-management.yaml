@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — Environment Management
+  description: 'PingOne Platform API — Environment Management. 1 operations. Lead operation: Environment Management. Self-contained
+    Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - Environment Management
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-environment-management
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — Environment Management business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-flowPolicies-flowPolicyID
+      path: /environments/{environmentID}/flowPolicies/{flowPolicyID}
+      operations:
+      - name: getflowpolicybyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-environment-management-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — Environment Management. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/flowpolicies/{flowpolicyid}
+      name: environments-environmentid-flowpolicies-flowpolicyid
+      description: REST surface for environments-environmentID-flowPolicies-flowPolicyID.
+      operations:
+      - method: GET
+        name: getflowpolicybyid
+        description: getflowpolicybyid
+        call: ping-identity-environment-management.getflowpolicybyid
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-environment-management-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — Environment Management. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: getflowpolicybyid
+      description: getflowpolicybyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-environment-management.getflowpolicybyid
+      outputParameters:
+      - type: object
+        mapping: $.

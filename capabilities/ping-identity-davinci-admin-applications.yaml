@@ -1,0 +1,281 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: PingOne Platform API — DaVinci Admin Applications
+  description: 'PingOne Platform API — DaVinci Admin Applications. 7 operations. Lead operation: DaVinci Admin Applications.
+    Self-contained Naftiko capability covering one Ping Identity business surface.'
+  tags:
+  - Ping Identity
+  - DaVinci Admin Applications
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PING_IDENTITY_API_KEY: PING_IDENTITY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: ping-identity-davinci-admin-applications
+    baseUri: https://api.pingone.{tld}/{basePath}
+    description: PingOne Platform API — DaVinci Admin Applications business capability. Self-contained, no shared references.
+    resources:
+    - name: environments-environmentID-davinciApplications
+      path: /environments/{environmentID}/davinciApplications
+      operations:
+      - name: getdavinciapplications
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createdavinciapplication
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+      operations:
+      - name: getdavinciapplicationbyid
+        method: GET
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: replacedavinciapplicationbyid
+        method: PUT
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deletedavinciapplicationbyid
+        method: DELETE
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-key
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/key
+      operations:
+      - name: rotatekeybydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: environments-environmentID-davinciApplications-davinciApplicationID-secret
+      path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/secret
+      operations:
+      - name: rotatesecretbydavinciapplicationid
+        method: POST
+        description: ''
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.PING_IDENTITY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: ping-identity-davinci-admin-applications-rest
+    port: 8080
+    description: REST adapter for PingOne Platform API — DaVinci Admin Applications. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/environments/{environmentid}/davinciapplications
+      name: environments-environmentid-davinciapplications
+      description: REST surface for environments-environmentID-davinciApplications.
+      operations:
+      - method: GET
+        name: getdavinciapplications
+        description: getdavinciapplications
+        call: ping-identity-davinci-admin-applications.getdavinciapplications
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createdavinciapplication
+        description: createdavinciapplication
+        call: ping-identity-davinci-admin-applications.createdavinciapplication
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}
+      name: environments-environmentid-davinciapplications-davinciapplicationid
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID.
+      operations:
+      - method: GET
+        name: getdavinciapplicationbyid
+        description: getdavinciapplicationbyid
+        call: ping-identity-davinci-admin-applications.getdavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: replacedavinciapplicationbyid
+        description: replacedavinciapplicationbyid
+        call: ping-identity-davinci-admin-applications.replacedavinciapplicationbyid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deletedavinciapplicationbyid
+        description: deletedavinciapplicationbyid
+        call: ping-identity-davinci-admin-applications.deletedavinciapplicationbyid
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/key
+      name: environments-environmentid-davinciapplications-davinciapplicationid-key
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-key.
+      operations:
+      - method: POST
+        name: rotatekeybydavinciapplicationid
+        description: rotatekeybydavinciapplicationid
+        call: ping-identity-davinci-admin-applications.rotatekeybydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/environments/{environmentid}/davinciapplications/{davinciapplicationid}/secret
+      name: environments-environmentid-davinciapplications-davinciapplicationid-secret
+      description: REST surface for environments-environmentID-davinciApplications-davinciApplicationID-secret.
+      operations:
+      - method: POST
+        name: rotatesecretbydavinciapplicationid
+        description: rotatesecretbydavinciapplicationid
+        call: ping-identity-davinci-admin-applications.rotatesecretbydavinciapplicationid
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: ping-identity-davinci-admin-applications-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for PingOne Platform API — DaVinci Admin Applications. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: getdavinciapplications
+      description: getdavinciapplications
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-applications.getdavinciapplications
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: createdavinciapplication
+      description: createdavinciapplication
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-applications.createdavinciapplication
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getdavinciapplicationbyid
+      description: getdavinciapplicationbyid
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-applications.getdavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: replacedavinciapplicationbyid
+      description: replacedavinciapplicationbyid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: ping-identity-davinci-admin-applications.replacedavinciapplicationbyid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deletedavinciapplicationbyid
+      description: deletedavinciapplicationbyid
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: ping-identity-davinci-admin-applications.deletedavinciapplicationbyid
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatekeybydavinciapplicationid
+      description: rotatekeybydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-applications.rotatekeybydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rotatesecretbydavinciapplicationid
+      description: rotatesecretbydavinciapplicationid
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: ping-identity-davinci-admin-applications.rotatesecretbydavinciapplicationid
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
