@@ -38,37 +38,37 @@ apis:
     url: https://github.com/pingidentity/pingone-openapi-specifications
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/ping-identity/refs/heads/main/openapi/ping-identity-openapi.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-configuration-management.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-environment-management.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-environments.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-flow-policies.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-metrics.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-snapshots.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/ping-identity-total-identities.yaml
 common:
 - type: LinkedIn
