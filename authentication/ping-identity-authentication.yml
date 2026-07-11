@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/ping-identity-openapi.yaml
+summary:
+  types:
+  - http
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  sources:
+  - openapi/ping-identity-openapi.yaml
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /as/token
+    scopes: 0
+  - flow: authorizationCode
+    authorizationUrl: /as/authorize
+    tokenUrl: /as/token
+    scopes: 0
+  sources:
+  - openapi/ping-identity-openapi.yaml
