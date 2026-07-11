@@ -1,0 +1,130 @@
+generated: '2026-07-11'
+method: searched
+source: openapi/ping-identity-openapi.yaml
+docs: https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles.html
+note: PingOne documents OIDC scopes and PingOne API self-management scopes (user-only);
+  administrative access to the PingOne platform APIs is granted through roles assigned
+  to worker applications rather than OAuth scopes.
+schemes:
+- name: oauth2
+  source: openapi/ping-identity-openapi.yaml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: /as/token
+  - flow: authorizationCode
+    authorizationUrl: /as/authorize
+    tokenUrl: /as/token
+scopes:
+- scope: openid
+  description: Required scope that tells the authorization server the incoming request
+    is an OpenID Connect request.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/openid-connect-oidc-scopes.html
+- scope: profile
+  description: Grants access to end-user profile claims including name, family name,
+    given name, middle name, preferred username, nickname, picture, timezone, locale,
+    profile, website, gender, birthdate, and updated timestamp.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/openid-connect-oidc-scopes.html
+- scope: email
+  description: Grants access to the email and email_verified claims.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/openid-connect-oidc-scopes.html
+- scope: address
+  description: Grants access to address claims including street address, locality,
+    region, postal code, country, and formatted address.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/openid-connect-oidc-scopes.html
+- scope: phone
+  description: Grants access to the phone_number and phone_number_verified claims.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/openid-connect-oidc-scopes.html
+- scope: p1:read:user
+  description: Users can retrieve their own user identity and all attributes.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:update:user
+  description: Users can modify the attributes of their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:update:userMfaEnabled
+  description: Users can enable and disable multi-factor authentication for their
+    own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:create:device
+  description: Users can create multi-factor authentication devices for their own
+    user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:device
+  description: Users can retrieve multi-factor authentication devices for their own
+    user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:update:device
+  description: Users can update multi-factor authentication devices for their own
+    user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:delete:device
+  description: Users can delete multi-factor authentication devices for their own
+    user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:userPassword
+  description: Users can read the password state for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:reset:userPassword
+  description: Users can reset the password for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:validate:userPassword
+  description: Users can validate the password for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:userLinkedAccounts
+  description: Users can read linked accounts for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:delete:userLinkedAccounts
+  description: Users can delete linked accounts for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:create:pairingKey
+  description: Users can create a pairing key for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:pairingKey
+  description: Users can read a pairing key for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:delete:pairingKey
+  description: Users can delete a pairing key for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:sessions
+  description: Users can read sessions for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:delete:sessions
+  description: Users can delete sessions for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:userConsent
+  description: Users can read consents for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:verify:user
+  description: Users can verify their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:read:oauthConsent
+  description: Users can read oauth scope consents for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html
+- scope: p1:update:oauthConsent
+  description: Users can update oauth scope consents for their own user identity.
+  sources:
+  - https://developer.pingidentity.com/pingone-api/foundations/pingone-roles-scopes-and-permissions/access-services-through-scopes-and-roles/pingone-self-management-scopes.html

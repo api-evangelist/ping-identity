@@ -71,6 +71,10 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/ping-identity-total-identities.yaml
 common:
+- type: Authentication
+  url: authentication/ping-identity-authentication.yml
+- type: OAuthScopes
+  url: scopes/ping-identity-scopes.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/ping-identity
 - type: Website
