@@ -71,6 +71,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/ping-identity-total-identities.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/ping-identity-agentic-access.yml
 - type: TrustCenter
   url: security/ping-identity-trust-center.yml
 - type: VulnerabilityDisclosure
