@@ -45,38 +45,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-apis-api
   name: Ping Identity DaVinci Admin APIs API
   description: >-
@@ -93,38 +61,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-application-flow-policies-api
   name: Ping Identity DaVinci Admin Application Flow Policies API
   description: Operations for managing DaVinci application flows policies
@@ -139,38 +75,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-applications-api
   name: Ping Identity DaVinci Admin Applications API
   description: Operations for managing DaVinci applications
@@ -185,38 +89,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-connector-instances-api
   name: Ping Identity DaVinci Admin Connector Instances API
   description: Operations for managing DaVinci connectors and connector instances
@@ -231,38 +103,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-connectors-api
   name: Ping Identity DaVinci Admin Connectors API
   description: Operations for managing DaVinci connectors and connector instances
@@ -277,38 +117,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-flow-versions-api
   name: Ping Identity DaVinci Admin Flow Versions API
   description: Operations for managing DaVinci flow versions
@@ -323,38 +131,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-flows-api
   name: Ping Identity DaVinci Admin Flows API
   description: Operations for managing DaVinci flows
@@ -369,38 +145,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-davinci-admin-variables-api
   name: Ping Identity DaVinci Admin Variables API
   description: Operations for managing DaVinci variables
@@ -415,38 +159,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-environment-management-api
   name: Ping Identity Environment Management API
   description: Operations for managing the PingOne tenant and tenant environments.
@@ -461,38 +173,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-environments-api
   name: Ping Identity Environments API
   description: Operations for managing PingOne environments
@@ -507,38 +187,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-flow-policies-api
   name: Ping Identity Flow Policies API
   description: Operations for managing flow policies in a PingOne environment.
@@ -553,38 +201,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-metrics-api
   name: Ping Identity Metrics API
   description: Operations that support retrieving metrics
@@ -599,38 +215,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-pingone-davinci-api
   name: Ping Identity PingOne DaVinci API
   description: >-
@@ -647,38 +231,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-snapshots-api
   name: Ping Identity Snapshots API
   description: Operations for managing configuration management snapshots.
@@ -693,38 +245,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 - aid: ping-identity:ping-identity-total-identities-api
   name: Ping Identity Total Identities API
   description: Operations for retrieving PingOne directory total identity reports
@@ -739,39 +259,10 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-configuration-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-apis.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-application-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-applications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connector-instances.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-connectors.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flow-versions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-flows.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-davinci-admin-variables.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environment-management.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-environments.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-flow-policies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-metrics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-pingone-davinci.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-snapshots.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/ping-identity-total-identities.yaml
 common:
+- type: License
+  name: Apache-2.0
+  url: https://github.com/pingidentity/pingone-openapi-specifications/blob/main/LICENSE
 - type: AgenticAccess
   url: agentic-access/ping-identity-agentic-access.yml
 - type: TrustCenter
