@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PingOne Platform Configuration Management Total Identities API",
+    "version": "2026.01.07-beta"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Total Identities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getTotalIdentities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/totalIdentities",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

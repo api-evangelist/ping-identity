@@ -1,0 +1,5056 @@
+{
+  "item": [
+    {
+      "id": "3c1c34cc-f2ec-46d0-a86c-7768940862e9",
+      "name": "DaVinci Admin Variables",
+      "description": {
+        "content": "Operations for managing DaVinci variables",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9af551ef-f19f-47ea-a9d3-a68cce706f7d",
+          "name": "get Variables",
+          "request": {
+            "name": "get Variables",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentID",
+                "variables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "environmentID",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{basePath}}",
+                  "key": "basePath"
+                },
+                {
+                  "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                  "type": "any",
+                  "value": "{{tld}}",
+                  "key": "tld"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Session-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Transaction-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "942320da-671c-430b-a7ef-10ff1d7e6d4c",
+              "name": "Successful Operation.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_embedded\": {\n    \"variables\": [\n      {\n        \"_links\": {\n          \"environment\": {\n            \"href\": \"http://dxdYEwMwBztTnFHhmrLrs.brzLbjQtBrYBHbAGCuOK-MphwQjFCU1lItrXUI.ixsLaW,9eQkzO,k\",\n            \"name\": \"string\",\n            \"profile\": \"http://u.kosCFvS0q-C0\",\n            \"title\": \"https://LwkgXpsNVyuxuGhxBxKJuZ.achziVGbun95SbCKZ\",\n            \"type\": \"string\"\n          },\n          \"self\": {\n            \"href\": \"http://ePPEdWSwcoPwMJLpSMXseXSBRWGu.gbectdVEJrtt4olG9+1shP,plWVJLYprXrQnmsi5P\",\n            \"name\": \"string\",\n            \"profile\": \"http://iilUANjLnZzNtq.qsrlDsCGB080h44-BakBh9pNgiRqcvcikEHv,DsIaNujWJY\",\n            \"title\": \"http://lGsaEsQtOKcKluBWAcr.rvgt9zCjoqNqwGYLWuz\",\n            \"type\": \"string\"\n          }\n        },\n        \"dataType\": \"screenConfig\",\n        \"environment\": {\n          \"id\": \"852df2e5-4646-edf8-7c16-adcab09b5ce6\"\n        },\n        \"id\": \"d152775d-f7c4-948a-e00c-bc83cc1b11ee\",\n        \"name\": \"string\",\n        \"context\": \"string\",\n        \"createdAt\": \"1962-05-03T05:16:22.584Z\",\n        \"displayName\": \"string\",\n        \"flow\": {\n          \"id\": \"}}No. _/\"\n        },\n        \"max\": 8780.671497853955,\n        \"min\": 5187.681204150608,\n        \"mutable\": true,\n        \"updatedAt\": \"1985-03-22T13:45:33.322Z\",\n        \"value\": true\n      },\n      {\n        \"_links\": {\n          \"environment\": {\n            \"href\": \"https://oC.gubnV14PUjt8fjO,BLaC0SVkGxZhmrQzyyMfQx7rzONFjsyh+q\",\n            \"name\": \"string\",\n            \"profile\": \"http://HYMXFnox.mkGR+oiHqJ+b5.zBtZp,q5Y4I+Y0kd2kowSp-ik4ioH8Bd-KPXeeNHEYExeiJij1iF5FF2.2ypN\",\n            \"title\": \"https://DHogTymlFGIUugplY.rrozvh3lPQmVIl5bvmm3\",\n            \"type\": \"string\"\n          },\n          \"self\": {\n            \"href\": \"http://RIPomkqfTpxZWammKCEtMXZJuOPDR.vnpd\",\n            \"name\": \"string\",\n            \"profile\": \"https://QmRpdlDFKkNvZTiZlbaZVjHm.jvfxSfjnmdoktvK+QzAIFx7bgbfK1R+59UnDBykvgWFen\",\n            \"title\": \"http://YY.spsPVnRe1HnzfkG-CJJdas9iE1rpzdRhGqohryLuX8SNquTtd8rYMAJ+9R87V0Y82Prh2EvHs\",\n            \"type\": \"string\"\n          }\n        },\n        \"dataType\": \"listInt\",\n        \"environment\": {\n          \"id\": \"731e7405-a785-c2ed-d532-74300a985982\"\n        },\n        \"id\": \"aab51d36-4f19-94ec-8b47-40952af8076d\",\n        \"name\": \"string\",\n        \"context\": \"string\",\n        \"createdAt\": \"1979-01-10T16:17:34.874Z\",\n        \"displayName\": \"string\",\n        \"flow\": {\n          \"id\": \".{M\"\n        },\n        \"max\": 9531.056757405267,\n        \"min\": 626.7912607879377,\n        \"mutable\": false,\n        \"updatedAt\": \"2004-05-12T18:39:09.030Z\",\n        \"value\": true\n      }\n    ]\n  },\n  \"_links\": {\n    \"environment\": {\n      \"href\": \"https://jndDyfRbFISbPoIuV.nlwkRkudh1SNCvhV\",\n      \"name\": \"string\",\n      \"profile\": \"http://XUrrMCCBWZCbC.yfgKYfyXkuMqALhKHJWcj+DRKgU-,QCu8dObMEbo+ffMaN\",\n      \"title\": \"https://RR.jexkeoT,uZt0KZ4RfB9ogPxv+aaTdDjVl+t9q3N.GrDqi9dL4,,,07IJPF2LWXLfB5PFTG0vhLIssJ\",\n      \"type\": \"string\"\n    },\n    \"self\": {\n      \"href\": \"https://jcQqeZ.ezidjWewHTHV6JWCKqY+IJ4SxM8+x,cn8InbhskbPV9OBO1wVlmZTJJ3MkZ1mC1edpofm\",\n      \"name\": \"string\",\n      \"profile\": \"https://SKihQRXKqosGzEAblMJd.grkcK\",\n      \"title\": \"http://mdbiFJwnzqIFWXCsswXZzgMehU.gixUjAtpD0OrZDPGw4if5dOMM\",\n      \"type\": \"string\"\n    },\n    \"next\": {\n      \"href\": \"https://mZXrUBsCKvhacuWAwKR.mhhoV+tGaJTARN7,5\",\n      \"name\": \"string\",\n      \"profile\": \"https://twDYSXwKRrGMaXcXcjyoxVbtKhSsOK.shvlGEeMJP\",\n      \"title\": \"https://DIRRZLriaDKiryAUzFKOSjAB.zlcjbbEGiiHSBlwbeKkHqsDQyOfnSWdbfFC7lPQn1gLmYoZ\",\n      \"type\": \"string\"\n    }\n  },\n  \"size\": 2976.361991499177,\n  \"count\": 2197.755572545221\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a904c69a-cb4e-4bc2-8fde-d922dfc92bb4",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "94049e9a-84a6-4ea2-8668-8c3fbc7ccc56",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ee2fb27b-bd91-4fc4-8dc4-3368180e1fc7",
+              "name": "Forbidden - Note: This may occur if the environment doesn't exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "090279a4-a97c-4ecd-b3ac-52262e6b1b6b",
+              "name": "Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6ae1cf0a-4041-4130-9069-e411b3b65ba9",
+              "name": "Unsupported Media Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unsupported Media Type",
+              "code": 415,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37f8c49b-3681-4b75-819c-e88ee6e0f723",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "75e6df64-5bc3-48b5-81b0-664867fe540d",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "428b165b-c10a-4560-a941-c8a9f813ebc6",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2904a0a7-a26b-41b6-8c80-20a0a224df63",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a2b1ea94-9000-447c-a123-a6e08c8ad2eb",
+          "name": "create Variable",
+          "request": {
+            "name": "create Variable",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentID",
+                "variables"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "environmentID",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{basePath}}",
+                  "key": "basePath"
+                },
+                {
+                  "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                  "type": "any",
+                  "value": "{{tld}}",
+                  "key": "tld"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Session-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Transaction-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"<string>\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c8f0d1a9-0b50-460e-b432-87d1e5b97809",
+              "name": "Successfully created the resource.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_links\": {\n    \"environment\": {\n      \"href\": \"http://BikFfZjzAbauNiDiUweDZDJGlgh.utuMcRAn0Y2QSyUGLeJeb\",\n      \"name\": \"string\",\n      \"profile\": \"https://zDxSzkffRSdhpHgmuwppvUdbFo.drobDf2jQMX4l,zj9c-Y.ds8rUnzJqkvRHFUiT2lsi+Uw\",\n      \"title\": \"https://CTCrkQNiiykVXGQRNr.pnIcZNacoandjs\",\n      \"type\": \"string\"\n    },\n    \"self\": {\n      \"href\": \"http://ajiwVUubbHDaLGaAtmgdRTLlC.gaxwV3Hsiznz8InRPn,tu2\",\n      \"name\": \"string\",\n      \"profile\": \"http://ayStPtlSkZ.lhiu0uszhVn8ApgV,TtE0\",\n      \"title\": \"http://PKVOJAwTdWmI.ehEL4dmyDvVORKXO0GxtFBPa9Xv2HR0b3Nxc.tYO+jaidoI6R3PpNncIXBG4Xh3AP\",\n      \"type\": \"string\"\n    }\n  },\n  \"dataType\": \"screenConfig\",\n  \"environment\": {\n    \"id\": \"27caaea1-ed8e-7b18-e6ce-f1e8bbf5b5ac\"\n  },\n  \"id\": \"848ea603-4f49-da77-8c86-e838956ece37\",\n  \"name\": \"string\",\n  \"context\": \"string\",\n  \"createdAt\": \"1998-09-23T06:15:48.411Z\",\n  \"displayName\": \"string\",\n  \"flow\": {\n    \"id\": \"{L-.N\"\n  },\n  \"max\": 1929.322217655498,\n  \"min\": 6161.121151377042,\n  \"mutable\": false,\n  \"updatedAt\": \"1984-04-02T00:55:25.453Z\",\n  \"value\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99112b7d-c5f5-4dad-b456-9d69f212de64",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "24ebcb30-36a3-4fb0-8c08-f5f77db7e78e",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5183ce99-e999-43d7-a0d2-bf53cfdc16b1",
+              "name": "Forbidden - Note: This may occur if the environment doesn't exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "96e9ad80-2b3d-42f1-8d9d-9e64f8554bb8",
+              "name": "Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a4ce9b42-203f-41c3-ad40-f198e9ac6580",
+              "name": "Unsupported Media Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unsupported Media Type",
+              "code": 415,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44998311-43d2-40fb-9c18-2f483f4114dc",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8728618d-924f-46f8-9811-c814c74e44b0",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ffc4060d-c0e8-4f40-b3cc-5298b4dbdab3",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "249c87b4-4da2-470d-ba76-ac9861325b52",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"/pS\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97ee5787-d303-49a3-b8ef-df9f914be51b",
+          "name": "get Variable By Id",
+          "request": {
+            "name": "get Variable By Id",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentID",
+                "variables",
+                ":variableID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "environmentID",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "variableID",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{basePath}}",
+                  "key": "basePath"
+                },
+                {
+                  "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                  "type": "any",
+                  "value": "{{tld}}",
+                  "key": "tld"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Session-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Transaction-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "51448d86-2662-4fe6-ad40-e213947d90a1",
+              "name": "Successful Operation.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_links\": {\n    \"environment\": {\n      \"href\": \"http://BikFfZjzAbauNiDiUweDZDJGlgh.utuMcRAn0Y2QSyUGLeJeb\",\n      \"name\": \"string\",\n      \"profile\": \"https://zDxSzkffRSdhpHgmuwppvUdbFo.drobDf2jQMX4l,zj9c-Y.ds8rUnzJqkvRHFUiT2lsi+Uw\",\n      \"title\": \"https://CTCrkQNiiykVXGQRNr.pnIcZNacoandjs\",\n      \"type\": \"string\"\n    },\n    \"self\": {\n      \"href\": \"http://ajiwVUubbHDaLGaAtmgdRTLlC.gaxwV3Hsiznz8InRPn,tu2\",\n      \"name\": \"string\",\n      \"profile\": \"http://ayStPtlSkZ.lhiu0uszhVn8ApgV,TtE0\",\n      \"title\": \"http://PKVOJAwTdWmI.ehEL4dmyDvVORKXO0GxtFBPa9Xv2HR0b3Nxc.tYO+jaidoI6R3PpNncIXBG4Xh3AP\",\n      \"type\": \"string\"\n    }\n  },\n  \"dataType\": \"screenConfig\",\n  \"environment\": {\n    \"id\": \"27caaea1-ed8e-7b18-e6ce-f1e8bbf5b5ac\"\n  },\n  \"id\": \"848ea603-4f49-da77-8c86-e838956ece37\",\n  \"name\": \"string\",\n  \"context\": \"string\",\n  \"createdAt\": \"1998-09-23T06:15:48.411Z\",\n  \"displayName\": \"string\",\n  \"flow\": {\n    \"id\": \"{L-.N\"\n  },\n  \"max\": 1929.322217655498,\n  \"min\": 6161.121151377042,\n  \"mutable\": false,\n  \"updatedAt\": \"1984-04-02T00:55:25.453Z\",\n  \"value\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c608bac1-4444-4f02-b4ad-a30419b12663",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f8873c88-e8a1-4a11-a796-1d69f94df138",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9667cee5-1e8e-4bc1-ab0f-735212bf61c7",
+              "name": "Forbidden - Note: This may occur if the environment doesn't exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bd811e10-e649-4a19-b0e7-e5934e214d28",
+              "name": "Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "60a89884-25f2-46ea-8690-1b8e8e3b1190",
+              "name": "Unsupported Media Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unsupported Media Type",
+              "code": 415,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6ad5df25-22fe-41ec-a146-c26af5248cc2",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c4572504-edaf-4059-a8b5-e2fcca528b2a",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c11dac04-be09-46e7-b015-ac3e0edaa89c",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "43391d88-18f0-4787-ab2a-4fb79c0a7b91",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40af476e-8c81-41d8-9e8a-262e9f5e268b",
+          "name": "replace Variable By Id",
+          "request": {
+            "name": "replace Variable By Id",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentID",
+                "variables",
+                ":variableID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "environmentID",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "variableID",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{basePath}}",
+                  "key": "basePath"
+                },
+                {
+                  "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                  "type": "any",
+                  "value": "{{tld}}",
+                  "key": "tld"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Session-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Transaction-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"<string>\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "841e7cfb-8ed5-4d43-859f-8aa4977e74e1",
+              "name": "Successful Operation.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_links\": {\n    \"environment\": {\n      \"href\": \"http://BikFfZjzAbauNiDiUweDZDJGlgh.utuMcRAn0Y2QSyUGLeJeb\",\n      \"name\": \"string\",\n      \"profile\": \"https://zDxSzkffRSdhpHgmuwppvUdbFo.drobDf2jQMX4l,zj9c-Y.ds8rUnzJqkvRHFUiT2lsi+Uw\",\n      \"title\": \"https://CTCrkQNiiykVXGQRNr.pnIcZNacoandjs\",\n      \"type\": \"string\"\n    },\n    \"self\": {\n      \"href\": \"http://ajiwVUubbHDaLGaAtmgdRTLlC.gaxwV3Hsiznz8InRPn,tu2\",\n      \"name\": \"string\",\n      \"profile\": \"http://ayStPtlSkZ.lhiu0uszhVn8ApgV,TtE0\",\n      \"title\": \"http://PKVOJAwTdWmI.ehEL4dmyDvVORKXO0GxtFBPa9Xv2HR0b3Nxc.tYO+jaidoI6R3PpNncIXBG4Xh3AP\",\n      \"type\": \"string\"\n    }\n  },\n  \"dataType\": \"screenConfig\",\n  \"environment\": {\n    \"id\": \"27caaea1-ed8e-7b18-e6ce-f1e8bbf5b5ac\"\n  },\n  \"id\": \"848ea603-4f49-da77-8c86-e838956ece37\",\n  \"name\": \"string\",\n  \"context\": \"string\",\n  \"createdAt\": \"1998-09-23T06:15:48.411Z\",\n  \"displayName\": \"string\",\n  \"flow\": {\n    \"id\": \"{L-.N\"\n  },\n  \"max\": 1929.322217655498,\n  \"min\": 6161.121151377042,\n  \"mutable\": false,\n  \"updatedAt\": \"1984-04-02T00:55:25.453Z\",\n  \"value\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e5a50f43-bed3-495e-afcb-96ac3fbd6078",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "361c4ed6-714c-4181-a2fe-79b67844890c",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f808a17d-8163-4833-8700-736cdf1f271d",
+              "name": "Forbidden - Note: This may occur if the environment doesn't exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17527576-b721-45fb-82cd-0fd292acd71b",
+              "name": "Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26608682-4d2c-40d0-a6a3-52728739e0b3",
+              "name": "Unsupported Media Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unsupported Media Type",
+              "code": 415,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99a60b7e-a935-4513-b18b-c3bb7e812b1e",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0b7b064c-7071-4483-9d34-c7fc5211a13e",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9ff904c7-1402-4e9c-b14c-17b790022e49",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1c750249-1bed-4790-83b2-c47dd4b55c9f",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"context\": \"<string>\",\n  \"dataType\": \"<string>\",\n  \"mutable\": \"<boolean>\",\n  \"displayName\": \"<string>\",\n  \"flow\": {\n    \"id\": \"L_{M p\"\n  },\n  \"max\": 2000,\n  \"min\": 0,\n  \"value\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "28c9accc-3988-463c-aa8b-58c7fd665f34",
+          "name": "delete Variable By Id",
+          "request": {
+            "name": "delete Variable By Id",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentID",
+                "variables",
+                ":variableID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "environmentID",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "variableID",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{basePath}}",
+                  "key": "basePath"
+                },
+                {
+                  "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                  "type": "any",
+                  "value": "{{tld}}",
+                  "key": "tld"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Session-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Ping-External-Transaction-ID",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa53c2f5-0fe7-485d-aaee-e17a4a7c65c0",
+              "name": "Successfully removed. No content.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c6ac91ef-34fe-49b6-91c5-e4634f94e405",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fa266a08-40dd-4339-b72f-d335401b197b",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d4677ee4-0ecc-4d3c-bbde-78f7b4d635c9",
+              "name": "Forbidden - Note: This may occur if the environment doesn't exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9f2d9f10-8030-4539-8818-b6869e24ad93",
+              "name": "Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f0ddb00b-5574-416d-b588-ae77ca6c7a42",
+              "name": "Unsupported Media Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unsupported Media Type",
+              "code": 415,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7786c747-f6f8-4132-9df2-563755d308cc",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "73315e3c-9c20-4202-a268-58d9cf678caa",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "null",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "877c6526-87d3-4241-a217-a107df873f65",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "81b2dc38-1f10-43d3-ae95-2aa738a87b35",
+              "name": "Service Unavailable",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentID",
+                    "variables",
+                    ":variableID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "environmentID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "variableID",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{basePath}}",
+                      "key": "basePath"
+                    },
+                    {
+                      "description": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+                      "type": "any",
+                      "value": "{{tld}}",
+                      "key": "tld"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Session-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Ping-External-Transaction-ID",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "key": "Retry-After",
+                  "value": "5684",
+                  "description": ""
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"code\": \"string\",\n  \"details\": [\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"innerError\": {\n        \"key_0\": {},\n        \"key_1\": {}\n      },\n      \"message\": \"string\",\n      \"target\": \"string\"\n    }\n  ],\n  \"id\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "v1",
+      "key": "basePath"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of eu,com,asia,com.au,ca,sg)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "com",
+      "key": "tld"
+    },
+    {
+      "type": "string",
+      "value": "https://api.pingone.{{tld}}/{{basePath}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7bb242b1-a4ce-43ed-aeb2-946475ffb386",
+    "name": "PingOne Platform Configuration Management DaVinci Admin Variables API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "PingOne is a cloud-based framework for secure identity access management. The PingOne API gives developers the tools to integrate enterprise and third-party applications with the PingOne platform.\n\nContact Support:\n Name: Ping Identity Developer Experiences\n Email: devex@pingidentity.com",
+      "type": "text/plain"
+    }
+  }
+}

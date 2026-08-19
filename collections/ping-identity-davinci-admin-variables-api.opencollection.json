@@ -1,0 +1,197 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PingOne Platform Configuration Management DaVinci Admin Variables API",
+    "version": "2026.01.07-beta"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DaVinci Admin Variables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getVariables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createVariable",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

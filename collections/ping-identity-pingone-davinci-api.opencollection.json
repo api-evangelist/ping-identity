@@ -1,0 +1,1433 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PingOne Platform Configuration Management PingOne DaVinci API",
+    "version": "2026.01.07-beta"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PingOne DaVinci",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getConnectorInstances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createConnectorInstance",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getConnectorInstanceById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances/:connectorInstanceID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorInstanceID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createConnectorInstanceById",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances/:connectorInstanceID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorInstanceID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "replaceConnectorInstanceById",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances/:connectorInstanceID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorInstanceID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteConnectorInstanceById",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectorInstances/:connectorInstanceID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorInstanceID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getConnectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getConnectorById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors/:connectorID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getDetailsByConnectorId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors/:connectorID/details",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getDavinciApplications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createDavinciApplication",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDavinciApplicationById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceDavinciApplicationById",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteDavinciApplicationById",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getFlowPoliciesByDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createFlowPolicyByDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getFlowPolicyByIdUsingDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies/:flowPolicyID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowPolicyID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceFlowPolicyByIdUsingDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies/:flowPolicyID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowPolicyID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteFlowPolicyByIdUsingDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies/:flowPolicyID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowPolicyID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getEventsByDavinciApplicationIdAndFlowPolicyId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/flowPolicies/:flowPolicyID/events",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowPolicyID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "rotateKeyByDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/key",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "rotateSecretByDavinciApplicationId",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/davinciApplications/:davinciApplicationID/secret",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "davinciApplicationID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getFlows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "attributes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createFlow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getFlowById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "attributes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceFlowById",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteFlowById",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "cloneFlowByIdAsCloneJson",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID#clone+json",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deployFlowByIdAsDeployJson",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID#deploy+json",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "validateFlowByIdAsValidateJson",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID#validate+json",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "updateEnabledByFlowId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/enabled",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getVersionsByFlowId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/versions",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getVersionByIdUsingFlowId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/versions/:versionID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "versionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "deleteVersionByIdUsingFlowId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/versions/:versionID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "versionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceAliasByFlowIdAndVersionId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/versions/:versionID/alias",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "versionID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getDetailsByFlowIdAndVersionId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/flows/:flowID/versions/:versionID/details",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "expand",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "flowID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "versionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getVariables",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "createVariable",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "getVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "replaceVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "deleteVariableById",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/variables/:variableID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variableID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

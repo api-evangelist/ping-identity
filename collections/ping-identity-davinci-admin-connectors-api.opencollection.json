@@ -1,0 +1,115 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "PingOne Platform Configuration Management DaVinci Admin Connectors API",
+    "version": "2026.01.07-beta"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DaVinci Admin Connectors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getConnectors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getConnectorById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors/:connectorID",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "getDetailsByConnectorId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.pingone.{tld}/{basePath}/environments/:environmentID/connectors/:connectorID/details",
+            "headers": [
+              {
+                "name": "X-Ping-External-Session-ID",
+                "value": ""
+              },
+              {
+                "name": "X-Ping-External-Transaction-ID",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "environmentID",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "connectorID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
