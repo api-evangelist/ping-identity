@@ -45,22 +45,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-- aid: ping-identity:ping-identity-davinci-admin-apis-api
-  name: Ping Identity DaVinci Admin APIs API
-  description: >-
-    The PingOne DaVinci Admin APIs provide access to DaVinci operations through the PingOne API resource
-    server.
-  humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  baseURL: https://api.pingone.com/v1
-  tags:
-  - DaVinci Admin APIs
-  properties:
-  - type: OpenAPI
-    url: openapi/ping-identity-davinci-admin-apis-api-openapi.yml
-  - type: Documentation
-    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  - type: Repository
-    url: https://github.com/pingidentity/pingone-openapi-specifications
 - aid: ping-identity:ping-identity-davinci-admin-application-flow-policies-api
   name: Ping Identity DaVinci Admin Application Flow Policies API
   description: Operations for managing DaVinci application flows policies
@@ -159,20 +143,6 @@ apis:
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
-- aid: ping-identity:ping-identity-environment-management-api
-  name: Ping Identity Environment Management API
-  description: Operations for managing the PingOne tenant and tenant environments.
-  humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  baseURL: https://api.pingone.com/v1
-  tags:
-  - Environment Management
-  properties:
-  - type: OpenAPI
-    url: openapi/ping-identity-environment-management-api-openapi.yml
-  - type: Documentation
-    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  - type: Repository
-    url: https://github.com/pingidentity/pingone-openapi-specifications
 - aid: ping-identity:ping-identity-environments-api
   name: Ping Identity Environments API
   description: Operations for managing PingOne environments
@@ -197,50 +167,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/ping-identity-flow-policies-api-openapi.yml
-  - type: Documentation
-    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  - type: Repository
-    url: https://github.com/pingidentity/pingone-openapi-specifications
-- aid: ping-identity:ping-identity-metrics-api
-  name: Ping Identity Metrics API
-  description: Operations that support retrieving metrics
-  humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  baseURL: https://api.pingone.com/v1
-  tags:
-  - Metrics
-  properties:
-  - type: OpenAPI
-    url: openapi/ping-identity-metrics-api-openapi.yml
-  - type: Documentation
-    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  - type: Repository
-    url: https://github.com/pingidentity/pingone-openapi-specifications
-- aid: ping-identity:ping-identity-pingone-davinci-api
-  name: Ping Identity PingOne DaVinci API
-  description: >-
-    PingOne DaVinci is an orchestration platform that helps you design and create flows. Flows are constructed,
-    logical paths that can contain both user-facing and backend elements.
-  humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  baseURL: https://api.pingone.com/v1
-  tags:
-  - PingOne DaVinci
-  properties:
-  - type: OpenAPI
-    url: openapi/ping-identity-pingone-davinci-api-openapi.yml
-  - type: Documentation
-    url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  - type: Repository
-    url: https://github.com/pingidentity/pingone-openapi-specifications
-- aid: ping-identity:ping-identity-snapshots-api
-  name: Ping Identity Snapshots API
-  description: Operations for managing configuration management snapshots.
-  humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
-  baseURL: https://api.pingone.com/v1
-  tags:
-  - Snapshots
-  properties:
-  - type: OpenAPI
-    url: openapi/ping-identity-snapshots-api-openapi.yml
   - type: Documentation
     url: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   - type: Repository
