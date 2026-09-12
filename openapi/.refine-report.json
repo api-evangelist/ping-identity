@@ -1,26 +1,10 @@
 {
   "provider": "ping-identity",
   "sources": [
-    "ping-identity-configuration-management-api-openapi.yml",
-    "ping-identity-davinci-admin-apis-api-openapi.yml",
-    "ping-identity-davinci-admin-application-flow-policies-api-openapi.yml",
-    "ping-identity-davinci-admin-applications-api-openapi.yml",
-    "ping-identity-davinci-admin-connector-instances-api-openapi.yml",
-    "ping-identity-davinci-admin-connectors-api-openapi.yml",
-    "ping-identity-davinci-admin-flow-versions-api-openapi.yml",
-    "ping-identity-davinci-admin-flows-api-openapi.yml",
-    "ping-identity-davinci-admin-variables-api-openapi.yml",
-    "ping-identity-environment-management-api-openapi.yml",
-    "ping-identity-environments-api-openapi.yml",
-    "ping-identity-flow-policies-api-openapi.yml",
-    "ping-identity-metrics-api-openapi.yml",
-    "ping-identity-pingone-davinci-api-openapi.yml",
-    "ping-identity-snapshots-api-openapi.yml",
-    "ping-identity-total-identities-api-openapi.yml"
+    "ping-identity-openapi.yaml"
   ],
   "outputs": [
     "ping-identity-configuration-management-api-openapi.yml",
-    "ping-identity-davinci-admin-apis-api-openapi.yml",
     "ping-identity-davinci-admin-application-flow-policies-api-openapi.yml",
     "ping-identity-davinci-admin-applications-api-openapi.yml",
     "ping-identity-davinci-admin-connector-instances-api-openapi.yml",
@@ -28,17 +12,19 @@
     "ping-identity-davinci-admin-flow-versions-api-openapi.yml",
     "ping-identity-davinci-admin-flows-api-openapi.yml",
     "ping-identity-davinci-admin-variables-api-openapi.yml",
-    "ping-identity-environment-management-api-openapi.yml",
     "ping-identity-environments-api-openapi.yml",
     "ping-identity-flow-policies-api-openapi.yml",
-    "ping-identity-metrics-api-openapi.yml",
-    "ping-identity-pingone-davinci-api-openapi.yml",
-    "ping-identity-snapshots-api-openapi.yml",
     "ping-identity-total-identities-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "archived openapi/ping-identity-openapi.yaml"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
+  "notes": [
+    "ping-identity-openapi.yaml: upgraded openapi 3.1.1 -> OpenAPI 3.2.0",
+    "ping-identity-openapi.yaml: multi-axis tagging (16 tags, 11 first tags, 2.63x duplication over 54 operations) \u2014 split on first tag, 47 operations narrowed",
+    "apis.yml register: already-registered"
+  ],
   "skipped": []
 }

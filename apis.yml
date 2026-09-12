@@ -240,3 +240,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-parent: pingone
+x-relationship: product
