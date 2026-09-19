@@ -163,6 +163,8 @@ apis:
   humanURL: https://apidocs.pingidentity.com/pingone/platform/v1/api/
   baseURL: https://api.pingone.com/v1
   tags:
+  - Environment
+  tags_raw:
   - Environments
   properties:
   - type: OpenAPI
