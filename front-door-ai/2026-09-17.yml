@@ -1,0 +1,29 @@
+# Front Door AI Index — ping-identity — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: ping-identity
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.pingidentity.com
+  final_host: www.pingidentity.com
+  ownership: own
+  owner: ping-identity
+  shares_host_with:
+  - pingone
+  inherited_from: null
+  verdict: scored
+  score: 7
+  host_score: 7
+  density: 6.62
+  words: 1058
+  tiers:
+    agentic: 1
+    core: 6
+    model: 0
+  ambiguous: 2
+  top_terms:
+    AI: 6
+    agentic: 1
+    intelligence: 1
+    smart: 1

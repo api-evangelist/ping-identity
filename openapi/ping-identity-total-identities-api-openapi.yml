@@ -69,8 +69,188 @@ paths:
       x-permission: orgmgt:read:environment
       tags:
       - Total Identities
+      summary: Get total identities
+      x-summary-source: derived
 components:
+  parameters:
+    com.pingidentity.path.environments.environmentID:
+      name: environmentID
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    com.pingidentity.header.ExternalTransactionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Transaction-ID
+      in: header
+    com.pingidentity.header.ExternalSessionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Session-ID
+      in: header
   schemas:
+    com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO:
+      type: object
+      properties:
+        date:
+          type: integer
+          format: unix-date-time
+          title: Directory Total Identities Count Response Date
+        totalIdentities:
+          type: integer
+          format: int32
+          title: Directory Total Identities Count Response Total Identities
+      title: Directory Total Identities Count Response
+    com.pingidentity.ErrorDetail:
+      type: object
+      properties:
+        code:
+          type: string
+          title: General Error Detail Code
+        innerError:
+          type: object
+          additionalProperties:
+            type: object
+            title: General Error Detail Inner Error Additional Properties
+          title: General Error Detail Inner Error
+        message:
+          type: string
+          title: General Error Detail Message
+        target:
+          type: string
+          title: General Error Detail Target
+      title: General Error Detail
+    com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTOCollectionResponse:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            totalIdentities:
+              type: array
+              items:
+                allOf:
+                - $ref: '#/components/schemas/com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO'
+                title: Directory Total Identities Count Collection Response _embedded Total Identity
+              title: Directory Total Identities Count Collection Response _embedded Total Identities
+          title: Directory Total Identities Count Collection Response _embedded
+        _links:
+          type: object
+          properties:
+            self:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          additionalProperties:
+            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          title: Directory Total Identities Count Collection Response _links
+        count:
+          type: integer
+          format: int32
+          title: Directory Total Identities Count Collection Response Count
+        size:
+          type: integer
+          format: int32
+          title: Directory Total Identities Count Collection Response Size
+      title: Directory Total Identities Count Collection Response
+    com.pingidentity.ApiErrorResponse.401:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Unauthorized Error Id
+        code:
+          type: string
+          enum:
+          - ACCESS_FAILED
+          minLength: 1
+          title: Unauthorized Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Unauthorized Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - INSUFFICIENT_PERMISSIONS
+                - INVALID_TOKEN
+                minLength: 1
+                title: Unauthorized Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Unauthorized Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Unauthorized Error Detail Inner Error
+              target:
+                type: string
+                title: Unauthorized Error Detail Target
+            required:
+            - code
+            - message
+            title: Unauthorized Error Detail
+          title: Unauthorized Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Unauthorized Error
+    com.pingidentity.api.response.Link:
+      type: object
+      properties:
+        href:
+          type: string
+          format: uri
+          minLength: 1
+          title: JSON HAL Link Href
+        name:
+          type: string
+          title: JSON HAL Link Name
+        profile:
+          type: string
+          format: uri
+          title: JSON HAL Link Profile
+        title:
+          type: string
+          format: uri
+          title: JSON HAL Link Title
+        type:
+          type: string
+          title: JSON HAL Link Type
+      required:
+      - href
+      readOnly: true
+      title: JSON HAL Link
+    com.pingidentity.ApiErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string
+          title: General Error Code
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
+          title: General Error Details
+        id:
+          type: string
+          title: General Error Id
+        message:
+          type: string
+          title: General Error Message
+      title: General Error
     com.pingidentity.ApiErrorResponse.400:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -181,150 +361,6 @@ components:
       - code
       - message
       title: Bad Request Error
-    com.pingidentity.ApiErrorResponse.403:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        code:
-          type: string
-          enum:
-          - ACCESS_FAILED
-          minLength: 1
-          title: Forbidden Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Forbidden Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - INSUFFICIENT_PERMISSIONS
-                - LICENSE_EXCEEDED
-                minLength: 1
-                title: Forbidden Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Forbidden Error Detail Message
-              innerError:
-                type: object
-                properties:
-                  quotaLimit:
-                    type: number
-                    title: Forbidden Error Detail Inner Error Quota Limit
-                additionalProperties: true
-                title: Forbidden Error Detail Inner Error
-              target:
-                type: string
-                title: Forbidden Error Detail Target
-            required:
-            - code
-            - message
-            title: Forbidden Error Detail
-          title: Forbidden Error Details
-        id:
-          type: string
-          format: uuid
-          title: Forbidden Error Id
-      required:
-      - code
-      - message
-      title: Forbidden Error
-    com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO:
-      type: object
-      properties:
-        date:
-          type: integer
-          format: unix-date-time
-          title: Directory Total Identities Count Response Date
-        totalIdentities:
-          type: integer
-          format: int32
-          title: Directory Total Identities Count Response Total Identities
-      title: Directory Total Identities Count Response
-    com.pingidentity.api.response.Link:
-      type: object
-      properties:
-        href:
-          type: string
-          format: uri
-          minLength: 1
-          title: JSON HAL Link Href
-        name:
-          type: string
-          title: JSON HAL Link Name
-        profile:
-          type: string
-          format: uri
-          title: JSON HAL Link Profile
-        title:
-          type: string
-          format: uri
-          title: JSON HAL Link Title
-        type:
-          type: string
-          title: JSON HAL Link Type
-      required:
-      - href
-      readOnly: true
-      title: JSON HAL Link
-    com.pingidentity.ApiErrorResponse.401:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Unauthorized Error Id
-        code:
-          type: string
-          enum:
-          - ACCESS_FAILED
-          minLength: 1
-          title: Unauthorized Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Unauthorized Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - INSUFFICIENT_PERMISSIONS
-                - INVALID_TOKEN
-                minLength: 1
-                title: Unauthorized Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Unauthorized Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Unauthorized Error Detail Inner Error
-              target:
-                type: string
-                title: Unauthorized Error Detail Target
-            required:
-            - code
-            - message
-            title: Unauthorized Error Detail
-          title: Unauthorized Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Unauthorized Error
     com.pingidentity.ApiErrorResponse.429:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -387,25 +423,6 @@ components:
       - code
       - message
       title: Too Many Requests Error
-    com.pingidentity.ErrorDetail:
-      type: object
-      properties:
-        code:
-          type: string
-          title: General Error Detail Code
-        innerError:
-          type: object
-          additionalProperties:
-            type: object
-            title: General Error Detail Inner Error Additional Properties
-          title: General Error Detail Inner Error
-        message:
-          type: string
-          title: General Error Detail Message
-        target:
-          type: string
-          title: General Error Detail Target
-      title: General Error Detail
     com.pingidentity.ApiErrorResponse.500:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -455,91 +472,61 @@ components:
       - code
       - message
       title: Internal Server Error
-    com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTOCollectionResponse:
-      type: object
-      properties:
-        _embedded:
-          type: object
-          properties:
-            totalIdentities:
-              type: array
-              items:
-                allOf:
-                - $ref: '#/components/schemas/com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO'
-                title: Directory Total Identities Count Collection Response _embedded Total Identity
-              title: Directory Total Identities Count Collection Response _embedded Total Identities
-          title: Directory Total Identities Count Collection Response _embedded
-        _links:
-          type: object
-          properties:
-            self:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          additionalProperties:
-            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          title: Directory Total Identities Count Collection Response _links
-        count:
-          type: integer
-          format: int32
-          title: Directory Total Identities Count Collection Response Count
-        size:
-          type: integer
-          format: int32
-          title: Directory Total Identities Count Collection Response Size
-      title: Directory Total Identities Count Collection Response
-    com.pingidentity.ApiErrorResponse:
+    com.pingidentity.ApiErrorResponse.403:
+      $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
         code:
           type: string
-          title: General Error Code
+          enum:
+          - ACCESS_FAILED
+          minLength: 1
+          title: Forbidden Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Forbidden Error Message
         details:
           type: array
           items:
-            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
-          title: General Error Details
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - INSUFFICIENT_PERMISSIONS
+                - LICENSE_EXCEEDED
+                minLength: 1
+                title: Forbidden Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Forbidden Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  quotaLimit:
+                    type: number
+                    title: Forbidden Error Detail Inner Error Quota Limit
+                additionalProperties: true
+                title: Forbidden Error Detail Inner Error
+              target:
+                type: string
+                title: Forbidden Error Detail Target
+            required:
+            - code
+            - message
+            title: Forbidden Error Detail
+          title: Forbidden Error Details
         id:
           type: string
-          title: General Error Id
-        message:
-          type: string
-          title: General Error Message
-      title: General Error
-  parameters:
-    com.pingidentity.header.ExternalSessionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Session-ID
-      in: header
-    com.pingidentity.header.ExternalTransactionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Transaction-ID
-      in: header
-    com.pingidentity.path.environments.environmentID:
-      name: environmentID
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
+          format: uuid
+          title: Forbidden Error Id
+      required:
+      - code
+      - message
+      title: Forbidden Error
   responses:
-    http.502.BadGateway:
-      description: Bad Gateway
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
-    http.503.ServiceUnavailable:
-      description: Service Unavailable
-      headers:
-        Retry-After:
-          $ref: '#/components/headers/http.RetryAfter'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
     http.403.Forbidden.P14C63085.DOCS8830:
       description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
       content:
@@ -548,12 +535,12 @@ components:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
       x-pingone-p14c-63085: true
       x-pingone-docs-8830: true
-    http.401.Unauthorized:
-      description: Unauthorized
+    http.502.BadGateway:
+      description: Bad Gateway
       content:
         '*/*':
           schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.401'
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
     http.500.InternalServerError:
       description: Internal Server Error
       content:
@@ -575,6 +562,21 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
+    http.503.ServiceUnavailable:
+      description: Service Unavailable
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/http.RetryAfter'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
+    http.401.Unauthorized:
+      description: Unauthorized
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.401'
   headers:
     http.RetryAfter:
       schema:
