@@ -40,6 +40,7 @@ tags:
 - Authorization
 - SSO
 - MFA
+- Identity Federation
 created: '2025-02-08'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/ping-identity/refs/heads/main/apis.yml
@@ -242,5 +243,4 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-x-parent: pingone
 x-relationship: product

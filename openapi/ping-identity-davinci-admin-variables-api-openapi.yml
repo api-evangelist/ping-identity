@@ -245,76 +245,7 @@ paths:
       summary: Delete variable by id
       x-summary-source: derived
 components:
-  parameters:
-    com.pingidentity.path.environments.environmentID:
-      name: environmentID
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
-    com.pingidentity.header.ExternalTransactionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Transaction-ID
-      in: header
-    com.pingidentity.path.environments.variables.variableID:
-      name: variableID
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
-    com.pingidentity.header.ExternalSessionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Session-ID
-      in: header
   responses:
-    http.404.NotFound.DOCS8830:
-      description: 'Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.404'
-      x-pingone-docs-8830: true
-    http.502.BadGateway:
-      description: Bad Gateway
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
-    http.403.Forbidden.P14C63085.DOCS8830:
-      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
-      x-pingone-p14c-63085: true
-      x-pingone-docs-8830: true
-    http.500.InternalServerError:
-      description: Internal Server Error
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.500'
-    http.400.BadRequest:
-      description: Bad Request
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.400'
-    http.429.TooManyRequests:
-      description: Too Many Requests
-      headers:
-        Retry-After:
-          $ref: '#/components/headers/http.RetryAfter'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
     http.503.ServiceUnavailable:
       description: Service Unavailable
       headers:
@@ -324,19 +255,123 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
+    http.400.BadRequest:
+      description: Bad Request
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.400'
     http.415.UnsupportedMediaType:
       description: Unsupported Media Type
       content:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.415'
+    http.403.Forbidden.P14C63085.DOCS8830:
+      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
+      x-pingone-p14c-63085: true
+      x-pingone-docs-8830: true
     http.401.Unauthorized:
       description: Unauthorized
       content:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.401'
+    http.404.NotFound.DOCS8830:
+      description: 'Not Found - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.404'
+      x-pingone-docs-8830: true
+    http.429.TooManyRequests:
+      description: Too Many Requests
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/http.RetryAfter'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
+    http.500.InternalServerError:
+      description: Internal Server Error
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.500'
+    http.502.BadGateway:
+      description: Bad Gateway
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
   schemas:
+    com.pingidentity.ApiErrorResponse.429:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        code:
+          type: string
+          enum:
+          - REQUEST_LIMITED
+          minLength: 1
+          title: Too Many Requests Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Too Many Requests Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - LIMIT_EXCEEDED
+                - QUOTA_EXCEEDED
+                minLength: 1
+                title: Too Many Requests Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Too Many Requests Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  quotaLimit:
+                    type: number
+                    title: Too Many Requests Error Detail Inner Error Quota Limit
+                  quotaResetTime:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
+                  retryAfter:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Retry After
+                additionalProperties: true
+                title: Too Many Requests Error Detail Inner Error
+              target:
+                type: string
+                title: Too Many Requests Error Detail Target
+            required:
+            - code
+            - message
+            title: Too Many Requests Error Detail
+          title: Too Many Requests Error Details
+        id:
+          type: string
+          format: uuid
+          title: Too Many Requests Error Id
+      required:
+      - code
+      - message
+      title: Too Many Requests Error
     com.pingidentity.api.Relationship.DaVinci:
       type: object
       properties:
@@ -348,109 +383,7 @@ components:
       required:
       - id
       title: Resource Relationship DaVinci
-    com.pingidentity.api.Relationship.PingOne.RO:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          readOnly: true
-          minLength: 1
-          title: Resource Relationship Read-Only Id
-      required:
-      - id
-      title: Resource Relationship Read-Only
-    com.pingidentity.pingone.davinci.variables.data.UpdateVariable:
-      type: object
-      additionalProperties: true
-      properties:
-        name:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
-          type: string
-          minLength: 1
-          title: DaVinci Variable Replace Request Name
-        context:
-          type: string
-          enum:
-          - company
-          - flow
-          - flowInstance
-          - user
-          minLength: 1
-          title: DaVinci Variable Replace Request Context
-        dataType:
-          type: string
-          enum:
-          - boolean
-          - number
-          - object
-          - secret
-          - string
-          minLength: 1
-          title: DaVinci Variable Replace Request Data Type
-        mutable:
-          type: boolean
-          title: DaVinci Variable Replace Request Mutable
-        displayName:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          minLength: 0
-          maxLength: 256
-          type: string
-          title: DaVinci Variable Replace Request Display Name
-        flow:
-          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
-        max:
-          type: integer
-          minimum: 0
-          default: 2000
-          title: DaVinci Variable Replace Request Max
-        min:
-          type: integer
-          minimum: 0
-          default: 0
-          title: DaVinci Variable Replace Request Min
-        value:
-          oneOf:
-          - type: boolean
-            title: DaVinci Variable Replace Request Value Choice 1
-          - type: number
-            title: DaVinci Variable Replace Request Value Choice 2
-          - type: object
-            title: DaVinci Variable Replace Request Value Choice 3
-          - type: string
-            title: DaVinci Variable Replace Request Value Choice 4
-          title: DaVinci Variable Replace Request Value
-      required:
-      - name
-      - context
-      - dataType
-      - mutable
-      x-immutable:
-      - name
-      - flow
-      - context
-      title: DaVinci Variable Replace Request
-    com.pingidentity.ErrorDetail:
-      type: object
-      properties:
-        code:
-          type: string
-          title: General Error Detail Code
-        innerError:
-          type: object
-          additionalProperties:
-            type: object
-            title: General Error Detail Inner Error Additional Properties
-          title: General Error Detail Inner Error
-        message:
-          type: string
-          title: General Error Detail Message
-        target:
-          type: string
-          title: General Error Detail Target
-      title: General Error Detail
-    com.pingidentity.ApiErrorResponse.404:
+    com.pingidentity.ApiErrorResponse.500:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
@@ -458,17 +391,17 @@ components:
           type: string
           format: uuid
           minLength: 1
-          title: Not Found Error Id
+          title: Internal Server Error Id
         code:
           type: string
           enum:
-          - NOT_FOUND
+          - UNEXPECTED_ERROR
           minLength: 1
-          title: Not Found Error Code
+          title: Internal Server Error Code
         message:
           type: string
           minLength: 1
-          title: Not Found Error Message
+          title: Internal Server Error Message
         details:
           type: array
           items:
@@ -477,28 +410,28 @@ components:
               code:
                 type: string
                 minLength: 1
-                title: Not Found Error Detail Code
+                title: Internal Server Error Detail Code
               message:
                 type: string
                 minLength: 1
-                title: Not Found Error Detail Message
+                title: Internal Server Error Detail Message
               innerError:
                 type: object
                 additionalProperties: true
-                title: Not Found Error Detail Inner Error
+                title: Internal Server Error Detail Inner Error
               target:
                 type: string
-                title: Not Found Error Detail Target
+                title: Internal Server Error Detail Target
             required:
             - code
             - message
-            title: Not Found Error Detail
-          title: Not Found Error Details
+            title: Internal Server Error Detail
+          title: Internal Server Error Details
       required:
       - id
       - code
       - message
-      title: Not Found Error
+      title: Internal Server Error
     com.pingidentity.pingone.davinci.variables.response.VariableResponse:
       type: object
       properties:
@@ -589,96 +522,84 @@ components:
       - id
       - name
       title: DaVinci Variable Response
-    com.pingidentity.ApiErrorResponse.401:
-      $schema: http://json-schema.org/draft/2020-12/schema#
+    com.pingidentity.pingone.davinci.variables.data.CreateVariable:
+      type: object
+      additionalProperties: true
+      properties:
+        name:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          maxLength: 256
+          type: string
+          minLength: 1
+          title: DaVinci Variable Create Request Name
+        context:
+          type: string
+          enum:
+          - company
+          - flow
+          - flowInstance
+          - user
+          minLength: 1
+          title: DaVinci Variable Create Request Context
+        dataType:
+          type: string
+          enum:
+          - boolean
+          - number
+          - object
+          - secret
+          - string
+          minLength: 1
+          title: DaVinci Variable Create Request Data Type
+        mutable:
+          type: boolean
+          title: DaVinci Variable Create Request Mutable
+        displayName:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          maxLength: 256
+          type: string
+          title: DaVinci Variable Create Request Display Name
+        flow:
+          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
+        max:
+          type: integer
+          minimum: 0
+          default: 2000
+          title: DaVinci Variable Create Request Max
+        min:
+          type: integer
+          minimum: 0
+          default: 0
+          title: DaVinci Variable Create Request Min
+        value:
+          oneOf:
+          - type: boolean
+            title: DaVinci Variable Create Request Value Choice 1
+          - type: number
+            title: DaVinci Variable Create Request Value Choice 2
+          - type: object
+            title: DaVinci Variable Create Request Value Choice 3
+          - type: string
+            title: DaVinci Variable Create Request Value Choice 4
+          title: DaVinci Variable Create Request Value
+      required:
+      - name
+      - context
+      - dataType
+      - mutable
+      title: DaVinci Variable Create Request
+    com.pingidentity.api.Relationship.PingOne.RO:
       type: object
       properties:
         id:
           type: string
           format: uuid
-          minLength: 1
-          title: Unauthorized Error Id
-        code:
-          type: string
-          enum:
-          - ACCESS_FAILED
-          minLength: 1
-          title: Unauthorized Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Unauthorized Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - INSUFFICIENT_PERMISSIONS
-                - INVALID_TOKEN
-                minLength: 1
-                title: Unauthorized Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Unauthorized Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Unauthorized Error Detail Inner Error
-              target:
-                type: string
-                title: Unauthorized Error Detail Target
-            required:
-            - code
-            - message
-            title: Unauthorized Error Detail
-          title: Unauthorized Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Unauthorized Error
-    com.pingidentity.api.Relationship.DaVinci.RO:
-      type: object
-      properties:
-        id:
-          type: string
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
           readOnly: true
           minLength: 1
-          title: Resource Relationship DaVinci Read-Only Id
+          title: Resource Relationship Read-Only Id
       required:
       - id
-      title: Resource Relationship DaVinci Read-Only
-    com.pingidentity.api.response.Link:
-      type: object
-      properties:
-        href:
-          type: string
-          format: uri
-          minLength: 1
-          title: JSON HAL Link Href
-        name:
-          type: string
-          title: JSON HAL Link Name
-        profile:
-          type: string
-          format: uri
-          title: JSON HAL Link Profile
-        title:
-          type: string
-          format: uri
-          title: JSON HAL Link Title
-        type:
-          type: string
-          title: JSON HAL Link Type
-      required:
-      - href
-      readOnly: true
-      title: JSON HAL Link
+      title: Resource Relationship Read-Only
     com.pingidentity.ApiErrorResponse.415:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -728,24 +649,6 @@ components:
       - code
       - message
       title: Unsupported Media Type Error
-    com.pingidentity.ApiErrorResponse:
-      type: object
-      properties:
-        code:
-          type: string
-          title: General Error Code
-        details:
-          type: array
-          items:
-            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
-          title: General Error Details
-        id:
-          type: string
-          title: General Error Id
-        message:
-          type: string
-          title: General Error Message
-      title: General Error
     com.pingidentity.ApiErrorResponse.400:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -856,68 +759,25 @@ components:
       - code
       - message
       title: Bad Request Error
-    com.pingidentity.ApiErrorResponse.429:
-      $schema: http://json-schema.org/draft/2020-12/schema#
+    com.pingidentity.ErrorDetail:
       type: object
       properties:
         code:
           type: string
-          enum:
-          - REQUEST_LIMITED
-          minLength: 1
-          title: Too Many Requests Error Code
+          title: General Error Detail Code
+        innerError:
+          type: object
+          additionalProperties:
+            type: object
+            title: General Error Detail Inner Error Additional Properties
+          title: General Error Detail Inner Error
         message:
           type: string
-          minLength: 1
-          title: Too Many Requests Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - LIMIT_EXCEEDED
-                - QUOTA_EXCEEDED
-                minLength: 1
-                title: Too Many Requests Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Too Many Requests Error Detail Message
-              innerError:
-                type: object
-                properties:
-                  quotaLimit:
-                    type: number
-                    title: Too Many Requests Error Detail Inner Error Quota Limit
-                  quotaResetTime:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
-                  retryAfter:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Retry After
-                additionalProperties: true
-                title: Too Many Requests Error Detail Inner Error
-              target:
-                type: string
-                title: Too Many Requests Error Detail Target
-            required:
-            - code
-            - message
-            title: Too Many Requests Error Detail
-          title: Too Many Requests Error Details
-        id:
+          title: General Error Detail Message
+        target:
           type: string
-          format: uuid
-          title: Too Many Requests Error Id
-      required:
-      - code
-      - message
-      title: Too Many Requests Error
+          title: General Error Detail Target
+      title: General Error Detail
     com.pingidentity.pingone.davinci.variables.response.VariablesResponse:
       type: object
       properties:
@@ -960,7 +820,134 @@ components:
       - size
       - count
       title: DaVinci Variable Collection Response
-    com.pingidentity.ApiErrorResponse.500:
+    com.pingidentity.api.Relationship.DaVinci.RO:
+      type: object
+      properties:
+        id:
+          type: string
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          readOnly: true
+          minLength: 1
+          title: Resource Relationship DaVinci Read-Only Id
+      required:
+      - id
+      title: Resource Relationship DaVinci Read-Only
+    com.pingidentity.pingone.davinci.variables.data.UpdateVariable:
+      type: object
+      additionalProperties: true
+      properties:
+        name:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          maxLength: 256
+          type: string
+          minLength: 1
+          title: DaVinci Variable Replace Request Name
+        context:
+          type: string
+          enum:
+          - company
+          - flow
+          - flowInstance
+          - user
+          minLength: 1
+          title: DaVinci Variable Replace Request Context
+        dataType:
+          type: string
+          enum:
+          - boolean
+          - number
+          - object
+          - secret
+          - string
+          minLength: 1
+          title: DaVinci Variable Replace Request Data Type
+        mutable:
+          type: boolean
+          title: DaVinci Variable Replace Request Mutable
+        displayName:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          minLength: 0
+          maxLength: 256
+          type: string
+          title: DaVinci Variable Replace Request Display Name
+        flow:
+          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
+        max:
+          type: integer
+          minimum: 0
+          default: 2000
+          title: DaVinci Variable Replace Request Max
+        min:
+          type: integer
+          minimum: 0
+          default: 0
+          title: DaVinci Variable Replace Request Min
+        value:
+          oneOf:
+          - type: boolean
+            title: DaVinci Variable Replace Request Value Choice 1
+          - type: number
+            title: DaVinci Variable Replace Request Value Choice 2
+          - type: object
+            title: DaVinci Variable Replace Request Value Choice 3
+          - type: string
+            title: DaVinci Variable Replace Request Value Choice 4
+          title: DaVinci Variable Replace Request Value
+      required:
+      - name
+      - context
+      - dataType
+      - mutable
+      x-immutable:
+      - name
+      - flow
+      - context
+      title: DaVinci Variable Replace Request
+    com.pingidentity.ApiErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string
+          title: General Error Code
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
+          title: General Error Details
+        id:
+          type: string
+          title: General Error Id
+        message:
+          type: string
+          title: General Error Message
+      title: General Error
+    com.pingidentity.api.response.Link:
+      type: object
+      properties:
+        href:
+          type: string
+          format: uri
+          minLength: 1
+          title: JSON HAL Link Href
+        name:
+          type: string
+          title: JSON HAL Link Name
+        profile:
+          type: string
+          format: uri
+          title: JSON HAL Link Profile
+        title:
+          type: string
+          format: uri
+          title: JSON HAL Link Title
+        type:
+          type: string
+          title: JSON HAL Link Type
+      required:
+      - href
+      readOnly: true
+      title: JSON HAL Link
+    com.pingidentity.ApiErrorResponse.404:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
@@ -968,17 +955,17 @@ components:
           type: string
           format: uuid
           minLength: 1
-          title: Internal Server Error Id
+          title: Not Found Error Id
         code:
           type: string
           enum:
-          - UNEXPECTED_ERROR
+          - NOT_FOUND
           minLength: 1
-          title: Internal Server Error Code
+          title: Not Found Error Code
         message:
           type: string
           minLength: 1
-          title: Internal Server Error Message
+          title: Not Found Error Message
         details:
           type: array
           items:
@@ -987,28 +974,80 @@ components:
               code:
                 type: string
                 minLength: 1
-                title: Internal Server Error Detail Code
+                title: Not Found Error Detail Code
               message:
                 type: string
                 minLength: 1
-                title: Internal Server Error Detail Message
+                title: Not Found Error Detail Message
               innerError:
                 type: object
                 additionalProperties: true
-                title: Internal Server Error Detail Inner Error
+                title: Not Found Error Detail Inner Error
               target:
                 type: string
-                title: Internal Server Error Detail Target
+                title: Not Found Error Detail Target
             required:
             - code
             - message
-            title: Internal Server Error Detail
-          title: Internal Server Error Details
+            title: Not Found Error Detail
+          title: Not Found Error Details
       required:
       - id
       - code
       - message
-      title: Internal Server Error
+      title: Not Found Error
+    com.pingidentity.ApiErrorResponse.401:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Unauthorized Error Id
+        code:
+          type: string
+          enum:
+          - ACCESS_FAILED
+          minLength: 1
+          title: Unauthorized Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Unauthorized Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - INSUFFICIENT_PERMISSIONS
+                - INVALID_TOKEN
+                minLength: 1
+                title: Unauthorized Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Unauthorized Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Unauthorized Error Detail Inner Error
+              target:
+                type: string
+                title: Unauthorized Error Detail Target
+            required:
+            - code
+            - message
+            title: Unauthorized Error Detail
+          title: Unauthorized Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Unauthorized Error
     com.pingidentity.ApiErrorResponse.403:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -1063,72 +1102,33 @@ components:
       - code
       - message
       title: Forbidden Error
-    com.pingidentity.pingone.davinci.variables.data.CreateVariable:
-      type: object
-      additionalProperties: true
-      properties:
-        name:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
-          type: string
-          minLength: 1
-          title: DaVinci Variable Create Request Name
-        context:
-          type: string
-          enum:
-          - company
-          - flow
-          - flowInstance
-          - user
-          minLength: 1
-          title: DaVinci Variable Create Request Context
-        dataType:
-          type: string
-          enum:
-          - boolean
-          - number
-          - object
-          - secret
-          - string
-          minLength: 1
-          title: DaVinci Variable Create Request Data Type
-        mutable:
-          type: boolean
-          title: DaVinci Variable Create Request Mutable
-        displayName:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
-          type: string
-          title: DaVinci Variable Create Request Display Name
-        flow:
-          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
-        max:
-          type: integer
-          minimum: 0
-          default: 2000
-          title: DaVinci Variable Create Request Max
-        min:
-          type: integer
-          minimum: 0
-          default: 0
-          title: DaVinci Variable Create Request Min
-        value:
-          oneOf:
-          - type: boolean
-            title: DaVinci Variable Create Request Value Choice 1
-          - type: number
-            title: DaVinci Variable Create Request Value Choice 2
-          - type: object
-            title: DaVinci Variable Create Request Value Choice 3
-          - type: string
-            title: DaVinci Variable Create Request Value Choice 4
-          title: DaVinci Variable Create Request Value
-      required:
-      - name
-      - context
-      - dataType
-      - mutable
-      title: DaVinci Variable Create Request
+  parameters:
+    com.pingidentity.header.ExternalSessionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Session-ID
+      in: header
+    com.pingidentity.header.ExternalTransactionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Transaction-ID
+      in: header
+    com.pingidentity.path.environments.variables.variableID:
+      name: variableID
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
+    com.pingidentity.path.environments.environmentID:
+      name: environmentID
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
   headers:
     http.RetryAfter:
       schema:
