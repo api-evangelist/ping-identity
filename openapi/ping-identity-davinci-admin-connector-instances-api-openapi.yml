@@ -269,6 +269,15 @@ paths:
       x-summary-source: derived
 components:
   responses:
+    http.429.TooManyRequests:
+      description: Too Many Requests
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/http.RetryAfter'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
     http.503.ServiceUnavailable:
       description: Service Unavailable
       headers:
@@ -284,20 +293,18 @@ components:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.400'
+    http.502.BadGateway:
+      description: Bad Gateway
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
     http.415.UnsupportedMediaType:
       description: Unsupported Media Type
       content:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.415'
-    http.403.Forbidden.P14C63085.DOCS8830:
-      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
-      x-pingone-p14c-63085: true
-      x-pingone-docs-8830: true
     http.401.Unauthorized:
       description: Unauthorized
       content:
@@ -311,42 +318,35 @@ components:
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.404'
       x-pingone-docs-8830: true
-    http.429.TooManyRequests:
-      description: Too Many Requests
-      headers:
-        Retry-After:
-          $ref: '#/components/headers/http.RetryAfter'
+    http.403.Forbidden.P14C63085.DOCS8830:
+      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first. - Note: This may be due to eventual consistency if the environment was recently created. Try again after a short delay.'
       content:
         '*/*':
           schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
+      x-pingone-p14c-63085: true
+      x-pingone-docs-8830: true
     http.500.InternalServerError:
       description: Internal Server Error
       content:
         '*/*':
           schema:
             $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.500'
-    http.502.BadGateway:
-      description: Bad Gateway
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
   schemas:
-    com.pingidentity.ApiErrorResponse.429:
+    com.pingidentity.ApiErrorResponse.403:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
         code:
           type: string
           enum:
-          - REQUEST_LIMITED
+          - ACCESS_FAILED
           minLength: 1
-          title: Too Many Requests Error Code
+          title: Forbidden Error Code
         message:
           type: string
           minLength: 1
-          title: Too Many Requests Error Message
+          title: Forbidden Error Message
         details:
           type: array
           items:
@@ -355,111 +355,56 @@ components:
               code:
                 type: string
                 enum:
-                - LIMIT_EXCEEDED
-                - QUOTA_EXCEEDED
+                - INSUFFICIENT_PERMISSIONS
+                - LICENSE_EXCEEDED
                 minLength: 1
-                title: Too Many Requests Error Detail Code
+                title: Forbidden Error Detail Code
               message:
                 type: string
                 minLength: 1
-                title: Too Many Requests Error Detail Message
+                title: Forbidden Error Detail Message
               innerError:
                 type: object
                 properties:
                   quotaLimit:
                     type: number
-                    title: Too Many Requests Error Detail Inner Error Quota Limit
-                  quotaResetTime:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
-                  retryAfter:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Retry After
+                    title: Forbidden Error Detail Inner Error Quota Limit
                 additionalProperties: true
-                title: Too Many Requests Error Detail Inner Error
+                title: Forbidden Error Detail Inner Error
               target:
                 type: string
-                title: Too Many Requests Error Detail Target
+                title: Forbidden Error Detail Target
             required:
             - code
             - message
-            title: Too Many Requests Error Detail
-          title: Too Many Requests Error Details
+            title: Forbidden Error Detail
+          title: Forbidden Error Details
         id:
           type: string
           format: uuid
-          title: Too Many Requests Error Id
+          title: Forbidden Error Id
       required:
       - code
       - message
-      title: Too Many Requests Error
-    com.pingidentity.pingone.davinci.connectorinstances.data.CloneConnectorInstance:
-      type: object
-      additionalProperties: true
-      properties: {}
-      title: DaVinci Connector Instance Clone Request
-    com.pingidentity.api.Relationship.DaVinci:
+      title: Forbidden Error
+    com.pingidentity.ApiErrorResponse:
       type: object
       properties:
-        id:
-          type: string
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          minLength: 1
-          title: Resource Relationship DaVinci Id
-      required:
-      - id
-      title: Resource Relationship DaVinci
-    com.pingidentity.ApiErrorResponse.500:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Internal Server Error Id
         code:
           type: string
-          enum:
-          - UNEXPECTED_ERROR
-          minLength: 1
-          title: Internal Server Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Internal Server Error Message
+          title: General Error Code
         details:
           type: array
           items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Internal Server Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Internal Server Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Internal Server Error Detail Inner Error
-              target:
-                type: string
-                title: Internal Server Error Detail Target
-            required:
-            - code
-            - message
-            title: Internal Server Error Detail
-          title: Internal Server Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Internal Server Error
+            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
+          title: General Error Details
+        id:
+          type: string
+          title: General Error Id
+        message:
+          type: string
+          title: General Error Message
+      title: General Error
     com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstancesResponse:
       type: object
       properties:
@@ -492,88 +437,6 @@ components:
       - _embedded
       - _links
       title: DaVinci Connector Instance Collection Response
-    com.pingidentity.pingone.davinci.connectorinstances.data.UpdateConnectorInstance:
-      type: object
-      additionalProperties: true
-      properties:
-        name:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
-          type: string
-          minLength: 1
-          title: DaVinci Connector Instance Replace Request Name
-        connector:
-          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
-        properties:
-          type: object
-          title: DaVinci Connector Instance Replace Request Properties
-      required:
-      - name
-      - connector
-      x-immutable:
-      - connector
-      title: DaVinci Connector Instance Replace Request
-    com.pingidentity.api.Relationship.PingOne.RO:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          readOnly: true
-          minLength: 1
-          title: Resource Relationship Read-Only Id
-      required:
-      - id
-      title: Resource Relationship Read-Only
-    com.pingidentity.ApiErrorResponse.415:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Unsupported Media Type Error Id
-        code:
-          type: string
-          enum:
-          - INVALID_REQUEST
-          minLength: 1
-          title: Unsupported Media Type Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Unsupported Media Type Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Unsupported Media Type Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Unsupported Media Type Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Unsupported Media Type Error Detail Inner Error
-              target:
-                type: string
-                title: Unsupported Media Type Error Detail Target
-            required:
-            - code
-            - message
-            title: Unsupported Media Type Error Detail
-          title: Unsupported Media Type Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Unsupported Media Type Error
     com.pingidentity.ApiErrorResponse.400:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -684,18 +547,225 @@ components:
       - code
       - message
       title: Bad Request Error
-    com.pingidentity.api.Relationship.DaVinci.RO:
+    com.pingidentity.ErrorDetail:
+      type: object
+      properties:
+        code:
+          type: string
+          title: General Error Detail Code
+        innerError:
+          type: object
+          additionalProperties:
+            type: object
+            title: General Error Detail Inner Error Additional Properties
+          title: General Error Detail Inner Error
+        message:
+          type: string
+          title: General Error Detail Message
+        target:
+          type: string
+          title: General Error Detail Target
+      title: General Error Detail
+    com.pingidentity.ApiErrorResponse.429:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        code:
+          type: string
+          enum:
+          - REQUEST_LIMITED
+          minLength: 1
+          title: Too Many Requests Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Too Many Requests Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - LIMIT_EXCEEDED
+                - QUOTA_EXCEEDED
+                minLength: 1
+                title: Too Many Requests Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Too Many Requests Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  quotaLimit:
+                    type: number
+                    title: Too Many Requests Error Detail Inner Error Quota Limit
+                  quotaResetTime:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
+                  retryAfter:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Retry After
+                additionalProperties: true
+                title: Too Many Requests Error Detail Inner Error
+              target:
+                type: string
+                title: Too Many Requests Error Detail Target
+            required:
+            - code
+            - message
+            title: Too Many Requests Error Detail
+          title: Too Many Requests Error Details
+        id:
+          type: string
+          format: uuid
+          title: Too Many Requests Error Id
+      required:
+      - code
+      - message
+      title: Too Many Requests Error
+    com.pingidentity.pingone.davinci.connectorinstances.data.UpdateConnectorInstance:
+      type: object
+      additionalProperties: true
+      properties:
+        name:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          maxLength: 256
+          type: string
+          minLength: 1
+          title: DaVinci Connector Instance Replace Request Name
+        connector:
+          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
+        properties:
+          type: object
+          title: DaVinci Connector Instance Replace Request Properties
+      required:
+      - name
+      - connector
+      x-immutable:
+      - connector
+      title: DaVinci Connector Instance Replace Request
+    com.pingidentity.ApiErrorResponse.415:
+      $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
         id:
           type: string
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          readOnly: true
+          format: uuid
           minLength: 1
-          title: Resource Relationship DaVinci Read-Only Id
+          title: Unsupported Media Type Error Id
+        code:
+          type: string
+          enum:
+          - INVALID_REQUEST
+          minLength: 1
+          title: Unsupported Media Type Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Unsupported Media Type Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                minLength: 1
+                title: Unsupported Media Type Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Unsupported Media Type Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Unsupported Media Type Error Detail Inner Error
+              target:
+                type: string
+                title: Unsupported Media Type Error Detail Target
+            required:
+            - code
+            - message
+            title: Unsupported Media Type Error Detail
+          title: Unsupported Media Type Error Details
       required:
       - id
-      title: Resource Relationship DaVinci Read-Only
+      - code
+      - message
+      title: Unsupported Media Type Error
+    com.pingidentity.ApiErrorResponse.500:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Internal Server Error Id
+        code:
+          type: string
+          enum:
+          - UNEXPECTED_ERROR
+          minLength: 1
+          title: Internal Server Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Internal Server Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                minLength: 1
+                title: Internal Server Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Internal Server Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Internal Server Error Detail Inner Error
+              target:
+                type: string
+                title: Internal Server Error Detail Target
+            required:
+            - code
+            - message
+            title: Internal Server Error Detail
+          title: Internal Server Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Internal Server Error
+    com.pingidentity.pingone.davinci.connectorinstances.data.CreateConnectorInstance:
+      type: object
+      additionalProperties: true
+      properties:
+        name:
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          maxLength: 256
+          type: string
+          minLength: 1
+          title: DaVinci Connector Instance Create Request Name
+        connector:
+          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
+        properties:
+          type: object
+          title: DaVinci Connector Instance Create Request Properties
+      required:
+      - name
+      - connector
+      title: DaVinci Connector Instance Create Request
     com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstanceResponse:
       type: object
       properties:
@@ -755,43 +825,17 @@ components:
       - id
       - name
       title: DaVinci Connector Instance Response
-    com.pingidentity.ApiErrorResponse:
+    com.pingidentity.api.Relationship.DaVinci:
       type: object
       properties:
-        code:
-          type: string
-          title: General Error Code
-        details:
-          type: array
-          items:
-            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
-          title: General Error Details
         id:
           type: string
-          title: General Error Id
-        message:
-          type: string
-          title: General Error Message
-      title: General Error
-    com.pingidentity.pingone.davinci.connectorinstances.data.CreateConnectorInstance:
-      type: object
-      additionalProperties: true
-      properties:
-        name:
           pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
-          type: string
           minLength: 1
-          title: DaVinci Connector Instance Create Request Name
-        connector:
-          $ref: '#/components/schemas/com.pingidentity.api.Relationship.DaVinci'
-        properties:
-          type: object
-          title: DaVinci Connector Instance Create Request Properties
+          title: Resource Relationship DaVinci Id
       required:
-      - name
-      - connector
-      title: DaVinci Connector Instance Create Request
+      - id
+      title: Resource Relationship DaVinci
     com.pingidentity.api.response.Link:
       type: object
       properties:
@@ -818,55 +862,6 @@ components:
       - href
       readOnly: true
       title: JSON HAL Link
-    com.pingidentity.ApiErrorResponse.404:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Not Found Error Id
-        code:
-          type: string
-          enum:
-          - NOT_FOUND
-          minLength: 1
-          title: Not Found Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Not Found Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Not Found Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Not Found Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Not Found Error Detail Inner Error
-              target:
-                type: string
-                title: Not Found Error Detail Target
-            required:
-            - code
-            - message
-            title: Not Found Error Detail
-          title: Not Found Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Not Found Error
     com.pingidentity.ApiErrorResponse.401:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -919,20 +914,37 @@ components:
       - code
       - message
       title: Unauthorized Error
-    com.pingidentity.ApiErrorResponse.403:
+    com.pingidentity.api.Relationship.DaVinci.RO:
+      type: object
+      properties:
+        id:
+          type: string
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          readOnly: true
+          minLength: 1
+          title: Resource Relationship DaVinci Read-Only Id
+      required:
+      - id
+      title: Resource Relationship DaVinci Read-Only
+    com.pingidentity.ApiErrorResponse.404:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Not Found Error Id
         code:
           type: string
           enum:
-          - ACCESS_FAILED
+          - NOT_FOUND
           minLength: 1
-          title: Forbidden Error Code
+          title: Not Found Error Code
         message:
           type: string
           minLength: 1
-          title: Forbidden Error Message
+          title: Not Found Error Message
         details:
           type: array
           items:
@@ -940,71 +952,47 @@ components:
             properties:
               code:
                 type: string
-                enum:
-                - INSUFFICIENT_PERMISSIONS
-                - LICENSE_EXCEEDED
                 minLength: 1
-                title: Forbidden Error Detail Code
+                title: Not Found Error Detail Code
               message:
                 type: string
                 minLength: 1
-                title: Forbidden Error Detail Message
+                title: Not Found Error Detail Message
               innerError:
                 type: object
-                properties:
-                  quotaLimit:
-                    type: number
-                    title: Forbidden Error Detail Inner Error Quota Limit
                 additionalProperties: true
-                title: Forbidden Error Detail Inner Error
+                title: Not Found Error Detail Inner Error
               target:
                 type: string
-                title: Forbidden Error Detail Target
+                title: Not Found Error Detail Target
             required:
             - code
             - message
-            title: Forbidden Error Detail
-          title: Forbidden Error Details
+            title: Not Found Error Detail
+          title: Not Found Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Not Found Error
+    com.pingidentity.pingone.davinci.connectorinstances.data.CloneConnectorInstance:
+      type: object
+      additionalProperties: true
+      properties: {}
+      title: DaVinci Connector Instance Clone Request
+    com.pingidentity.api.Relationship.PingOne.RO:
+      type: object
+      properties:
         id:
           type: string
           format: uuid
-          title: Forbidden Error Id
+          readOnly: true
+          minLength: 1
+          title: Resource Relationship Read-Only Id
       required:
-      - code
-      - message
-      title: Forbidden Error
-    com.pingidentity.ErrorDetail:
-      type: object
-      properties:
-        code:
-          type: string
-          title: General Error Detail Code
-        innerError:
-          type: object
-          additionalProperties:
-            type: object
-            title: General Error Detail Inner Error Additional Properties
-          title: General Error Detail Inner Error
-        message:
-          type: string
-          title: General Error Detail Message
-        target:
-          type: string
-          title: General Error Detail Target
-      title: General Error Detail
+      - id
+      title: Resource Relationship Read-Only
   parameters:
-    com.pingidentity.header.ExternalSessionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Session-ID
-      in: header
-    com.pingidentity.header.ExternalTransactionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Transaction-ID
-      in: header
     com.pingidentity.path.environments.connectorInstances.connectorInstanceID:
       name: connectorInstanceID
       in: path
@@ -1012,6 +1000,18 @@ components:
       schema:
         type: string
         pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+    com.pingidentity.header.ExternalTransactionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Transaction-ID
+      in: header
+    com.pingidentity.header.ExternalSessionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Session-ID
+      in: header
     com.pingidentity.path.environments.environmentID:
       name: environmentID
       in: path

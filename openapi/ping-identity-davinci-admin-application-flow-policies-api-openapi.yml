@@ -269,351 +269,7 @@ paths:
       summary: Get events by davinci application id and flow policy id
       x-summary-source: derived
 components:
-  responses:
-    http.503.ServiceUnavailable:
-      description: Service Unavailable
-      headers:
-        Retry-After:
-          $ref: '#/components/headers/http.RetryAfter'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
-    http.400.BadRequest:
-      description: Bad Request
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.400'
-    http.403.Forbidden.P14C63085:
-      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first.'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
-      x-pingone-p14c-63085: true
-    http.415.UnsupportedMediaType:
-      description: Unsupported Media Type
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.415'
-    http.401.Unauthorized:
-      description: Unauthorized
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.401'
-    http.429.TooManyRequests:
-      description: Too Many Requests
-      headers:
-        Retry-After:
-          $ref: '#/components/headers/http.RetryAfter'
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
-    http.404.NotFound:
-      description: Not Found
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.404'
-    http.500.InternalServerError:
-      description: Internal Server Error
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.500'
-    http.502.BadGateway:
-      description: Bad Gateway
-      content:
-        '*/*':
-          schema:
-            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
   schemas:
-    com.pingidentity.ApiErrorResponse.429:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        code:
-          type: string
-          enum:
-          - REQUEST_LIMITED
-          minLength: 1
-          title: Too Many Requests Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Too Many Requests Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - LIMIT_EXCEEDED
-                - QUOTA_EXCEEDED
-                minLength: 1
-                title: Too Many Requests Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Too Many Requests Error Detail Message
-              innerError:
-                type: object
-                properties:
-                  quotaLimit:
-                    type: number
-                    title: Too Many Requests Error Detail Inner Error Quota Limit
-                  quotaResetTime:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
-                  retryAfter:
-                    type: string
-                    format: date-time
-                    title: Too Many Requests Error Detail Inner Error Retry After
-                additionalProperties: true
-                title: Too Many Requests Error Detail Inner Error
-              target:
-                type: string
-                title: Too Many Requests Error Detail Target
-            required:
-            - code
-            - message
-            title: Too Many Requests Error Detail
-          title: Too Many Requests Error Details
-        id:
-          type: string
-          format: uuid
-          title: Too Many Requests Error Id
-      required:
-      - code
-      - message
-      title: Too Many Requests Error
-    com.pingidentity.ApiErrorResponse.500:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Internal Server Error Id
-        code:
-          type: string
-          enum:
-          - UNEXPECTED_ERROR
-          minLength: 1
-          title: Internal Server Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Internal Server Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Internal Server Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Internal Server Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Internal Server Error Detail Inner Error
-              target:
-                type: string
-                title: Internal Server Error Detail Target
-            required:
-            - code
-            - message
-            title: Internal Server Error Detail
-          title: Internal Server Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Internal Server Error
-    com.pingidentity.api.Relationship.PingOne.RO:
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          readOnly: true
-          minLength: 1
-          title: Resource Relationship Read-Only Id
-      required:
-      - id
-      title: Resource Relationship Read-Only
-    com.pingidentity.ApiErrorResponse.415:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Unsupported Media Type Error Id
-        code:
-          type: string
-          enum:
-          - INVALID_REQUEST
-          minLength: 1
-          title: Unsupported Media Type Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Unsupported Media Type Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Unsupported Media Type Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Unsupported Media Type Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Unsupported Media Type Error Detail Inner Error
-              target:
-                type: string
-                title: Unsupported Media Type Error Detail Target
-            required:
-            - code
-            - message
-            title: Unsupported Media Type Error Detail
-          title: Unsupported Media Type Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Unsupported Media Type Error
-    com.pingidentity.ApiErrorResponse.400:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Bad Request Error Id
-        code:
-          type: string
-          enum:
-          - INVALID_DATA
-          - INVALID_REQUEST
-          - REQUEST_FAILED
-          minLength: 1
-          title: Bad Request Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Bad Request Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                - ACCOUNT_NOT_USABLE
-                - CONSTRAINT_VIOLATION
-                - EMPTY_VALUE
-                - INVALID_FILTER
-                - INVALID_OTP
-                - INVALID_PARAMETER
-                - INVALID_VALUE
-                - MFA_AUTH_METHODS_CONFLICT
-                - NO_PASSWORD
-                - OUT_OF_RANGE
-                - REQUIRED_VALUE
-                - SIZE_LIMIT_EXCEEDED
-                - UNIQUENESS_VIOLATION
-                minLength: 1
-                title: Bad Request Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Bad Request Error Detail Message
-              innerError:
-                type: object
-                properties:
-                  allowedPattern:
-                    type: string
-                    title: Bad Request Error Detail Inner Error Allowed Pattern
-                  allowedValues:
-                    type: array
-                    items:
-                      type: string
-                      title: Bad Request Error Detail Inner Error Allowed Value
-                    title: Bad Request Error Detail Inner Error Allowed Values
-                  claim:
-                    type: string
-                    title: Bad Request Error Detail Inner Error Claim
-                  existingId:
-                    type: string
-                    format: uuid
-                    title: Bad Request Error Detail Inner Error Existing Id
-                  maximumValue:
-                    type: number
-                    title: Bad Request Error Detail Inner Error Maximum Value
-                  quotaLimit:
-                    type: number
-                    title: Bad Request Error Detail Inner Error Quota Limit
-                  quotaResetTime:
-                    type: string
-                    format: date-time
-                    title: Bad Request Error Detail Inner Error Quota Reset Time
-                  rangeMaximumValue:
-                    type: number
-                    title: Bad Request Error Detail Inner Error Range Maximum Value
-                  rangeMinimumValue:
-                    type: number
-                    title: Bad Request Error Detail Inner Error Range Minimum Value
-                  supportedAttributes:
-                    type: array
-                    items:
-                      type: string
-                      title: Bad Request Error Detail Inner Error Supported Attribute
-                    title: Bad Request Error Detail Inner Error Supported Attributes
-                  supportedOperators:
-                    type: array
-                    items:
-                      type: string
-                      title: Bad Request Error Detail Inner Error Supported Operator
-                    title: Bad Request Error Detail Inner Error Supported Operators
-                additionalProperties: true
-                title: Bad Request Error Detail Inner Error
-              target:
-                type: string
-                title: Bad Request Error Detail Target
-            required:
-            - code
-            - message
-            title: Bad Request Error Detail
-          title: Bad Request Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Bad Request Error
     com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyResponse:
       type: object
       properties:
@@ -761,209 +417,188 @@ components:
       - name
       - status
       title: DaVinci Flow Policy Response
-    com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyEventsResponse:
+    com.pingidentity.ApiErrorResponse.403:
+      $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
-        _links:
-          type: object
-          properties:
-            self:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-            environment:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          required:
-          - self
-          - environment
-          additionalProperties:
-            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          title: DaVinci Flow Policy Events Collection _links
-        _embedded:
-          type: object
-          properties:
-            events:
-              type: array
-              items:
-                type: object
-                properties:
-                  environment:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                        minLength: 1
-                        title: DaVinci Flow Policy Events Collection _embedded Event Environment Id
-                    required:
-                    - id
-                    title: DaVinci Flow Policy Events Collection _embedded Event Environment
-                  flow:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                        minLength: 1
-                        title: DaVinci Flow Policy Events Collection _embedded Event Flow Id
-                      version:
-                        type: number
-                        title: DaVinci Flow Policy Events Collection _embedded Event Flow Version
-                    required:
-                    - id
-                    title: DaVinci Flow Policy Events Collection _embedded Event Flow
-                  events:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: string
-                          minLength: 1
-                          title: DaVinci Flow Policy Events Collection _embedded Event Event Id
-                        timestamp:
-                          type: string
-                          minLength: 1
-                          title: DaVinci Flow Policy Events Collection _embedded Event Event Timestamp
-                      required:
-                      - id
-                      - timestamp
-                      title: DaVinci Flow Policy Events Collection _embedded Event Event
-                    title: DaVinci Flow Policy Events Collection _embedded Event Events
-                  successCount:
-                    type: number
-                    title: DaVinci Flow Policy Events Collection _embedded Event Success Count
-                  totalCount:
-                    type: number
-                    title: DaVinci Flow Policy Events Collection _embedded Event Total Count
-                required:
-                - environment
-                - flow
-                title: DaVinci Flow Policy Events Collection _embedded Event
-              title: DaVinci Flow Policy Events Collection _embedded Events
-          required:
-          - events
-          title: DaVinci Flow Policy Events Collection _embedded
-      required:
-      - _links
-      - _embedded
-      title: DaVinci Flow Policy Events Collection
-    com.pingidentity.pingone.davinci.flowpolicies.data.UpdateFlowPolicy:
-      type: object
-      additionalProperties: true
-      properties:
-        name:
-          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          maxLength: 256
+        code:
           type: string
-          default: New Policy
+          enum:
+          - ACCESS_FAILED
           minLength: 1
-          title: DaVinci Flow Policy Replace Request Name
-        flowDistributions:
+          title: Forbidden Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Forbidden Error Message
+        details:
           type: array
-          minItems: 1
-          maxItems: 100
           items:
             type: object
-            additionalProperties: false
             properties:
-              id:
+              code:
+                type: string
+                enum:
+                - INSUFFICIENT_PERMISSIONS
+                - LICENSE_EXCEEDED
+                minLength: 1
+                title: Forbidden Error Detail Code
+              message:
                 type: string
                 minLength: 1
-                title: DaVinci Flow Policy Replace Request Flow Distribution Id
-              version:
-                type: number
-                title: DaVinci Flow Policy Replace Request Flow Distribution Version
-              ip:
-                type: array
-                items:
-                  type: string
-                  title: DaVinci Flow Policy Replace Request Flow Distribution Ip Item
-                title: DaVinci Flow Policy Replace Request Flow Distribution Ip
-              successNodes:
-                type: array
-                minItems: 1
-                items:
-                  type: object
-                  additionalProperties: false
-                  properties:
-                    id:
-                      pattern: ^[a-zA-Z0-9]+$
-                      type: string
-                      minLength: 1
-                      title: DaVinci Flow Policy Replace Request Flow Distribution Success Node Id
-                  required:
-                  - id
-                  title: DaVinci Flow Policy Replace Request Flow Distribution Success Node
-                title: DaVinci Flow Policy Replace Request Flow Distribution Success Nodes
-              weight:
-                type: number
-                title: DaVinci Flow Policy Replace Request Flow Distribution Weight
+                title: Forbidden Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  quotaLimit:
+                    type: number
+                    title: Forbidden Error Detail Inner Error Quota Limit
+                additionalProperties: true
+                title: Forbidden Error Detail Inner Error
+              target:
+                type: string
+                title: Forbidden Error Detail Target
             required:
-            - id
-            - version
-            title: DaVinci Flow Policy Replace Request Flow Distribution
-          title: DaVinci Flow Policy Replace Request Flow Distributions
-        status:
-          enum:
-          - disabled
-          - enabled
+            - code
+            - message
+            title: Forbidden Error Detail
+          title: Forbidden Error Details
+        id:
           type: string
-          default: enabled
-          title: DaVinci Flow Policy Replace Request Status
-        trigger:
-          type: object
-          additionalProperties: true
-          properties:
-            configuration:
-              type: object
-              additionalProperties: true
-              properties:
-                mfa:
-                  type: object
-                  additionalProperties: true
-                  properties:
-                    enabled:
-                      type: boolean
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Enabled
-                    time:
-                      type: number
-                      minLength: 0
-                      maxLength: 100000
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Time
-                    timeFormat:
-                      type: string
-                      minLength: 0
-                      maxLength: 50
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Time Format
-                  title: DaVinci Flow Policy Replace Request Trigger Configuration MFA
-                pwd:
-                  type: object
-                  additionalProperties: true
-                  properties:
-                    enabled:
-                      type: boolean
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Enabled
-                    time:
-                      type: number
-                      minLength: 0
-                      maxLength: 100000
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Time
-                    timeFormat:
-                      type: string
-                      minLength: 0
-                      maxLength: 50
-                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Time Format
-                  title: DaVinci Flow Policy Replace Request Trigger Configuration Password
-              title: DaVinci Flow Policy Replace Request Trigger Configuration
-            type:
-              type: string
-              minLength: 0
-              maxLength: 50
-              enum:
-              - AUTHENTICATION
-              default: AUTHENTICATION
-              title: DaVinci Flow Policy Replace Request Trigger Type
-          title: DaVinci Flow Policy Replace Request Trigger
+          format: uuid
+          title: Forbidden Error Id
       required:
-      - name
-      title: DaVinci Flow Policy Replace Request
+      - code
+      - message
+      title: Forbidden Error
+    com.pingidentity.ApiErrorResponse:
+      type: object
+      properties:
+        code:
+          type: string
+          title: General Error Code
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
+          title: General Error Details
+        id:
+          type: string
+          title: General Error Id
+        message:
+          type: string
+          title: General Error Message
+      title: General Error
+    com.pingidentity.ApiErrorResponse.400:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Bad Request Error Id
+        code:
+          type: string
+          enum:
+          - INVALID_DATA
+          - INVALID_REQUEST
+          - REQUEST_FAILED
+          minLength: 1
+          title: Bad Request Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Bad Request Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - ACCOUNT_NOT_USABLE
+                - CONSTRAINT_VIOLATION
+                - EMPTY_VALUE
+                - INVALID_FILTER
+                - INVALID_OTP
+                - INVALID_PARAMETER
+                - INVALID_VALUE
+                - MFA_AUTH_METHODS_CONFLICT
+                - NO_PASSWORD
+                - OUT_OF_RANGE
+                - REQUIRED_VALUE
+                - SIZE_LIMIT_EXCEEDED
+                - UNIQUENESS_VIOLATION
+                minLength: 1
+                title: Bad Request Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Bad Request Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  allowedPattern:
+                    type: string
+                    title: Bad Request Error Detail Inner Error Allowed Pattern
+                  allowedValues:
+                    type: array
+                    items:
+                      type: string
+                      title: Bad Request Error Detail Inner Error Allowed Value
+                    title: Bad Request Error Detail Inner Error Allowed Values
+                  claim:
+                    type: string
+                    title: Bad Request Error Detail Inner Error Claim
+                  existingId:
+                    type: string
+                    format: uuid
+                    title: Bad Request Error Detail Inner Error Existing Id
+                  maximumValue:
+                    type: number
+                    title: Bad Request Error Detail Inner Error Maximum Value
+                  quotaLimit:
+                    type: number
+                    title: Bad Request Error Detail Inner Error Quota Limit
+                  quotaResetTime:
+                    type: string
+                    format: date-time
+                    title: Bad Request Error Detail Inner Error Quota Reset Time
+                  rangeMaximumValue:
+                    type: number
+                    title: Bad Request Error Detail Inner Error Range Maximum Value
+                  rangeMinimumValue:
+                    type: number
+                    title: Bad Request Error Detail Inner Error Range Minimum Value
+                  supportedAttributes:
+                    type: array
+                    items:
+                      type: string
+                      title: Bad Request Error Detail Inner Error Supported Attribute
+                    title: Bad Request Error Detail Inner Error Supported Attributes
+                  supportedOperators:
+                    type: array
+                    items:
+                      type: string
+                      title: Bad Request Error Detail Inner Error Supported Operator
+                    title: Bad Request Error Detail Inner Error Supported Operators
+                additionalProperties: true
+                title: Bad Request Error Detail Inner Error
+              target:
+                type: string
+                title: Bad Request Error Detail Target
+            required:
+            - code
+            - message
+            title: Bad Request Error Detail
+          title: Bad Request Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Bad Request Error
     com.pingidentity.pingone.davinci.flowpolicies.data.CreateFlowPolicy:
       type: object
       additionalProperties: true
@@ -1084,36 +719,423 @@ components:
       required:
       - flowDistributions
       title: DaVinci Flow Policy Create Request
-    com.pingidentity.api.Relationship.DaVinci.RO:
+    com.pingidentity.pingone.davinci.flowpolicies.data.UpdateFlowPolicy:
       type: object
+      additionalProperties: true
       properties:
-        id:
-          type: string
+        name:
           pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-          readOnly: true
+          maxLength: 256
+          type: string
+          default: New Policy
           minLength: 1
-          title: Resource Relationship DaVinci Read-Only Id
+          title: DaVinci Flow Policy Replace Request Name
+        flowDistributions:
+          type: array
+          minItems: 1
+          maxItems: 100
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              id:
+                type: string
+                minLength: 1
+                title: DaVinci Flow Policy Replace Request Flow Distribution Id
+              version:
+                type: number
+                title: DaVinci Flow Policy Replace Request Flow Distribution Version
+              ip:
+                type: array
+                items:
+                  type: string
+                  title: DaVinci Flow Policy Replace Request Flow Distribution Ip Item
+                title: DaVinci Flow Policy Replace Request Flow Distribution Ip
+              successNodes:
+                type: array
+                minItems: 1
+                items:
+                  type: object
+                  additionalProperties: false
+                  properties:
+                    id:
+                      pattern: ^[a-zA-Z0-9]+$
+                      type: string
+                      minLength: 1
+                      title: DaVinci Flow Policy Replace Request Flow Distribution Success Node Id
+                  required:
+                  - id
+                  title: DaVinci Flow Policy Replace Request Flow Distribution Success Node
+                title: DaVinci Flow Policy Replace Request Flow Distribution Success Nodes
+              weight:
+                type: number
+                title: DaVinci Flow Policy Replace Request Flow Distribution Weight
+            required:
+            - id
+            - version
+            title: DaVinci Flow Policy Replace Request Flow Distribution
+          title: DaVinci Flow Policy Replace Request Flow Distributions
+        status:
+          enum:
+          - disabled
+          - enabled
+          type: string
+          default: enabled
+          title: DaVinci Flow Policy Replace Request Status
+        trigger:
+          type: object
+          additionalProperties: true
+          properties:
+            configuration:
+              type: object
+              additionalProperties: true
+              properties:
+                mfa:
+                  type: object
+                  additionalProperties: true
+                  properties:
+                    enabled:
+                      type: boolean
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Enabled
+                    time:
+                      type: number
+                      minLength: 0
+                      maxLength: 100000
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Time
+                    timeFormat:
+                      type: string
+                      minLength: 0
+                      maxLength: 50
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration MFA Time Format
+                  title: DaVinci Flow Policy Replace Request Trigger Configuration MFA
+                pwd:
+                  type: object
+                  additionalProperties: true
+                  properties:
+                    enabled:
+                      type: boolean
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Enabled
+                    time:
+                      type: number
+                      minLength: 0
+                      maxLength: 100000
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Time
+                    timeFormat:
+                      type: string
+                      minLength: 0
+                      maxLength: 50
+                      title: DaVinci Flow Policy Replace Request Trigger Configuration Password Time Format
+                  title: DaVinci Flow Policy Replace Request Trigger Configuration Password
+              title: DaVinci Flow Policy Replace Request Trigger Configuration
+            type:
+              type: string
+              minLength: 0
+              maxLength: 50
+              enum:
+              - AUTHENTICATION
+              default: AUTHENTICATION
+              title: DaVinci Flow Policy Replace Request Trigger Type
+          title: DaVinci Flow Policy Replace Request Trigger
       required:
-      - id
-      title: Resource Relationship DaVinci Read-Only
-    com.pingidentity.ApiErrorResponse:
+      - name
+      title: DaVinci Flow Policy Replace Request
+    com.pingidentity.ErrorDetail:
       type: object
       properties:
         code:
           type: string
-          title: General Error Code
+          title: General Error Detail Code
+        innerError:
+          type: object
+          additionalProperties:
+            type: object
+            title: General Error Detail Inner Error Additional Properties
+          title: General Error Detail Inner Error
+        message:
+          type: string
+          title: General Error Detail Message
+        target:
+          type: string
+          title: General Error Detail Target
+      title: General Error Detail
+    com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyEventsResponse:
+      type: object
+      properties:
+        _links:
+          type: object
+          properties:
+            self:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+            environment:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          required:
+          - self
+          - environment
+          additionalProperties:
+            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          title: DaVinci Flow Policy Events Collection _links
+        _embedded:
+          type: object
+          properties:
+            events:
+              type: array
+              items:
+                type: object
+                properties:
+                  environment:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        minLength: 1
+                        title: DaVinci Flow Policy Events Collection _embedded Event Environment Id
+                    required:
+                    - id
+                    title: DaVinci Flow Policy Events Collection _embedded Event Environment
+                  flow:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        minLength: 1
+                        title: DaVinci Flow Policy Events Collection _embedded Event Flow Id
+                      version:
+                        type: number
+                        title: DaVinci Flow Policy Events Collection _embedded Event Flow Version
+                    required:
+                    - id
+                    title: DaVinci Flow Policy Events Collection _embedded Event Flow
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          minLength: 1
+                          title: DaVinci Flow Policy Events Collection _embedded Event Event Id
+                        timestamp:
+                          type: string
+                          minLength: 1
+                          title: DaVinci Flow Policy Events Collection _embedded Event Event Timestamp
+                      required:
+                      - id
+                      - timestamp
+                      title: DaVinci Flow Policy Events Collection _embedded Event Event
+                    title: DaVinci Flow Policy Events Collection _embedded Event Events
+                  successCount:
+                    type: number
+                    title: DaVinci Flow Policy Events Collection _embedded Event Success Count
+                  totalCount:
+                    type: number
+                    title: DaVinci Flow Policy Events Collection _embedded Event Total Count
+                required:
+                - environment
+                - flow
+                title: DaVinci Flow Policy Events Collection _embedded Event
+              title: DaVinci Flow Policy Events Collection _embedded Events
+          required:
+          - events
+          title: DaVinci Flow Policy Events Collection _embedded
+      required:
+      - _links
+      - _embedded
+      title: DaVinci Flow Policy Events Collection
+    com.pingidentity.ApiErrorResponse.429:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        code:
+          type: string
+          enum:
+          - REQUEST_LIMITED
+          minLength: 1
+          title: Too Many Requests Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Too Many Requests Error Message
         details:
           type: array
           items:
-            $ref: '#/components/schemas/com.pingidentity.ErrorDetail'
-          title: General Error Details
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                - LIMIT_EXCEEDED
+                - QUOTA_EXCEEDED
+                minLength: 1
+                title: Too Many Requests Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Too Many Requests Error Detail Message
+              innerError:
+                type: object
+                properties:
+                  quotaLimit:
+                    type: number
+                    title: Too Many Requests Error Detail Inner Error Quota Limit
+                  quotaResetTime:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Quota Reset Time
+                  retryAfter:
+                    type: string
+                    format: date-time
+                    title: Too Many Requests Error Detail Inner Error Retry After
+                additionalProperties: true
+                title: Too Many Requests Error Detail Inner Error
+              target:
+                type: string
+                title: Too Many Requests Error Detail Target
+            required:
+            - code
+            - message
+            title: Too Many Requests Error Detail
+          title: Too Many Requests Error Details
         id:
           type: string
-          title: General Error Id
+          format: uuid
+          title: Too Many Requests Error Id
+      required:
+      - code
+      - message
+      title: Too Many Requests Error
+    com.pingidentity.ApiErrorResponse.415:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Unsupported Media Type Error Id
+        code:
+          type: string
+          enum:
+          - INVALID_REQUEST
+          minLength: 1
+          title: Unsupported Media Type Error Code
         message:
           type: string
-          title: General Error Message
-      title: General Error
+          minLength: 1
+          title: Unsupported Media Type Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                minLength: 1
+                title: Unsupported Media Type Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Unsupported Media Type Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Unsupported Media Type Error Detail Inner Error
+              target:
+                type: string
+                title: Unsupported Media Type Error Detail Target
+            required:
+            - code
+            - message
+            title: Unsupported Media Type Error Detail
+          title: Unsupported Media Type Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Unsupported Media Type Error
+    com.pingidentity.ApiErrorResponse.500:
+      $schema: http://json-schema.org/draft/2020-12/schema#
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Internal Server Error Id
+        code:
+          type: string
+          enum:
+          - UNEXPECTED_ERROR
+          minLength: 1
+          title: Internal Server Error Code
+        message:
+          type: string
+          minLength: 1
+          title: Internal Server Error Message
+        details:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                minLength: 1
+                title: Internal Server Error Detail Code
+              message:
+                type: string
+                minLength: 1
+                title: Internal Server Error Detail Message
+              innerError:
+                type: object
+                additionalProperties: true
+                title: Internal Server Error Detail Inner Error
+              target:
+                type: string
+                title: Internal Server Error Detail Target
+            required:
+            - code
+            - message
+            title: Internal Server Error Detail
+          title: Internal Server Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Internal Server Error
+    com.pingidentity.pingone.davinci.flowpolicies.response.FlowPoliciesResponse:
+      type: object
+      properties:
+        _links:
+          type: object
+          properties:
+            self:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+            environment:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+            davinciApplication:
+              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          required:
+          - self
+          - environment
+          - davinciApplication
+          additionalProperties:
+            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
+          title: DaVinci Flow Policy Collection _links
+        _embedded:
+          type: object
+          properties:
+            flowPolicies:
+              type: array
+              items:
+                type: object
+                $ref: '#/components/schemas/com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyResponse'
+              title: DaVinci Flow Policy Collection _embedded Flow Policies
+          required:
+          - flowPolicies
+          title: DaVinci Flow Policy Collection _embedded
+      required:
+      - _links
+      - _embedded
+      title: DaVinci Flow Policy Collection
     com.pingidentity.api.response.Link:
       type: object
       properties:
@@ -1140,55 +1162,6 @@ components:
       - href
       readOnly: true
       title: JSON HAL Link
-    com.pingidentity.ApiErrorResponse.404:
-      $schema: http://json-schema.org/draft/2020-12/schema#
-      type: object
-      properties:
-        id:
-          type: string
-          format: uuid
-          minLength: 1
-          title: Not Found Error Id
-        code:
-          type: string
-          enum:
-          - NOT_FOUND
-          minLength: 1
-          title: Not Found Error Code
-        message:
-          type: string
-          minLength: 1
-          title: Not Found Error Message
-        details:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: string
-                minLength: 1
-                title: Not Found Error Detail Code
-              message:
-                type: string
-                minLength: 1
-                title: Not Found Error Detail Message
-              innerError:
-                type: object
-                additionalProperties: true
-                title: Not Found Error Detail Inner Error
-              target:
-                type: string
-                title: Not Found Error Detail Target
-            required:
-            - code
-            - message
-            title: Not Found Error Detail
-          title: Not Found Error Details
-      required:
-      - id
-      - code
-      - message
-      title: Not Found Error
     com.pingidentity.ApiErrorResponse.401:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
@@ -1241,20 +1214,37 @@ components:
       - code
       - message
       title: Unauthorized Error
-    com.pingidentity.ApiErrorResponse.403:
+    com.pingidentity.api.Relationship.DaVinci.RO:
+      type: object
+      properties:
+        id:
+          type: string
+          pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+          readOnly: true
+          minLength: 1
+          title: Resource Relationship DaVinci Read-Only Id
+      required:
+      - id
+      title: Resource Relationship DaVinci Read-Only
+    com.pingidentity.ApiErrorResponse.404:
       $schema: http://json-schema.org/draft/2020-12/schema#
       type: object
       properties:
+        id:
+          type: string
+          format: uuid
+          minLength: 1
+          title: Not Found Error Id
         code:
           type: string
           enum:
-          - ACCESS_FAILED
+          - NOT_FOUND
           minLength: 1
-          title: Forbidden Error Code
+          title: Not Found Error Code
         message:
           type: string
           minLength: 1
-          title: Forbidden Error Message
+          title: Not Found Error Message
         details:
           type: array
           items:
@@ -1262,120 +1252,104 @@ components:
             properties:
               code:
                 type: string
-                enum:
-                - INSUFFICIENT_PERMISSIONS
-                - LICENSE_EXCEEDED
                 minLength: 1
-                title: Forbidden Error Detail Code
+                title: Not Found Error Detail Code
               message:
                 type: string
                 minLength: 1
-                title: Forbidden Error Detail Message
+                title: Not Found Error Detail Message
               innerError:
                 type: object
-                properties:
-                  quotaLimit:
-                    type: number
-                    title: Forbidden Error Detail Inner Error Quota Limit
                 additionalProperties: true
-                title: Forbidden Error Detail Inner Error
+                title: Not Found Error Detail Inner Error
               target:
                 type: string
-                title: Forbidden Error Detail Target
+                title: Not Found Error Detail Target
             required:
             - code
             - message
-            title: Forbidden Error Detail
-          title: Forbidden Error Details
+            title: Not Found Error Detail
+          title: Not Found Error Details
+      required:
+      - id
+      - code
+      - message
+      title: Not Found Error
+    com.pingidentity.api.Relationship.PingOne.RO:
+      type: object
+      properties:
         id:
           type: string
           format: uuid
-          title: Forbidden Error Id
+          readOnly: true
+          minLength: 1
+          title: Resource Relationship Read-Only Id
       required:
-      - code
-      - message
-      title: Forbidden Error
-    com.pingidentity.pingone.davinci.flowpolicies.response.FlowPoliciesResponse:
-      type: object
-      properties:
-        _links:
-          type: object
-          properties:
-            self:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-            environment:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-            davinciApplication:
-              $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          required:
-          - self
-          - environment
-          - davinciApplication
-          additionalProperties:
-            $ref: '#/components/schemas/com.pingidentity.api.response.Link'
-          title: DaVinci Flow Policy Collection _links
-        _embedded:
-          type: object
-          properties:
-            flowPolicies:
-              type: array
-              items:
-                type: object
-                $ref: '#/components/schemas/com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyResponse'
-              title: DaVinci Flow Policy Collection _embedded Flow Policies
-          required:
-          - flowPolicies
-          title: DaVinci Flow Policy Collection _embedded
-      required:
-      - _links
-      - _embedded
-      title: DaVinci Flow Policy Collection
-    com.pingidentity.ErrorDetail:
-      type: object
-      properties:
-        code:
-          type: string
-          title: General Error Detail Code
-        innerError:
-          type: object
-          additionalProperties:
-            type: object
-            title: General Error Detail Inner Error Additional Properties
-          title: General Error Detail Inner Error
-        message:
-          type: string
-          title: General Error Detail Message
-        target:
-          type: string
-          title: General Error Detail Target
-      title: General Error Detail
+      - id
+      title: Resource Relationship Read-Only
+  responses:
+    http.429.TooManyRequests:
+      description: Too Many Requests
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/http.RetryAfter'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.429'
+    http.500.InternalServerError:
+      description: Internal Server Error
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.500'
+    http.503.ServiceUnavailable:
+      description: Service Unavailable
+      headers:
+        Retry-After:
+          $ref: '#/components/headers/http.RetryAfter'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
+    http.400.BadRequest:
+      description: Bad Request
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.400'
+    http.502.BadGateway:
+      description: Bad Gateway
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse'
+    http.403.Forbidden.P14C63085:
+      description: 'Forbidden - Note: This may occur if the environment doesn''t exist. Check for environment existence with GET /environments/{environmentID} first.'
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.403'
+      x-pingone-p14c-63085: true
+    http.401.Unauthorized:
+      description: Unauthorized
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.401'
+    http.404.NotFound:
+      description: Not Found
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.404'
+    http.415.UnsupportedMediaType:
+      description: Unsupported Media Type
+      content:
+        '*/*':
+          schema:
+            $ref: '#/components/schemas/com.pingidentity.ApiErrorResponse.415'
   parameters:
-    com.pingidentity.header.ExternalSessionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Session-ID
-      in: header
-    com.pingidentity.header.ExternalTransactionID:
-      schema:
-        type: string
-        minLength: 1
-      name: X-Ping-External-Transaction-ID
-      in: header
-    com.pingidentity.path.environments.davinciApplications.flowPolicies.flowPolicyID:
-      name: flowPolicyID
-      in: path
-      required: true
-      schema:
-        type: string
-        pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
-    com.pingidentity.path.environments.environmentID:
-      name: environmentID
-      in: path
-      required: true
-      schema:
-        type: string
-        format: uuid
     com.pingidentity.path.environments.davinciApplications.davinciApplicationID:
       name: davinciApplicationID
       in: path
@@ -1383,6 +1357,32 @@ components:
       schema:
         type: string
         pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+    com.pingidentity.path.environments.davinciApplications.flowPolicies.flowPolicyID:
+      name: flowPolicyID
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: ^(?=\S)[\p{L}\p{M}\p{N}\p{So}/.'_ -]*(?!.*((<)|(\$\{)))
+    com.pingidentity.header.ExternalTransactionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Transaction-ID
+      in: header
+    com.pingidentity.header.ExternalSessionID:
+      schema:
+        type: string
+        minLength: 1
+      name: X-Ping-External-Session-ID
+      in: header
+    com.pingidentity.path.environments.environmentID:
+      name: environmentID
+      in: path
+      required: true
+      schema:
+        type: string
+        format: uuid
   headers:
     http.RetryAfter:
       schema:
