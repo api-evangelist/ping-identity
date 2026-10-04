@@ -41,6 +41,8 @@ tags:
 - SSO
 - MFA
 - Identity Federation
+- OpenID Connect
+- Identity and Access Management
 created: '2025-02-08'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/ping-identity/refs/heads/main/apis.yml
@@ -203,6 +205,9 @@ apis:
   - type: Repository
     url: https://github.com/pingidentity/pingone-openapi-specifications
 common:
+- type: CapabilityMap
+  url: capabilities/ping-identity-capability-edges.yml
+  name: Ping Identity Business Capability Map
 - type: IssueTracker
   url: https://github.com/pingidentity/pingone-openapi-specifications/issues
 - type: License
