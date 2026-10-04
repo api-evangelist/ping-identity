@@ -1,0 +1,27 @@
+slug: ping-identity
+provider: Ping Identity
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Flow Policies
+  spec_file: ping-identity-flow-policies-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /environments/{environmentID}/flowPolicies/{flowPolicyID} — 'Get flow policy by id'; schema
+    'com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowPolicyDTO'
+  reason: PingOne flow policies define which authentication/DaVinci flow is assigned to an application,
+    i.e. configuration of the authentication path for identities. This is squarely identity and access
+    management tooling, not a business-domain capability. Only a single read operation, so confidence
+    is moderate on the sub-capability.

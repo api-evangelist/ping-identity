@@ -1,13 +1,10 @@
 aid: ping-identity
-
 name: Ping Identity
-
-description: Identity for enterprises - flawless user experience with fortified enterprise protection. Ping Identity's PingOne platform provides
-  cloud-based identity and access management with REST APIs covering authentication, authorization, user and population management, applications,
-  MFA, risk, verification, and more.
-
+description: Identity for enterprises - flawless user experience with fortified enterprise protection.
+  Ping Identity's PingOne platform provides cloud-based identity and access management with REST APIs
+  covering authentication, authorization, user and population management, applications, MFA, risk, verification,
+  and more.
 type: Index
-
 deliveryModel:
   model: open-core
   license: Apache-2.0
@@ -22,7 +19,6 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
-
 accessModel:
   pricing: freemium
   onboarding: self-serve
@@ -36,13 +32,9 @@ accessModel:
   - authentication
   generated: '2026-07-22'
   method: derived
-
 position: Consuming
-
 access: 3rd-Party
-
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ping-identity.png
-
 tags:
 - Identity
 - Authentication
@@ -50,19 +42,13 @@ tags:
 - SSO
 - MFA
 - Identity Federation
-
 created: '2025-02-08'
-
 modified: '2026-05-19'
-
 url: https://raw.githubusercontent.com/api-evangelist/ping-identity/refs/heads/main/apis.yml
-
 specificationVersion: '0.23'
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-
 common:
 - type: Pricing
   url: https://www.pingidentity.com/en/platform/pricing.html
@@ -145,7 +131,11 @@ common:
   url: https://www.pingidentity.com/en/legal.html
 - type: PrivacyPolicy
   url: https://www.pingidentity.com/en/legal/privacy.html
-
+- type: CapabilityMap
+  url: capabilities/ping-identity-capability-edges.yml
+  name: Ping Identity Business Capability Map
+- type: Pricing
+  url: https://www.pingidentity.com/en/platform/capabilities/pricing.html
 apis:
 - aid: ping-identity:ping-identity-configuration-management-api
   name: Ping Identity Configuration Management API
@@ -393,7 +383,6 @@ apis:
     url: https://github.com/pingidentity/pingone-openapi-specifications
   - type: JSONSchema
     url: json-schema/ping-identity-com-pingidentity-pingone-directory-totalidentitiesdashboard-data-total-identities-count-dtocollection-response-schema.json
-
 x-relationship: product
 x-enrichment:
   date: '2026-10-03'
