@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-application-flow-policy-assignment-model-flow-policy-dto-schema.json",
+  "title": "PingOne Application DaVinci Flow Policy",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-flow-policies-api-openapi.yml#/components/schemas/com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowPolicyDTO",
+  "required": [
+    "id"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "readOnly": true,
+      "minLength": 1,
+      "title": "PingOne Application DaVinci Flow Policy Id"
+    },
+    "_embedded": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "readOnly": true,
+        "title": "PingOne Application DaVinci Flow Policy _embedded Additional Properties"
+      },
+      "readOnly": true,
+      "title": "PingOne Application DaVinci Flow Policy _embedded"
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/$defs/com.pingidentity.api.response.Link"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/com.pingidentity.api.response.Link"
+      },
+      "readOnly": true,
+      "title": "PingOne Application DaVinci Flow Policy _links"
+    },
+    "application": {
+      "$ref": "#/$defs/com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowApplication"
+    },
+    "enabled": {
+      "type": "boolean",
+      "title": "PingOne Application DaVinci Flow Policy Enabled"
+    },
+    "environment": {
+      "$ref": "#/$defs/com.pingidentity.api.Relationship.PingOne.RO"
+    },
+    "name": {
+      "type": "string",
+      "title": "PingOne Application DaVinci Flow Policy Name"
+    },
+    "trigger": {
+      "$ref": "#/$defs/com.pingidentity.pingone.flowpolicy.davinci.model.Trigger"
+    }
+  },
+  "$defs": {
+    "com.pingidentity.api.Relationship.PingOne.RO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "readOnly": true,
+          "minLength": 1,
+          "title": "Resource Relationship Read-Only Id"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Resource Relationship Read-Only"
+    },
+    "com.pingidentity.api.response.Link": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "minLength": 1,
+          "title": "JSON HAL Link Href"
+        },
+        "name": {
+          "type": "string",
+          "title": "JSON HAL Link Name"
+        },
+        "profile": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Profile"
+        },
+        "title": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Title"
+        },
+        "type": {
+          "type": "string",
+          "title": "JSON HAL Link Type"
+        }
+      },
+      "required": [
+        "href"
+      ],
+      "readOnly": true,
+      "title": "JSON HAL Link"
+    },
+    "com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowApplication": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "PingOne Application Flow Policy Assignment Application Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "PingOne Application Flow Policy Assignment Application Name"
+        }
+      },
+      "title": "PingOne Application Flow Policy Assignment Application"
+    },
+    "com.pingidentity.pingone.flowpolicy.davinci.model.Trigger": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "AUTHENTICATION"
+          ],
+          "title": "DaVinci Flow Policy Trigger Type"
+        }
+      },
+      "title": "DaVinci Flow Policy Trigger"
+    }
+  }
+}

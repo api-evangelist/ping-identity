@@ -1,0 +1,19 @@
+generated: '2026-10-03'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/ping-identity-davinci-admin-flows-api-openapi.yml
+skills:
+- file: skills/ping-identity-manage-davinci-admin-variables.md
+  name: ping-identity-manage-davinci-admin-variables
+  api: openapi/ping-identity-davinci-admin-variables-api-openapi.yml
+  operations:
+  - createVariable
+  - getVariableById
+  - replaceVariableById
+  - deleteVariableById
+- file: skills/ping-identity-create-and-retrieve-connector-instance.md
+  name: ping-identity-create-and-retrieve-connector-instance
+  api: openapi/ping-identity-davinci-admin-connector-instances-api-openapi.yml
+  operations:
+  - createConnectorInstance
+  - getConnectorInstanceById

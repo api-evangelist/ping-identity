@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-configmanagement-snapshots-data-snapshot-view-schema.json",
+  "title": "Snapshot View",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-configuration-management-api-openapi.yml#/components/schemas/com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotView",
+  "type": "object",
+  "properties": {
+    "_embedded": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "readOnly": true,
+        "title": "Snapshot View _embedded Additional Properties"
+      },
+      "readOnly": true,
+      "title": "Snapshot View _embedded"
+    },
+    "_links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "$ref": "#/$defs/com.pingidentity.api.response.Link"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/com.pingidentity.api.response.Link"
+      },
+      "readOnly": true,
+      "title": "Snapshot View _links"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Snapshot View Completed At"
+    },
+    "configuration": {
+      "type": "string",
+      "title": "Snapshot View Configuration"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Snapshot View Created At"
+    },
+    "environment": {
+      "$ref": "#/$defs/com.pingidentity.api.Relationship.PingOne.RO"
+    },
+    "error": {
+      "type": "string",
+      "title": "Snapshot View Error"
+    },
+    "errorCode": {
+      "type": "integer",
+      "format": "int32",
+      "title": "Snapshot View Error Code"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "readOnly": true,
+      "title": "Snapshot View Id"
+    },
+    "importMetadata": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "title": "Snapshot View Import Metadata Additional Properties"
+      },
+      "title": "Snapshot View Import Metadata"
+    },
+    "referencedResources": {
+      "uniqueItems": true,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Snapshot View Referenced Resource"
+      },
+      "title": "Snapshot View Referenced Resources"
+    },
+    "resource": {
+      "$ref": "#/$defs/com.pingidentity.pingone.configmanagement.snapshots.data.ResourceInformation"
+    },
+    "resourceUrl": {
+      "type": "string",
+      "title": "Snapshot View Resource Url"
+    },
+    "snapshotId": {
+      "type": "string",
+      "format": "uuid",
+      "title": "Snapshot View Snapshot Id"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Snapshot View Started At"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "COMPLETE",
+        "ERROR",
+        "IN_PROGRESS",
+        "WAITING"
+      ],
+      "title": "Snapshot View Status"
+    },
+    "versionedAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Snapshot View Versioned At"
+    }
+  },
+  "$defs": {
+    "com.pingidentity.api.Relationship.PingOne.RO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "readOnly": true,
+          "minLength": 1,
+          "title": "Resource Relationship Read-Only Id"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Resource Relationship Read-Only"
+    },
+    "com.pingidentity.api.response.Link": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "minLength": 1,
+          "title": "JSON HAL Link Href"
+        },
+        "name": {
+          "type": "string",
+          "title": "JSON HAL Link Name"
+        },
+        "profile": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Profile"
+        },
+        "title": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Title"
+        },
+        "type": {
+          "type": "string",
+          "title": "JSON HAL Link Type"
+        }
+      },
+      "required": [
+        "href"
+      ],
+      "readOnly": true,
+      "title": "JSON HAL Link"
+    },
+    "com.pingidentity.pingone.configmanagement.snapshots.data.ResourceInformation": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "title": "Snapshot Resource Information Category"
+        },
+        "id": {
+          "type": "string",
+          "title": "Snapshot Resource Information Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Snapshot Resource Information Name"
+        }
+      },
+      "title": "Snapshot Resource Information"
+    }
+  }
+}

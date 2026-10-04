@@ -1,0 +1,225 @@
+generated: '2026-10-03'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/ping-identity-configuration-management-api-openapi.yml
+- openapi/ping-identity-davinci-admin-application-flow-policies-api-openapi.yml
+- openapi/ping-identity-davinci-admin-applications-api-openapi.yml
+- openapi/ping-identity-davinci-admin-connector-instances-api-openapi.yml
+- openapi/ping-identity-davinci-admin-connectors-api-openapi.yml
+- openapi/ping-identity-davinci-admin-flow-versions-api-openapi.yml
+- openapi/ping-identity-davinci-admin-flows-api-openapi.yml
+- openapi/ping-identity-davinci-admin-variables-api-openapi.yml
+- openapi/ping-identity-environments-api-openapi.yml
+- openapi/ping-identity-flow-policies-api-openapi.yml
+- openapi/ping-identity-total-identities-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.pingone.com, api.pingidentity.com, apidocs.pingidentity.com, developer.pingidentity.com;
+  verdict opaque (https://api.pingone.com/mcp answered 403: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 54 operation(s) in the provider''s own OpenAPI (40 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: create_snapshot
+  operationId: createSnapshot
+  method: POST
+  path: /environments/{environmentID}/snapshots
+  description: Create snapshot
+- name: get_flow_policies_by_davinci_application_id
+  operationId: getFlowPoliciesByDavinciApplicationId
+  method: GET
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+  description: Get flow policies by davinci application id
+- name: get_davinci_applications
+  operationId: getDavinciApplications
+  method: GET
+  path: /environments/{environmentID}/davinciApplications
+  description: Get davinci applications
+- name: get_connector_instances
+  operationId: getConnectorInstances
+  method: GET
+  path: /environments/{environmentID}/connectorInstances
+  description: Get connector instances
+- name: get_connectors
+  operationId: getConnectors
+  method: GET
+  path: /environments/{environmentID}/connectors
+  description: Get connectors
+- name: get_versions_by_flow_id
+  operationId: getVersionsByFlowId
+  method: GET
+  path: /environments/{environmentID}/flows/{flowID}/versions
+  description: Get versions by flow id
+- name: get_flows
+  operationId: getFlows
+  method: GET
+  path: /environments/{environmentID}/flows
+  description: Get flows
+- name: get_variables
+  operationId: getVariables
+  method: GET
+  path: /environments/{environmentID}/variables
+  description: Get variables
+- name: get_environments
+  operationId: getEnvironments
+  method: GET
+  path: /environments
+  description: Get environments
+- name: get_flow_policy_by_id
+  operationId: getFlowPolicyById
+  method: GET
+  path: /environments/{environmentID}/flowPolicies/{flowPolicyID}
+  description: Get flow policy by id
+- name: get_total_identities
+  operationId: getTotalIdentities
+  method: GET
+  path: /environments/{environmentID}/totalIdentities
+  description: Get total identities
+- name: get_snapshot_by_id
+  operationId: getSnapshotById
+  method: GET
+  path: /environments/{environmentID}/snapshots/{snapshotID}
+  description: Get snapshot by id
+- name: create_flow_policy_by_davinci_application_id
+  operationId: createFlowPolicyByDavinciApplicationId
+  method: POST
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies
+  description: Create flow policy by davinci application id
+- name: create_davinci_application
+  operationId: createDavinciApplication
+  method: POST
+  path: /environments/{environmentID}/davinciApplications
+  description: Create davinci application
+- name: create_connector_instance
+  operationId: createConnectorInstance
+  method: POST
+  path: /environments/{environmentID}/connectorInstances
+  description: Create connector instance
+- name: get_connector_by_id
+  operationId: getConnectorById
+  method: GET
+  path: /environments/{environmentID}/connectors/{connectorID}
+  description: Get connector by id
+- name: get_version_by_id_using_flow_id
+  operationId: getVersionByIdUsingFlowId
+  method: GET
+  path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+  description: Get version by id using flow id
+- name: create_flow
+  operationId: createFlow
+  method: POST
+  path: /environments/{environmentID}/flows
+  description: Create flow
+- name: create_variable
+  operationId: createVariable
+  method: POST
+  path: /environments/{environmentID}/variables
+  description: Create variable
+- name: create_environment
+  operationId: createEnvironment
+  method: POST
+  path: /environments
+  description: Create environment
+- name: get_versions_by_snapshot_id
+  operationId: getVersionsBySnapshotId
+  method: GET
+  path: /environments/{environmentID}/snapshots/{snapshotID}/versions
+  description: Get versions by snapshot id
+- name: get_flow_policy_by_id_using_davinci_application_id
+  operationId: getFlowPolicyByIdUsingDavinciApplicationId
+  method: GET
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+  description: Get flow policy by id using davinci application id
+- name: get_davinci_application_by_id
+  operationId: getDavinciApplicationById
+  method: GET
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+  description: Get davinci application by id
+- name: get_connector_instance_by_id
+  operationId: getConnectorInstanceById
+  method: GET
+  path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+  description: Get connector instance by id
+- name: get_details_by_connector_id
+  operationId: getDetailsByConnectorId
+  method: GET
+  path: /environments/{environmentID}/connectors/{connectorID}/details
+  description: Get details by connector id
+- name: delete_version_by_id_using_flow_id
+  operationId: deleteVersionByIdUsingFlowId
+  method: DELETE
+  path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}
+  description: Delete version by id using flow id
+- name: get_flow_by_id
+  operationId: getFlowById
+  method: GET
+  path: /environments/{environmentID}/flows/{flowID}
+  description: Get flow by id
+- name: get_variable_by_id
+  operationId: getVariableById
+  method: GET
+  path: /environments/{environmentID}/variables/{variableID}
+  description: Get variable by id
+- name: get_environment_by_id
+  operationId: getEnvironmentById
+  method: GET
+  path: /environments/{environmentID}
+  description: Get environment by id
+- name: get_version_by_id_using_snapshot_id
+  operationId: getVersionByIdUsingSnapshotId
+  method: GET
+  path: /environments/{environmentID}/snapshots/{snapshotID}/versions/{versionID}
+  description: Get version by id using snapshot id
+- name: replace_flow_policy_by_id_using_davinci_application_id
+  operationId: replaceFlowPolicyByIdUsingDavinciApplicationId
+  method: PUT
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+  description: Replace flow policy by id using davinci application id
+- name: replace_davinci_application_by_id
+  operationId: replaceDavinciApplicationById
+  method: PUT
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+  description: Replace davinci application by id
+- name: create_connector_instance_by_id
+  operationId: createConnectorInstanceById
+  method: POST
+  path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+  description: Create connector instance by id
+- name: replace_alias_by_flow_id_and_version_id
+  operationId: replaceAliasByFlowIdAndVersionId
+  method: PUT
+  path: /environments/{environmentID}/flows/{flowID}/versions/{versionID}/alias
+  description: Replace alias by flow id and version id
+- name: replace_flow_by_id
+  operationId: replaceFlowById
+  method: PUT
+  path: /environments/{environmentID}/flows/{flowID}
+  description: Replace flow by id
+- name: replace_variable_by_id
+  operationId: replaceVariableById
+  method: PUT
+  path: /environments/{environmentID}/variables/{variableID}
+  description: Replace variable by id
+- name: replace_environment_by_id
+  operationId: replaceEnvironmentById
+  method: PUT
+  path: /environments/{environmentID}
+  description: Replace environment by id
+- name: delete_flow_policy_by_id_using_davinci_application_id
+  operationId: deleteFlowPolicyByIdUsingDavinciApplicationId
+  method: DELETE
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}/flowPolicies/{flowPolicyID}
+  description: Delete flow policy by id using davinci application id
+- name: delete_davinci_application_by_id
+  operationId: deleteDavinciApplicationById
+  method: DELETE
+  path: /environments/{environmentID}/davinciApplications/{davinciApplicationID}
+  description: Delete davinci application by id
+- name: replace_connector_instance_by_id
+  operationId: replaceConnectorInstanceById
+  method: PUT
+  path: /environments/{environmentID}/connectorInstances/{connectorInstanceID}
+  description: Replace connector instance by id

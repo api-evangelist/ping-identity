@@ -1,11 +1,11 @@
-generated: '2026-07-11'
+generated: '2026-10-03'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: www.pingidentity.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep  4 20:14:53 2026 GMT
+  cert_expires: Nov  9 19:55:59 2026 GMT
   hsts: true
   hsts_max_age: 31557600
 - host: apidocs.pingidentity.com
@@ -28,12 +28,12 @@ domains:
 - domain: pingone.com
   dnssec: false
   caa:
-  - 0 issue "letsencrypt.org"
-  - 0 issuewild "amazonaws.com"
-  - 0 issue "amazonaws.com"
   - 0 issuewild "digicert.com"
+  - 0 iodef "mailto:sitereliability@pingidentity.com"
+  - 0 issuewild "amazonaws.com"
   - 0 issue "digicert.com"
-  - 0 issue "pki.goog"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "amazonaws.com"
   spf: true
   dmarc: true
   dmarc_policy: quarantine

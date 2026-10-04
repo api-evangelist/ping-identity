@@ -1,0 +1,25 @@
+generated: '2026-10-03'
+method: probed
+source: "https://www.pingidentity.com/en-us/docs/legal/privacy"
+signals:
+  data_retention:
+    note: "States retention period is as needed and as required by law."
+    evidence:
+      - source: "https://www.pingidentity.com/en-us/docs/legal/privacy"
+        http_status: 200
+        fetched: "/tmp/ping_privacy_final.html"
+        quote: "We retain personal information for as long as reasonably necessary for the purposes described in this Privacy Statement and for any additional period required or permitted by applicable law, including to satisfy legal, accounting, reporting, audit and compliance obligations."
+  subprocessors:
+    note: "Acknowledges use of subprocessors under contract."
+    evidence:
+      - source: "https://www.pingidentity.com/en-us/docs/legal/privacy"
+        http_status: 200
+        fetched: "/tmp/ping_privacy_final.html"
+        quote: "Our subprocessors, service providers and contractors, who are contractually required to protect Customer Data and process it only on our behalf and for authorized purposes; and"
+  data_subject_request:
+    note: "Provides data subject access and portability rights."
+    evidence:
+      - source: "https://www.pingidentity.com/en-us/docs/legal/privacy"
+        http_status: 200
+        fetched: "/tmp/ping_privacy_final.html"
+        quote: "The right to know if we maintain your personal information, and if we do, to access that information (subject to the rights of others) and to request that we provide your information in a portable format;"

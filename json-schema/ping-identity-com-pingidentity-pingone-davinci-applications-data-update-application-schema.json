@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-update-application-schema.json",
+  "title": "DaVinci Application Replace Request",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-davinci-admin-applications-api-openapi.yml#/components/schemas/com.pingidentity.pingone.davinci.applications.data.UpdateApplication",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "pattern": "^(?=\\S)[\\p{L}\\p{M}\\p{N}\\p{So}/.'_ -]*(?!.*((<)|(\\$\\{)))",
+      "maxLength": 256,
+      "type": "string",
+      "minLength": 1,
+      "title": "DaVinci Application Replace Request Name"
+    },
+    "apiKey": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "DaVinci Application Replace Request Api Key Enabled"
+        }
+      },
+      "title": "DaVinci Application Replace Request Api Key"
+    },
+    "oauth": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "enforceSignedRequestOpenid": {
+          "type": "boolean",
+          "title": "DaVinci Application Replace Request OAuth Enforce Signed Request Openid"
+        },
+        "grantTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "authorizationCode",
+              "clientCredentials",
+              "implicit"
+            ],
+            "title": "DaVinci Application Replace Request OAuth Grant Type"
+          },
+          "title": "DaVinci Application Replace Request OAuth Grant Types"
+        },
+        "logoutUris": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "DaVinci Application Replace Request OAuth Logout Uri"
+          },
+          "title": "DaVinci Application Replace Request OAuth Logout Uris"
+        },
+        "redirectUris": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "DaVinci Application Replace Request OAuth Redirect Uri"
+          },
+          "title": "DaVinci Application Replace Request OAuth Redirect Uris"
+        },
+        "scopes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "flow_analytics",
+              "offline_access",
+              "openid",
+              "profile"
+            ],
+            "title": "DaVinci Application Replace Request OAuth Scope"
+          },
+          "title": "DaVinci Application Replace Request OAuth Scopes"
+        },
+        "spJwksOpenid": {
+          "type": "string",
+          "title": "DaVinci Application Replace Request OAuth Sp Jwks Openid"
+        },
+        "spjwksUrl": {
+          "type": "string",
+          "title": "DaVinci Application Replace Request OAuth Spjwks Url"
+        }
+      },
+      "title": "DaVinci Application Replace Request OAuth"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

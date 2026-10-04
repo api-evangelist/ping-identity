@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-data-replace-environment-schema.json",
+  "title": "Environment Replace Request",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-environments-api-openapi.yml#/components/schemas/com.pingidentity.pingone.orgmgt.environments.data.ReplaceEnvironment",
+  "required": [
+    "name",
+    "region",
+    "type"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "title": "Environment Replace Request Name"
+    },
+    "region": {
+      "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.data.EnvironmentRegionCodeValue"
+    },
+    "type": {
+      "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.data.EnvironmentTypeValue"
+    },
+    "billOfMaterials": {
+      "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.bom.api.model.ReplaceBillOfMaterials"
+    },
+    "description": {
+      "type": "string",
+      "title": "Environment Replace Request Description"
+    },
+    "icon": {
+      "type": "string",
+      "title": "Environment Replace Request Icon"
+    },
+    "license": {
+      "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.data.EnvironmentLicense"
+    },
+    "status": {
+      "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.data.EnvironmentStatusValue"
+    },
+    "subtype": {
+      "type": "string",
+      "enum": [
+        "DEV",
+        "QA",
+        "STAGING",
+        "TESTING",
+        "UAT"
+      ],
+      "title": "Environment Replace Request Subtype"
+    }
+  },
+  "x-immutable": [
+    "region"
+  ],
+  "$defs": {
+    "com.pingidentity.api.Relationship.PingOne.RO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "readOnly": true,
+          "minLength": 1,
+          "title": "Resource Relationship Read-Only Id"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Resource Relationship Read-Only"
+    },
+    "com.pingidentity.api.Relationship.lang.String": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "readOnly": true,
+          "title": "Resource Relationship Generic Id"
+        }
+      },
+      "title": "Resource Relationship Generic"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Bookmark": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "type": "string",
+          "title": "Environment Bill of Materials Product Bookmark Href"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Environment Bill of Materials Product Bookmark Name"
+        }
+      },
+      "required": [
+        "href",
+        "name"
+      ],
+      "title": "Environment Bill of Materials Product Bookmark"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Console": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "maxLength": 1024,
+          "minLength": 1,
+          "type": "string",
+          "title": "Environment Bill of Materials Product Console Href"
+        }
+      },
+      "required": [],
+      "title": "Environment Bill of Materials Product Console"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Product": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "IDENTITY_CLOUD",
+            "PING_ACCESS",
+            "PING_AUTHORIZE",
+            "PING_CENTRAL",
+            "PING_DATA_GOVERNANCE",
+            "PING_DATA_SYNC",
+            "PING_DIRECTORY",
+            "PING_FEDERATE",
+            "PING_ID",
+            "PING_ID_SDK",
+            "PING_INTELLIGENCE",
+            "PING_ONE_AUTHORIZE",
+            "PING_ONE_BASE",
+            "PING_ONE_CREDENTIALS",
+            "PING_ONE_DAVINCI",
+            "PING_ONE_FOR_ENTERPRISE",
+            "PING_ONE_FOR_SAAS",
+            "PING_ONE_FRAUD",
+            "PING_ONE_ID",
+            "PING_ONE_LEGACY",
+            "PING_ONE_MFA",
+            "PING_ONE_ORCHESTRATE",
+            "PING_ONE_PROVISIONING",
+            "PING_ONE_RISK",
+            "PING_ONE_VERIFY"
+          ],
+          "minLength": 1,
+          "title": "Environment Bill of Materials Product Type"
+        },
+        "bookmarks": {
+          "maxItems": 5,
+          "minItems": 0,
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.bom.api.model.Bookmark"
+          },
+          "title": "Environment Bill of Materials Product Bookmarks"
+        },
+        "console": {
+          "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.bom.api.model.Console"
+        },
+        "deployment": {
+          "$ref": "#/$defs/com.pingidentity.api.Relationship.PingOne.RO"
+        },
+        "description": {
+          "type": "string",
+          "title": "Environment Bill of Materials Product Description"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "readOnly": true,
+          "title": "Environment Bill of Materials Product Id",
+          "minLength": 1
+        },
+        "softwareLicense": {
+          "$ref": "#/$defs/com.pingidentity.api.Relationship.lang.String"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "Environment Bill of Materials Product Tag"
+          },
+          "title": "Environment Bill of Materials Product Tags"
+        }
+      },
+      "title": "Environment Bill of Materials Product"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.ReplaceBillOfMaterials": {
+      "type": "object",
+      "properties": {
+        "products": {
+          "maxItems": 100,
+          "minItems": 0,
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/com.pingidentity.pingone.orgmgt.environments.bom.api.model.Product"
+          },
+          "title": "Environment Bill of Materials Replace Request Products"
+        }
+      },
+      "required": [
+        "products"
+      ],
+      "title": "Environment Bill of Materials Replace Request"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentLicense": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "minLength": 1,
+          "title": "Environment License Id"
+        },
+        "package": {
+          "type": "string",
+          "title": "Environment License Package"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Environment License"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentRegionCodeValue": {
+      "type": "string",
+      "enum": [
+        "AP",
+        "AU",
+        "CA",
+        "EU",
+        "NA",
+        "SG"
+      ],
+      "minLength": 1,
+      "title": "Environment Region Code"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentStatusValue": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "DELETE_PENDING"
+      ],
+      "minLength": 1,
+      "title": "Environment Status Value"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentTypeValue": {
+      "type": "string",
+      "enum": [
+        "PRODUCTION",
+        "SANDBOX"
+      ],
+      "minLength": 1,
+      "title": "Environment Type Value"
+    }
+  }
+}

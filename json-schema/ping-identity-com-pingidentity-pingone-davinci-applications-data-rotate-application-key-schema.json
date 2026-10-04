@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-rotate-application-key-schema.json",
+  "title": "DaVinci Application Rotate Key Request",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-davinci-admin-applications-api-openapi.yml#/components/schemas/com.pingidentity.pingone.davinci.applications.data.RotateApplicationKey",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {}
+}

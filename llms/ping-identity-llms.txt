@@ -1,0 +1,51 @@
+# docs.pingidentity.com
+
+> This is the root llms.txt index for this documentation site.
+> Each section below links to the llms.txt file for an individual docset.
+> To access the full content for a docset, follow the link and parse the
+> linked Markdown pages listed there.
+>
+> AI agents should consult [Docs for Agents](https://developer.pingidentity.com/build-with-ai/docs-for-agents.md)
+> for guidance on navigating Ping Identity documentation.
+
+## Docsets
+
+- [Auth Node Ref](https://docs.pingidentity.com/auth-node-ref/llms.txt)
+- [Autonomous Identity](https://docs.pingidentity.com/autonomous-identity/llms.txt)
+- [Configuration Guides](https://docs.pingidentity.com/configuration_guides/llms.txt)
+- [Connectors](https://docs.pingidentity.com/connectors/llms.txt)
+- [Davinci](https://docs.pingidentity.com/davinci/llms.txt)
+- [Enterprise Connect](https://docs.pingidentity.com/enterprise-connect/llms.txt)
+- [Forgeops](https://docs.pingidentity.com/forgeops/llms.txt)
+- [Glossary](https://docs.pingidentity.com/glossary/llms.txt)
+- [Identity Governance](https://docs.pingidentity.com/identity-governance/llms.txt)
+- [Identity Reporting](https://docs.pingidentity.com/identity-reporting/llms.txt)
+- [Integrations](https://docs.pingidentity.com/integrations/llms.txt)
+- [Java Agents](https://docs.pingidentity.com/java-agents/llms.txt)
+- [Licensing Guide](https://docs.pingidentity.com/licensing-guide/llms.txt)
+- [Unknown docset](https://docs.pingidentity.com/llms.txt)
+- [Openicf](https://docs.pingidentity.com/openicf/llms.txt)
+- [Pgic](https://docs.pingidentity.com/pgic/llms.txt)
+- [Pingaccess](https://docs.pingidentity.com/pingaccess/llms.txt)
+- [Pingam](https://docs.pingidentity.com/pingam/llms.txt)
+- [Pingauthorize](https://docs.pingidentity.com/pingauthorize/llms.txt)
+- [Pingcentral](https://docs.pingidentity.com/pingcentral/llms.txt)
+- [Pingdirectory](https://docs.pingidentity.com/pingdirectory/llms.txt)
+- [Pingds](https://docs.pingidentity.com/pingds/llms.txt)
+- [Pingfederate](https://docs.pingidentity.com/pingfederate/llms.txt)
+- [Pinggateway](https://docs.pingidentity.com/pinggateway/llms.txt)
+- [Pingid User Guide](https://docs.pingidentity.com/pingid-user-guide/llms.txt)
+- [Pingid](https://docs.pingidentity.com/pingid/llms.txt)
+- [Pingidm](https://docs.pingidentity.com/pingidm/llms.txt)
+- [Pingone Admin Mfa Faq](https://docs.pingidentity.com/pingone-admin-mfa-faq/llms.txt)
+- [Pingone Solutions](https://docs.pingidentity.com/pingone-solutions/llms.txt)
+- [Pingone](https://docs.pingidentity.com/pingone/llms.txt)
+- [Pingoneadvancedservices](https://docs.pingidentity.com/pingoneadvancedservices/llms.txt)
+- [Pingoneaic](https://docs.pingidentity.com/pingoneaic/llms.txt)
+- [Pingoneforenterprise](https://docs.pingidentity.com/pingoneforenterprise/llms.txt)
+- [Platform](https://docs.pingidentity.com/platform/llms.txt)
+- [Privilege](https://docs.pingidentity.com/privilege/llms.txt)
+- [Recognize](https://docs.pingidentity.com/recognize/llms.txt)
+- [Sdks](https://docs.pingidentity.com/sdks/llms.txt)
+- [Solution Guides](https://docs.pingidentity.com/solution-guides/llms.txt)
+- [Web Agents](https://docs.pingidentity.com/web-agents/llms.txt)

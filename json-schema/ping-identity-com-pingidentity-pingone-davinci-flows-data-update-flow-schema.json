@@ -1,0 +1,1144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-data-update-flow-schema.json",
+  "title": "DaVinci Flow Replace Request",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-davinci-admin-flows-api-openapi.yml#/components/schemas/com.pingidentity.pingone.davinci.flows.data.UpdateFlow",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "pattern": "^\\s*([\\p{L}\\p{M}\\p{N}\\p{So}/.'_\\-\\[\\]]).?(?!.*((<)|(\\$\\{)))",
+      "maxLength": 256,
+      "type": "string",
+      "minLength": 1,
+      "title": "DaVinci Flow Replace Request Name"
+    },
+    "color": {
+      "type": "string",
+      "title": "DaVinci Flow Replace Request Color"
+    },
+    "description": {
+      "type": "string",
+      "pattern": "^\\s*[\\p{L}\\p{M}\\p{N}\\p{So}/.'_ -]*(?!.*((<)|(\\$\\{)))",
+      "maxLength": 1024,
+      "title": "DaVinci Flow Replace Request Description"
+    },
+    "graphData": {
+      "$ref": "#/$defs/com.pingidentity.pingone.davinci.flows.data.fragment.GraphData"
+    },
+    "inputSchema": {
+      "$ref": "#/$defs/com.pingidentity.pingone.davinci.flows.data.fragment.InputSchema"
+    },
+    "outputSchema": {
+      "$ref": "#/$defs/com.pingidentity.pingone.davinci.flows.data.fragment.OutputSchema"
+    },
+    "settings": {
+      "$ref": "#/$defs/com.pingidentity.pingone.davinci.flows.data.fragment.Settings"
+    },
+    "trigger": {
+      "$ref": "#/$defs/com.pingidentity.pingone.davinci.flows.data.fragment.Trigger"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "$defs": {
+    "com.pingidentity.pingone.davinci.flows.data.fragment.GraphData": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "boxSelectionEnabled": {
+          "type": "boolean",
+          "title": "DaVinci Flow Graph Data Request Box Selection Enabled"
+        },
+        "data": {
+          "type": "object",
+          "title": "DaVinci Flow Graph Data Request Data"
+        },
+        "elements": {
+          "type": "object",
+          "properties": {
+            "edges": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "DaVinci Flow Graph Data Request Elements Edge Data Id"
+                      },
+                      "source": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "DaVinci Flow Graph Data Request Elements Edge Data Source"
+                      },
+                      "target": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "DaVinci Flow Graph Data Request Elements Edge Data Target"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "source",
+                      "target"
+                    ],
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Data"
+                  },
+                  "classes": {
+                    "type": "string",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Classes"
+                  },
+                  "grabbable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Grabbable"
+                  },
+                  "group": {
+                    "type": "string",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Group"
+                  },
+                  "locked": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Locked"
+                  },
+                  "pannable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Pannable"
+                  },
+                  "position": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "number",
+                        "format": "bigFloatUnquoted",
+                        "title": "DaVinci Flow Graph Data Request Elements Edge Position X"
+                      },
+                      "y": {
+                        "type": "number",
+                        "format": "bigFloatUnquoted",
+                        "title": "DaVinci Flow Graph Data Request Elements Edge Position Y"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Position"
+                  },
+                  "removed": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Removed"
+                  },
+                  "selectable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Selectable"
+                  },
+                  "selected": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Edge Selected"
+                  }
+                },
+                "additionalProperties": true,
+                "required": [
+                  "data"
+                ],
+                "title": "DaVinci Flow Graph Data Request Elements Edge"
+              },
+              "title": "DaVinci Flow Graph Data Request Elements Edges"
+            },
+            "nodes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Id"
+                      },
+                      "nodeType": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Node Type"
+                      },
+                      "capabilityName": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Capability Name"
+                      },
+                      "connectionId": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Connection Id"
+                      },
+                      "connectorId": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Connector Id"
+                      },
+                      "idUnique": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Id Unique"
+                      },
+                      "label": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Label"
+                      },
+                      "name": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Name"
+                      },
+                      "properties": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                          "backgroundColor": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Background Color Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Background Color"
+                          },
+                          "code": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Code Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Code"
+                          },
+                          "customCSS": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom CSS Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom CSS"
+                          },
+                          "customHTML": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom HTML Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom HTML"
+                          },
+                          "customScript": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom Script Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Custom Script"
+                          },
+                          "formFieldsList": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "preferredDataType": {
+                                      "type": [
+                                        "array",
+                                        "boolean",
+                                        "integer",
+                                        "number",
+                                        "object",
+                                        "string"
+                                      ],
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value Item Preferred Data Type"
+                                    },
+                                    "propertyName": {
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value Item Property Name"
+                                    },
+                                    "preferredControlType": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value Item Preferred Control Type"
+                                    },
+                                    "value": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value Item Value"
+                                    }
+                                  },
+                                  "required": [
+                                    "preferredDataType",
+                                    "propertyName"
+                                  ],
+                                  "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value Item"
+                                },
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Form Fields List"
+                          },
+                          "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Input Schema Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Input Schema"
+                          },
+                          "message": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Message Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Message"
+                          },
+                          "nodeTitle": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Node Title Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Node Title"
+                          },
+                          "outputSchema": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Output Schema Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Output Schema"
+                          },
+                          "saveVariables": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "additionalProperties": true,
+                                  "properties": {
+                                    "name": {
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Name"
+                                    },
+                                    "key": {
+                                      "type": "number",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Key"
+                                    },
+                                    "label": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Label"
+                                    },
+                                    "nameDefault": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Name Default"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Type"
+                                    },
+                                    "value": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item Value"
+                                    }
+                                  },
+                                  "required": [
+                                    "name"
+                                  ],
+                                  "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value Item"
+                                },
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Save Variables"
+                          },
+                          "showContinueButton": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "boolean",
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Show Continue Button Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Show Continue Button"
+                          },
+                          "type": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "string",
+                                "minLength": 1,
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Type Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Type"
+                          },
+                          "variableInputList": {
+                            "type": "object",
+                            "properties": {
+                              "value": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "name": {
+                                      "type": "string",
+                                      "minLength": 1,
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value Item Name"
+                                    },
+                                    "preferredDataType": {
+                                      "type": [
+                                        "array",
+                                        "boolean",
+                                        "integer",
+                                        "number",
+                                        "object",
+                                        "string"
+                                      ],
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value Item Preferred Data Type"
+                                    },
+                                    "preferredControlType": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value Item Preferred Control Type"
+                                    },
+                                    "value": {
+                                      "type": "string",
+                                      "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value Item Value"
+                                    }
+                                  },
+                                  "required": [
+                                    "name",
+                                    "preferredDataType"
+                                  ],
+                                  "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value Item"
+                                },
+                                "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List Value"
+                              }
+                            },
+                            "required": [
+                              "value"
+                            ],
+                            "title": "DaVinci Flow Graph Data Request Elements Node Data Properties Variable Input List"
+                          }
+                        },
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Properties"
+                      },
+                      "status": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Status"
+                      },
+                      "type": {
+                        "type": "string",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Data Type"
+                      }
+                    },
+                    "additionalProperties": true,
+                    "required": [
+                      "id",
+                      "nodeType"
+                    ],
+                    "title": "DaVinci Flow Graph Data Request Elements Node Data"
+                  },
+                  "classes": {
+                    "type": "string",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Classes"
+                  },
+                  "grabbable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Grabbable"
+                  },
+                  "group": {
+                    "type": "string",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Group"
+                  },
+                  "locked": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Locked"
+                  },
+                  "pannable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Pannable"
+                  },
+                  "position": {
+                    "type": "object",
+                    "properties": {
+                      "x": {
+                        "type": "number",
+                        "format": "bigFloatUnquoted",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Position X"
+                      },
+                      "y": {
+                        "type": "number",
+                        "format": "bigFloatUnquoted",
+                        "title": "DaVinci Flow Graph Data Request Elements Node Position Y"
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ],
+                    "title": "DaVinci Flow Graph Data Request Elements Node Position"
+                  },
+                  "removed": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Removed"
+                  },
+                  "selectable": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Selectable"
+                  },
+                  "selected": {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Graph Data Request Elements Node Selected"
+                  }
+                },
+                "additionalProperties": true,
+                "required": [
+                  "data"
+                ],
+                "title": "DaVinci Flow Graph Data Request Elements Node"
+              },
+              "title": "DaVinci Flow Graph Data Request Elements Nodes"
+            }
+          },
+          "additionalProperties": true,
+          "title": "DaVinci Flow Graph Data Request Elements"
+        },
+        "maxZoom": {
+          "type": "number",
+          "format": "bigFloatUnquoted",
+          "title": "DaVinci Flow Graph Data Request Max Zoom"
+        },
+        "minZoom": {
+          "type": "number",
+          "format": "bigFloatUnquoted",
+          "title": "DaVinci Flow Graph Data Request Min Zoom"
+        },
+        "pan": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number",
+              "format": "bigFloatUnquoted",
+              "title": "DaVinci Flow Graph Data Request Pan X"
+            },
+            "y": {
+              "type": "number",
+              "format": "bigFloatUnquoted",
+              "title": "DaVinci Flow Graph Data Request Pan Y"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "title": "DaVinci Flow Graph Data Request Pan"
+        },
+        "panningEnabled": {
+          "type": "boolean",
+          "title": "DaVinci Flow Graph Data Request Panning Enabled"
+        },
+        "renderer": {
+          "type": "object",
+          "title": "DaVinci Flow Graph Data Request Renderer"
+        },
+        "userPanningEnabled": {
+          "type": "boolean",
+          "title": "DaVinci Flow Graph Data Request User Panning Enabled"
+        },
+        "userZoomingEnabled": {
+          "type": "boolean",
+          "title": "DaVinci Flow Graph Data Request User Zooming Enabled"
+        },
+        "zoom": {
+          "type": "integer",
+          "title": "DaVinci Flow Graph Data Request Zoom"
+        },
+        "zoomingEnabled": {
+          "type": "boolean",
+          "title": "DaVinci Flow Graph Data Request Zooming Enabled"
+        }
+      },
+      "title": "DaVinci Flow Graph Data Request"
+    },
+    "com.pingidentity.pingone.davinci.flows.data.fragment.InputSchema": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "minLength": 1,
+            "title": "DaVinci Flow Input Schema Request Item Property Name"
+          },
+          "preferredDataType": {
+            "type": "string",
+            "enum": [
+              "array",
+              "boolean",
+              "number",
+              "object",
+              "string"
+            ],
+            "minLength": 1,
+            "title": "DaVinci Flow Input Schema Request Item Preferred Data Type"
+          },
+          "description": {
+            "type": "string",
+            "title": "DaVinci Flow Input Schema Request Item Description"
+          },
+          "isExpanded": {
+            "type": "boolean",
+            "title": "DaVinci Flow Input Schema Request Item Is Expanded"
+          },
+          "preferredControlType": {
+            "type": "string",
+            "enum": [
+              "button",
+              "colorPicker",
+              "contentEditableTextArea",
+              "cssArea",
+              "dropDown",
+              "dropDownMultiSelect",
+              "dropDownMultiSelect2",
+              "dropDownWithCreate",
+              "functionArgumentList",
+              "keyValueList",
+              "label",
+              "radioSelect",
+              "textArea",
+              "textField",
+              "textFieldArrayView",
+              "toggleSwitch"
+            ],
+            "title": "DaVinci Flow Input Schema Request Item Preferred Control Type"
+          },
+          "required": {
+            "type": "boolean",
+            "title": "DaVinci Flow Input Schema Request Item Required"
+          }
+        },
+        "required": [
+          "propertyName",
+          "preferredDataType"
+        ],
+        "title": "DaVinci Flow Input Schema Request Item"
+      },
+      "title": "DaVinci Flow Input Schema Request"
+    },
+    "com.pingidentity.pingone.davinci.flows.data.fragment.OutputSchema": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true,
+              "title": "DaVinci Flow Output Schema Request Output Properties"
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "object"
+              ],
+              "minLength": 1,
+              "title": "DaVinci Flow Output Schema Request Output Type"
+            },
+            "additionalProperties": {
+              "type": "boolean",
+              "title": "DaVinci Flow Output Schema Request Output Additional Properties"
+            }
+          },
+          "required": [
+            "properties",
+            "type"
+          ],
+          "title": "DaVinci Flow Output Schema Request Output"
+        }
+      },
+      "required": [
+        "output"
+      ],
+      "title": "DaVinci Flow Output Schema Request"
+    },
+    "com.pingidentity.pingone.davinci.flows.data.fragment.Settings": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "csp": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Csp"
+        },
+        "css": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Css"
+        },
+        "cssLinks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "DaVinci Flow Settings Request Css Link"
+          },
+          "title": "DaVinci Flow Settings Request Css Links"
+        },
+        "customErrorScreenBrandLogoUrl": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Custom Error Screen Brand Logo Url"
+        },
+        "customErrorShowFooter": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Custom Error Show Footer Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Custom Error Show Footer Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Custom Error Show Footer"
+        },
+        "customFaviconLink": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Custom Favicon Link"
+        },
+        "customLogoURLSelection": {
+          "type": "integer",
+          "title": "DaVinci Flow Settings Request Custom Logo URL Selection"
+        },
+        "customTitle": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Custom Title"
+        },
+        "defaultErrorScreenBrandLogo": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Default Error Screen Brand Logo Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Default Error Screen Brand Logo Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Default Error Screen Brand Logo"
+        },
+        "flowHttpTimeoutInSeconds": {
+          "type": "integer",
+          "title": "DaVinci Flow Settings Request Flow Http Timeout In Seconds"
+        },
+        "flowTimeoutInSeconds": {
+          "type": "integer",
+          "title": "DaVinci Flow Settings Request Flow Timeout In Seconds"
+        },
+        "intermediateLoadingScreenCSS": {
+          "oneOf": [
+            {
+              "type": "string",
+              "title": "DaVinci Flow Settings Request Intermediate Loading Screen CSS Choice 1"
+            },
+            {
+              "type": "object",
+              "title": "DaVinci Flow Settings Request Intermediate Loading Screen CSS Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Intermediate Loading Screen CSS"
+        },
+        "intermediateLoadingScreenHTML": {
+          "oneOf": [
+            {
+              "type": "string",
+              "title": "DaVinci Flow Settings Request Intermediate Loading Screen HTML Choice 1"
+            },
+            {
+              "type": "object",
+              "title": "DaVinci Flow Settings Request Intermediate Loading Screen HTML Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Intermediate Loading Screen HTML"
+        },
+        "jsCustomFlowPlayer": {
+          "type": "string",
+          "title": "DaVinci Flow Settings Request Js Custom Flow Player"
+        },
+        "jsLinks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Label"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Value"
+              },
+              "defer": {
+                "oneOf": [
+                  {
+                    "type": "boolean",
+                    "title": "DaVinci Flow Settings Request Js Link Defer Choice 1"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "false",
+                      "true"
+                    ],
+                    "title": "DaVinci Flow Settings Request Js Link Defer Choice 2"
+                  }
+                ],
+                "title": "DaVinci Flow Settings Request Js Link Defer"
+              },
+              "crossorigin": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Crossorigin"
+              },
+              "integrity": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Integrity"
+              },
+              "referrerpolicy": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Referrerpolicy"
+              },
+              "type": {
+                "type": "string",
+                "minLength": 1,
+                "title": "DaVinci Flow Settings Request Js Link Type"
+              }
+            },
+            "required": [
+              "label",
+              "value",
+              "defer",
+              "crossorigin",
+              "integrity",
+              "referrerpolicy",
+              "type"
+            ],
+            "title": "DaVinci Flow Settings Request Js Link"
+          },
+          "title": "DaVinci Flow Settings Request Js Links"
+        },
+        "logLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4,
+          "title": "DaVinci Flow Settings Request Log Level"
+        },
+        "requireAuthenticationToInitiate": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Require Authentication To Initiate Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Require Authentication To Initiate Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Require Authentication To Initiate"
+        },
+        "scrubSensitiveInfo": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Scrub Sensitive Info Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Scrub Sensitive Info Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Scrub Sensitive Info"
+        },
+        "sensitiveInfoFields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "title": "DaVinci Flow Settings Request Sensitive Info Field"
+          },
+          "title": "DaVinci Flow Settings Request Sensitive Info Fields"
+        },
+        "useCSP": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Use CSP Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Use CSP Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Use CSP"
+        },
+        "useCustomCSS": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Use Custom CSS Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Use Custom CSS Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Use Custom CSS"
+        },
+        "useCustomFlowPlayer": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Use Custom Flow Player Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Use Custom Flow Player Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Use Custom Flow Player"
+        },
+        "useCustomScript": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Use Custom Script Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Use Custom Script Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Use Custom Script"
+        },
+        "useIntermediateLoadingScreen": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Use Intermediate Loading Screen Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Use Intermediate Loading Screen Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Use Intermediate Loading Screen"
+        },
+        "validateOnSave": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "title": "DaVinci Flow Settings Request Validate On Save Choice 1"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "false",
+                "true"
+              ],
+              "title": "DaVinci Flow Settings Request Validate On Save Choice 2"
+            }
+          ],
+          "title": "DaVinci Flow Settings Request Validate On Save"
+        }
+      },
+      "title": "DaVinci Flow Settings Request"
+    },
+    "com.pingidentity.pingone.davinci.flows.data.fragment.Trigger": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "AUTHENTICATION",
+            "SCHEDULE"
+          ],
+          "minLength": 1,
+          "title": "DaVinci Flow Trigger Request Type"
+        },
+        "configuration": {
+          "type": "object",
+          "properties": {
+            "mfa": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "title": "DaVinci Flow Trigger Request Configuration MFA Enabled"
+                },
+                "time": {
+                  "type": "number",
+                  "title": "DaVinci Flow Trigger Request Configuration MFA Time"
+                },
+                "timeFormat": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "DaVinci Flow Trigger Request Configuration MFA Time Format"
+                }
+              },
+              "required": [
+                "enabled",
+                "time",
+                "timeFormat"
+              ],
+              "title": "DaVinci Flow Trigger Request Configuration MFA"
+            },
+            "pwd": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "title": "DaVinci Flow Trigger Request Configuration Password Enabled"
+                },
+                "time": {
+                  "type": "number",
+                  "title": "DaVinci Flow Trigger Request Configuration Password Time"
+                },
+                "timeFormat": {
+                  "type": "string",
+                  "minLength": 1,
+                  "title": "DaVinci Flow Trigger Request Configuration Password Time Format"
+                }
+              },
+              "required": [
+                "enabled",
+                "time",
+                "timeFormat"
+              ],
+              "title": "DaVinci Flow Trigger Request Configuration Password"
+            }
+          },
+          "required": [
+            "mfa",
+            "pwd"
+          ],
+          "title": "DaVinci Flow Trigger Request Configuration"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "DaVinci Flow Trigger Request"
+    }
+  }
+}

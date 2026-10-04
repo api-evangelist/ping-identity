@@ -1,0 +1,1117 @@
+{
+  "@context": {
+    "@vocab": "https://pingidentity.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ping": "https://pingidentity.com/schema#",
+    "com.pingidentity.ApiErrorResponse.403": "ping:com.pingidentity.ApiErrorResponse.403",
+    "code": {
+      "@id": "ping:code",
+      "@type": "xsd:string"
+    },
+    "message": {
+      "@id": "ping:message",
+      "@type": "xsd:string"
+    },
+    "details": {
+      "@id": "ping:details",
+      "@container": "@list"
+    },
+    "id": {
+      "@id": "ping:id",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.ApiErrorResponse": "ping:com.pingidentity.ApiErrorResponse",
+    "com.pingidentity.ApiErrorResponse.400": "ping:com.pingidentity.ApiErrorResponse.400",
+    "com.pingidentity.ErrorDetail": "ping:com.pingidentity.ErrorDetail",
+    "innerError": {
+      "@id": "ping:innerError"
+    },
+    "target": {
+      "@id": "ping:target",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotsVersionsResponse": "ping:com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotsVersionsResponse",
+    "_embedded": {
+      "@id": "ping:_embedded"
+    },
+    "_links": {
+      "@id": "ping:_links"
+    },
+    "count": {
+      "@id": "ping:count",
+      "@type": "xsd:integer"
+    },
+    "size": {
+      "@id": "ping:size",
+      "@type": "xsd:integer"
+    },
+    "com.pingidentity.ApiErrorResponse.429": "ping:com.pingidentity.ApiErrorResponse.429",
+    "com.pingidentity.pingone.configmanagement.snapshots.data.ResourceInformation": "ping:com.pingidentity.pingone.configmanagement.snapshots.data.ResourceInformation",
+    "category": {
+      "@id": "ping:category",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "ping:name",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.ApiErrorResponse.500": "ping:com.pingidentity.ApiErrorResponse.500",
+    "com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotView": "ping:com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotView",
+    "completedAt": {
+      "@id": "ping:completedAt",
+      "@type": "xsd:dateTime"
+    },
+    "configuration": {
+      "@id": "ping:configuration",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "ping:createdAt",
+      "@type": "xsd:dateTime"
+    },
+    "environment": {
+      "@id": "ping:environment",
+      "@type": "@id"
+    },
+    "error": {
+      "@id": "ping:error",
+      "@type": "xsd:string"
+    },
+    "errorCode": {
+      "@id": "ping:errorCode",
+      "@type": "xsd:integer"
+    },
+    "importMetadata": {
+      "@id": "ping:importMetadata"
+    },
+    "referencedResources": {
+      "@id": "ping:referencedResources",
+      "@container": "@list"
+    },
+    "resource": {
+      "@id": "ping:resource",
+      "@type": "@id"
+    },
+    "resourceUrl": {
+      "@id": "ping:resourceUrl",
+      "@type": "xsd:string"
+    },
+    "snapshotId": {
+      "@id": "ping:snapshotId",
+      "@type": "xsd:string"
+    },
+    "startedAt": {
+      "@id": "ping:startedAt",
+      "@type": "xsd:dateTime"
+    },
+    "status": {
+      "@id": "ping:status",
+      "@type": "xsd:string"
+    },
+    "versionedAt": {
+      "@id": "ping:versionedAt",
+      "@type": "xsd:dateTime"
+    },
+    "com.pingidentity.api.response.Link": "ping:com.pingidentity.api.response.Link",
+    "href": {
+      "@id": "ping:href",
+      "@type": "@id"
+    },
+    "profile": {
+      "@id": "ping:profile",
+      "@type": "@id"
+    },
+    "title": {
+      "@id": "ping:title",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "ping:type",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotRequest": "ping:com.pingidentity.pingone.configmanagement.snapshots.data.SnapshotRequest",
+    "baseResourceURL": {
+      "@id": "ping:baseResourceURL",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.ApiErrorResponse.401": "ping:com.pingidentity.ApiErrorResponse.401",
+    "com.pingidentity.api.Relationship.PingOne.RO": "ping:com.pingidentity.api.Relationship.PingOne.RO",
+    "com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyResponse": "ping:com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyResponse",
+    "flowDistributions": {
+      "@id": "ping:flowDistributions",
+      "@container": "@list"
+    },
+    "application": {
+      "@id": "ping:application",
+      "@type": "@id"
+    },
+    "trigger": {
+      "@id": "ping:trigger"
+    },
+    "updatedAt": {
+      "@id": "ping:updatedAt",
+      "@type": "xsd:dateTime"
+    },
+    "com.pingidentity.pingone.davinci.flowpolicies.data.CreateFlowPolicy": "ping:com.pingidentity.pingone.davinci.flowpolicies.data.CreateFlowPolicy",
+    "com.pingidentity.pingone.davinci.flowpolicies.data.UpdateFlowPolicy": "ping:com.pingidentity.pingone.davinci.flowpolicies.data.UpdateFlowPolicy",
+    "com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyEventsResponse": "ping:com.pingidentity.pingone.davinci.flowpolicies.response.FlowPolicyEventsResponse",
+    "com.pingidentity.ApiErrorResponse.415": "ping:com.pingidentity.ApiErrorResponse.415",
+    "com.pingidentity.pingone.davinci.flowpolicies.response.FlowPoliciesResponse": "ping:com.pingidentity.pingone.davinci.flowpolicies.response.FlowPoliciesResponse",
+    "com.pingidentity.api.Relationship.DaVinci.RO": "ping:com.pingidentity.api.Relationship.DaVinci.RO",
+    "com.pingidentity.ApiErrorResponse.404": "ping:com.pingidentity.ApiErrorResponse.404",
+    "com.pingidentity.pingone.davinci.applications.response.ApplicationResponse": "ping:com.pingidentity.pingone.davinci.applications.response.ApplicationResponse",
+    "apiKey": {
+      "@id": "ping:apiKey"
+    },
+    "oauth": {
+      "@id": "ping:oauth"
+    },
+    "com.pingidentity.pingone.davinci.applications.response.ApplicationsResponse": "ping:com.pingidentity.pingone.davinci.applications.response.ApplicationsResponse",
+    "com.pingidentity.pingone.davinci.applications.data.CreateApplication": "ping:com.pingidentity.pingone.davinci.applications.data.CreateApplication",
+    "com.pingidentity.pingone.davinci.applications.data.UpdateApplication": "ping:com.pingidentity.pingone.davinci.applications.data.UpdateApplication",
+    "com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstancesResponse": "ping:com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstancesResponse",
+    "com.pingidentity.pingone.davinci.connectorinstances.data.UpdateConnectorInstance": "ping:com.pingidentity.pingone.davinci.connectorinstances.data.UpdateConnectorInstance",
+    "connector": {
+      "@id": "ping:connector",
+      "@type": "@id"
+    },
+    "properties": {
+      "@id": "ping:properties"
+    },
+    "com.pingidentity.pingone.davinci.connectorinstances.data.CreateConnectorInstance": "ping:com.pingidentity.pingone.davinci.connectorinstances.data.CreateConnectorInstance",
+    "com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstanceResponse": "ping:com.pingidentity.pingone.davinci.connectorinstances.response.ConnectorInstanceResponse",
+    "com.pingidentity.api.Relationship.DaVinci": "ping:com.pingidentity.api.Relationship.DaVinci",
+    "com.pingidentity.pingone.davinci.connectors.response.ConnectorsMinimalResponse": "ping:com.pingidentity.pingone.davinci.connectors.response.ConnectorsMinimalResponse",
+    "com.pingidentity.pingone.davinci.connectors.response.ConnectorMinimalResponse": "ping:com.pingidentity.pingone.davinci.connectors.response.ConnectorMinimalResponse",
+    "metadata": {
+      "@id": "ping:metadata"
+    },
+    "version": {
+      "@id": "ping:version",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "ping:description",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.davinci.connectors.response.ConnectorDetailsResponse": "ping:com.pingidentity.pingone.davinci.connectors.response.ConnectorDetailsResponse",
+    "accountConfigView": {
+      "@id": "ping:accountConfigView"
+    },
+    "capabilities": {
+      "@id": "ping:capabilities"
+    },
+    "credentialsView": {
+      "@id": "ping:credentialsView"
+    },
+    "flowSections": {
+      "@id": "ping:flowSections",
+      "@container": "@list"
+    },
+    "sections": {
+      "@id": "ping:sections",
+      "@container": "@list"
+    },
+    "com.pingidentity.pingone.davinci.flowversions.response.FlowVersionDetailResponse": "ping:com.pingidentity.pingone.davinci.flowversions.response.FlowVersionDetailResponse",
+    "alias": {
+      "@id": "ping:alias",
+      "@type": "xsd:string"
+    },
+    "color": {
+      "@id": "ping:color",
+      "@type": "xsd:string"
+    },
+    "connectors": {
+      "@id": "ping:connectors",
+      "@container": "@list"
+    },
+    "deployedAt": {
+      "@id": "ping:deployedAt",
+      "@type": "xsd:dateTime"
+    },
+    "enabled": {
+      "@id": "ping:enabled",
+      "@type": "xsd:boolean"
+    },
+    "flow": {
+      "@id": "ping:flow"
+    },
+    "graphData": {
+      "@id": "ping:graphData",
+      "@type": "@id"
+    },
+    "inputSchema": {
+      "@id": "ping:inputSchema",
+      "@type": "@id"
+    },
+    "outputSchema": {
+      "@id": "ping:outputSchema",
+      "@type": "@id"
+    },
+    "settings": {
+      "@id": "ping:settings",
+      "@type": "@id"
+    },
+    "skcomponents": {
+      "@id": "ping:skcomponents",
+      "@container": "@list"
+    },
+    "updates": {
+      "@id": "ping:updates",
+      "@container": "@list"
+    },
+    "com.pingidentity.pingone.davinci.flowversions.response.FlowVersionsResponse": "ping:com.pingidentity.pingone.davinci.flowversions.response.FlowVersionsResponse",
+    "com.pingidentity.pingone.davinci.flows.response.fragment.GraphData": "ping:com.pingidentity.pingone.davinci.flows.response.fragment.GraphData",
+    "boxSelectionEnabled": {
+      "@id": "ping:boxSelectionEnabled",
+      "@type": "xsd:boolean"
+    },
+    "elements": {
+      "@id": "ping:elements"
+    },
+    "pan": {
+      "@id": "ping:pan"
+    },
+    "panningEnabled": {
+      "@id": "ping:panningEnabled",
+      "@type": "xsd:boolean"
+    },
+    "renderer": {
+      "@id": "ping:renderer"
+    },
+    "userPanningEnabled": {
+      "@id": "ping:userPanningEnabled",
+      "@type": "xsd:boolean"
+    },
+    "userZoomingEnabled": {
+      "@id": "ping:userZoomingEnabled",
+      "@type": "xsd:boolean"
+    },
+    "zoom": {
+      "@id": "ping:zoom",
+      "@type": "xsd:decimal"
+    },
+    "allLinterErrors": {
+      "@id": "ping:allLinterErrors",
+      "@container": "@list"
+    },
+    "data": {
+      "@id": "ping:data"
+    },
+    "maxZoom": {
+      "@id": "ping:maxZoom",
+      "@type": "xsd:decimal"
+    },
+    "minZoom": {
+      "@id": "ping:minZoom",
+      "@type": "xsd:decimal"
+    },
+    "zoomingEnabled": {
+      "@id": "ping:zoomingEnabled",
+      "@type": "xsd:boolean"
+    },
+    "com.pingidentity.pingone.davinci.flows.response.fragment.Trigger": "ping:com.pingidentity.pingone.davinci.flows.response.fragment.Trigger",
+    "com.pingidentity.pingone.davinci.flowversions.response.FlowVersionResponse": "ping:com.pingidentity.pingone.davinci.flowversions.response.FlowVersionResponse",
+    "clonedFrom": {
+      "@id": "ping:clonedFrom",
+      "@type": "xsd:decimal"
+    },
+    "com.pingidentity.pingone.davinci.flowversions.response.FlowVersionAliasResponse": "ping:com.pingidentity.pingone.davinci.flowversions.response.FlowVersionAliasResponse",
+    "com.pingidentity.pingone.davinci.flows.response.fragment.OutputSchema": "ping:com.pingidentity.pingone.davinci.flows.response.fragment.OutputSchema",
+    "output": {
+      "@id": "ping:output"
+    },
+    "com.pingidentity.pingone.davinci.flowversions.data.FlowVersionAlias": "ping:com.pingidentity.pingone.davinci.flowversions.data.FlowVersionAlias",
+    "com.pingidentity.pingone.davinci.flows.response.fragment.Settings": "ping:com.pingidentity.pingone.davinci.flows.response.fragment.Settings",
+    "csp": {
+      "@id": "ping:csp",
+      "@type": "xsd:string"
+    },
+    "css": {
+      "@id": "ping:css",
+      "@type": "xsd:string"
+    },
+    "cssLinks": {
+      "@id": "ping:cssLinks",
+      "@container": "@list"
+    },
+    "customErrorScreenBrandLogoUrl": {
+      "@id": "ping:customErrorScreenBrandLogoUrl",
+      "@type": "xsd:string"
+    },
+    "customErrorShowFooter": {
+      "@id": "ping:customErrorShowFooter"
+    },
+    "customFaviconLink": {
+      "@id": "ping:customFaviconLink",
+      "@type": "xsd:string"
+    },
+    "customLogoURLSelection": {
+      "@id": "ping:customLogoURLSelection",
+      "@type": "xsd:integer"
+    },
+    "customTitle": {
+      "@id": "ping:customTitle",
+      "@type": "xsd:string"
+    },
+    "defaultErrorScreenBrandLogo": {
+      "@id": "ping:defaultErrorScreenBrandLogo"
+    },
+    "flowHttpTimeoutInSeconds": {
+      "@id": "ping:flowHttpTimeoutInSeconds",
+      "@type": "xsd:integer"
+    },
+    "flowTimeoutInSeconds": {
+      "@id": "ping:flowTimeoutInSeconds",
+      "@type": "xsd:decimal"
+    },
+    "intermediateLoadingScreenCSS": {
+      "@id": "ping:intermediateLoadingScreenCSS"
+    },
+    "intermediateLoadingScreenHTML": {
+      "@id": "ping:intermediateLoadingScreenHTML"
+    },
+    "jsCustomFlowPlayer": {
+      "@id": "ping:jsCustomFlowPlayer",
+      "@type": "xsd:string"
+    },
+    "jsLinks": {
+      "@id": "ping:jsLinks",
+      "@container": "@list"
+    },
+    "logLevel": {
+      "@id": "ping:logLevel",
+      "@type": "xsd:integer"
+    },
+    "requireAuthenticationToInitiate": {
+      "@id": "ping:requireAuthenticationToInitiate"
+    },
+    "scrubSensitiveInfo": {
+      "@id": "ping:scrubSensitiveInfo"
+    },
+    "sensitiveInfoFields": {
+      "@id": "ping:sensitiveInfoFields",
+      "@container": "@list"
+    },
+    "useCSP": {
+      "@id": "ping:useCSP"
+    },
+    "useCustomCSS": {
+      "@id": "ping:useCustomCSS"
+    },
+    "useCustomFlowPlayer": {
+      "@id": "ping:useCustomFlowPlayer"
+    },
+    "useCustomScript": {
+      "@id": "ping:useCustomScript"
+    },
+    "useIntermediateLoadingScreen": {
+      "@id": "ping:useIntermediateLoadingScreen"
+    },
+    "validateOnSave": {
+      "@id": "ping:validateOnSave"
+    },
+    "com.pingidentity.pingone.davinci.flows.response.FlowResponse": "ping:com.pingidentity.pingone.davinci.flows.response.FlowResponse",
+    "currentVersion": {
+      "@id": "ping:currentVersion",
+      "@type": "xsd:decimal"
+    },
+    "dvlinterErrorCount": {
+      "@id": "ping:dvlinterErrorCount",
+      "@type": "xsd:decimal"
+    },
+    "dvlinterWarningCount": {
+      "@id": "ping:dvlinterWarningCount",
+      "@type": "xsd:decimal"
+    },
+    "publishedVersion": {
+      "@id": "ping:publishedVersion",
+      "@type": "xsd:decimal"
+    },
+    "com.pingidentity.pingone.davinci.flows.response.FlowsResponse": "ping:com.pingidentity.pingone.davinci.flows.response.FlowsResponse",
+    "com.pingidentity.pingone.davinci.flows.data.fragment.OutputSchema": "ping:com.pingidentity.pingone.davinci.flows.data.fragment.OutputSchema",
+    "com.pingidentity.pingone.davinci.flows.response.FlowEnabledResponse": "ping:com.pingidentity.pingone.davinci.flows.response.FlowEnabledResponse",
+    "com.pingidentity.pingone.davinci.flows.data.CreateFlow": "ping:com.pingidentity.pingone.davinci.flows.data.CreateFlow",
+    "com.pingidentity.pingone.davinci.flows.data.fragment.Settings": "ping:com.pingidentity.pingone.davinci.flows.data.fragment.Settings",
+    "com.pingidentity.pingone.davinci.flows.data.UpdateFlow": "ping:com.pingidentity.pingone.davinci.flows.data.UpdateFlow",
+    "com.pingidentity.pingone.davinci.flows.data.ValidateFlow": "ping:com.pingidentity.pingone.davinci.flows.data.ValidateFlow",
+    "com.pingidentity.pingone.davinci.flows.data.fragment.Trigger": "ping:com.pingidentity.pingone.davinci.flows.data.fragment.Trigger",
+    "com.pingidentity.pingone.davinci.flows.data.fragment.GraphData": "ping:com.pingidentity.pingone.davinci.flows.data.fragment.GraphData",
+    "com.pingidentity.pingone.davinci.flows.data.EnableFlow": "ping:com.pingidentity.pingone.davinci.flows.data.EnableFlow",
+    "com.pingidentity.pingone.davinci.variables.response.VariablesResponse": "ping:com.pingidentity.pingone.davinci.variables.response.VariablesResponse",
+    "com.pingidentity.pingone.davinci.variables.data.CreateVariable": "ping:com.pingidentity.pingone.davinci.variables.data.CreateVariable",
+    "context": {
+      "@id": "ping:context",
+      "@type": "xsd:string"
+    },
+    "dataType": {
+      "@id": "ping:dataType",
+      "@type": "xsd:string"
+    },
+    "mutable": {
+      "@id": "ping:mutable",
+      "@type": "xsd:boolean"
+    },
+    "displayName": {
+      "@id": "ping:displayName",
+      "@type": "xsd:string"
+    },
+    "max": {
+      "@id": "ping:max",
+      "@type": "xsd:integer"
+    },
+    "min": {
+      "@id": "ping:min",
+      "@type": "xsd:integer"
+    },
+    "value": {
+      "@id": "ping:value"
+    },
+    "com.pingidentity.pingone.davinci.variables.response.VariableResponse": "ping:com.pingidentity.pingone.davinci.variables.response.VariableResponse",
+    "com.pingidentity.pingone.davinci.variables.data.UpdateVariable": "ping:com.pingidentity.pingone.davinci.variables.data.UpdateVariable",
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.BillOfMaterialsApiResponse": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.BillOfMaterialsApiResponse",
+    "products": {
+      "@id": "ping:products",
+      "@container": "@list"
+    },
+    "solutionType": {
+      "@id": "ping:solutionType",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.BillOfMaterials": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.BillOfMaterials",
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.ReplaceBillOfMaterials": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.ReplaceBillOfMaterials",
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentTypeValue": "ping:com.pingidentity.pingone.orgmgt.environments.data.EnvironmentTypeValue",
+    "com.pingidentity.api.Relationship.lang.String": "ping:com.pingidentity.api.Relationship.lang.String",
+    "com.pingidentity.pingone.orgmgt.environments.data.Environment": "ping:com.pingidentity.pingone.orgmgt.environments.data.Environment",
+    "region": {
+      "@id": "ping:region",
+      "@type": "@id"
+    },
+    "organization": {
+      "@id": "ping:organization",
+      "@type": "@id"
+    },
+    "billOfMaterials": {
+      "@id": "ping:billOfMaterials",
+      "@type": "@id"
+    },
+    "environmentCapabilities": {
+      "@id": "ping:environmentCapabilities",
+      "@type": "@id"
+    },
+    "hardDeleteAllowedAt": {
+      "@id": "ping:hardDeleteAllowedAt",
+      "@type": "xsd:dateTime"
+    },
+    "icon": {
+      "@id": "ping:icon",
+      "@type": "xsd:string"
+    },
+    "license": {
+      "@id": "ping:license",
+      "@type": "@id"
+    },
+    "pingoneAccountId": {
+      "@id": "ping:pingoneAccountId",
+      "@type": "xsd:string"
+    },
+    "softDeletedAt": {
+      "@id": "ping:softDeletedAt",
+      "@type": "xsd:dateTime"
+    },
+    "subtype": {
+      "@id": "ping:subtype",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Bookmark": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.Bookmark",
+    "com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.EnvironmentCapabilities": "ping:com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.EnvironmentCapabilities",
+    "canAddResources": {
+      "@id": "ping:canAddResources",
+      "@type": "xsd:boolean"
+    },
+    "canAssignCustomRolesEverywhere": {
+      "@id": "ping:canAssignCustomRolesEverywhere",
+      "@type": "xsd:boolean"
+    },
+    "canAssignUsersRoles": {
+      "@id": "ping:canAssignUsersRoles",
+      "@type": "xsd:boolean"
+    },
+    "canContactSupport": {
+      "@id": "ping:canContactSupport",
+      "@type": "xsd:boolean"
+    },
+    "canCreateConnections": {
+      "@id": "ping:canCreateConnections",
+      "@type": "xsd:boolean"
+    },
+    "canCreateCustomDomain": {
+      "@id": "ping:canCreateCustomDomain",
+      "@type": "xsd:boolean"
+    },
+    "canPromoteToProd": {
+      "@id": "ping:canPromoteToProd",
+      "@type": "xsd:boolean"
+    },
+    "canSendMfaNotificationsOutsideWhitelist": {
+      "@id": "ping:canSendMfaNotificationsOutsideWhitelist",
+      "@type": "xsd:boolean"
+    },
+    "canSendPasswordManagementNotifications": {
+      "@id": "ping:canSendPasswordManagementNotifications",
+      "@type": "xsd:boolean"
+    },
+    "canSendVerificationFlowNotifications": {
+      "@id": "ping:canSendVerificationFlowNotifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseAadhaar": {
+      "@id": "ping:canUseAadhaar",
+      "@type": "xsd:boolean"
+    },
+    "canUseAamva": {
+      "@id": "ping:canUseAamva",
+      "@type": "xsd:boolean"
+    },
+    "canUseAccountOwnership": {
+      "@id": "ping:canUseAccountOwnership",
+      "@type": "xsd:boolean"
+    },
+    "canUseAccountProtection": {
+      "@id": "ping:canUseAccountProtection",
+      "@type": "xsd:boolean"
+    },
+    "canUseAccountTakeoverDetection": {
+      "@id": "ping:canUseAccountTakeoverDetection",
+      "@type": "xsd:boolean"
+    },
+    "canUseApiAccessManagement": {
+      "@id": "ping:canUseApiAccessManagement",
+      "@type": "xsd:boolean"
+    },
+    "canUseApplicationPermissions": {
+      "@id": "ping:canUseApplicationPermissions",
+      "@type": "xsd:boolean"
+    },
+    "canUseBotMaliciousDeviceDetection": {
+      "@id": "ping:canUseBotMaliciousDeviceDetection",
+      "@type": "xsd:boolean"
+    },
+    "canUseCredentialSharingDetection": {
+      "@id": "ping:canUseCredentialSharingDetection",
+      "@type": "xsd:boolean"
+    },
+    "canUseCredentials": {
+      "@id": "ping:canUseCredentials",
+      "@type": "xsd:boolean"
+    },
+    "canUseCredentialsPushNotifications": {
+      "@id": "ping:canUseCredentialsPushNotifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseCustomSchema": {
+      "@id": "ping:canUseCustomSchema",
+      "@type": "xsd:boolean"
+    },
+    "canUseDaVinciAdminPortal": {
+      "@id": "ping:canUseDaVinciAdminPortal",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataAnalyticsSupport": {
+      "@id": "ping:canUseDataAnalyticsSupport",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataBasedVerifications": {
+      "@id": "ping:canUseDataBasedVerifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataVerificationGroup1": {
+      "@id": "ping:canUseDataVerificationGroup1",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataVerificationGroup2": {
+      "@id": "ping:canUseDataVerificationGroup2",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataVerificationGroup3": {
+      "@id": "ping:canUseDataVerificationGroup3",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataVerificationGroup4": {
+      "@id": "ping:canUseDataVerificationGroup4",
+      "@type": "xsd:boolean"
+    },
+    "canUseDataVerificationGroup5": {
+      "@id": "ping:canUseDataVerificationGroup5",
+      "@type": "xsd:boolean"
+    },
+    "canUseDeviceReputationScoring": {
+      "@id": "ping:canUseDeviceReputationScoring",
+      "@type": "xsd:boolean"
+    },
+    "canUseDigitalVerifications": {
+      "@id": "ping:canUseDigitalVerifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseDocumentMatch": {
+      "@id": "ping:canUseDocumentMatch",
+      "@type": "xsd:boolean"
+    },
+    "canUseDynamicAuthorization": {
+      "@id": "ping:canUseDynamicAuthorization",
+      "@type": "xsd:boolean"
+    },
+    "canUseEditNotificationTemplate": {
+      "@id": "ping:canUseEditNotificationTemplate",
+      "@type": "xsd:boolean"
+    },
+    "canUseEmailOtp": {
+      "@id": "ping:canUseEmailOtp",
+      "@type": "xsd:boolean"
+    },
+    "canUseFaceMatch": {
+      "@id": "ping:canUseFaceMatch",
+      "@type": "xsd:boolean"
+    },
+    "canUseFraudDataEnrichment": {
+      "@id": "ping:canUseFraudDataEnrichment",
+      "@type": "xsd:boolean"
+    },
+    "canUseGlobalWatchlist": {
+      "@id": "ping:canUseGlobalWatchlist",
+      "@type": "xsd:boolean"
+    },
+    "canUseIdentities": {
+      "@id": "ping:canUseIdentities",
+      "@type": "xsd:boolean"
+    },
+    "canUseIdentityProviders": {
+      "@id": "ping:canUseIdentityProviders",
+      "@type": "xsd:boolean"
+    },
+    "canUseInboundProvisioning": {
+      "@id": "ping:canUseInboundProvisioning",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligence": {
+      "@id": "ping:canUseIntelligence",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceAdvancedPredictors": {
+      "@id": "ping:canUseIntelligenceAdvancedPredictors",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceAnonymousNetworkDetection": {
+      "@id": "ping:canUseIntelligenceAnonymousNetworkDetection",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceDataConsent": {
+      "@id": "ping:canUseIntelligenceDataConsent",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceEditPolicyScores": {
+      "@id": "ping:canUseIntelligenceEditPolicyScores",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceGeoVelocity": {
+      "@id": "ping:canUseIntelligenceGeoVelocity",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceLastTransactionOlderThan": {
+      "@id": "ping:canUseIntelligenceLastTransactionOlderThan",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceLimitedCompositePredictor": {
+      "@id": "ping:canUseIntelligenceLimitedCompositePredictor",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceNewDevicePredictor": {
+      "@id": "ping:canUseIntelligenceNewDevicePredictor",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceProtect": {
+      "@id": "ping:canUseIntelligenceProtect",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceReputation": {
+      "@id": "ping:canUseIntelligenceReputation",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceRisk": {
+      "@id": "ping:canUseIntelligenceRisk",
+      "@type": "xsd:boolean"
+    },
+    "canUseIntelligenceTrustDevicePredictor": {
+      "@id": "ping:canUseIntelligenceTrustDevicePredictor",
+      "@type": "xsd:boolean"
+    },
+    "canUseKerberosGateway": {
+      "@id": "ping:canUseKerberosGateway",
+      "@type": "xsd:boolean"
+    },
+    "canUseLdapGateway": {
+      "@id": "ping:canUseLdapGateway",
+      "@type": "xsd:boolean"
+    },
+    "canUseLiveAgent": {
+      "@id": "ping:canUseLiveAgent",
+      "@type": "xsd:boolean"
+    },
+    "canUseManualIDStepUpInspection": {
+      "@id": "ping:canUseManualIDStepUpInspection",
+      "@type": "xsd:boolean"
+    },
+    "canUseManualIdInspection": {
+      "@id": "ping:canUseManualIdInspection",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfa": {
+      "@id": "ping:canUseMfa",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfaCiam": {
+      "@id": "ping:canUseMfaCiam",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfaFido2Devices": {
+      "@id": "ping:canUseMfaFido2Devices",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfaPushNotifications": {
+      "@id": "ping:canUseMfaPushNotifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfaVoiceOtp": {
+      "@id": "ping:canUseMfaVoiceOtp",
+      "@type": "xsd:boolean"
+    },
+    "canUseMfaWf": {
+      "@id": "ping:canUseMfaWf",
+      "@type": "xsd:boolean"
+    },
+    "canUseMyAccount": {
+      "@id": "ping:canUseMyAccount",
+      "@type": "xsd:boolean"
+    },
+    "canUseNewAccountFraudDetection": {
+      "@id": "ping:canUseNewAccountFraudDetection",
+      "@type": "xsd:boolean"
+    },
+    "canUseOATHToken": {
+      "@id": "ping:canUseOATHToken",
+      "@type": "xsd:boolean"
+    },
+    "canUseOrchestration": {
+      "@id": "ping:canUseOrchestration",
+      "@type": "xsd:boolean"
+    },
+    "canUsePasswordManagement": {
+      "@id": "ping:canUsePasswordManagement",
+      "@type": "xsd:boolean"
+    },
+    "canUsePasswordOnlyAuthentication": {
+      "@id": "ping:canUsePasswordOnlyAuthentication",
+      "@type": "xsd:boolean"
+    },
+    "canUsePasswordPolicy": {
+      "@id": "ping:canUsePasswordPolicy",
+      "@type": "xsd:boolean"
+    },
+    "canUsePingIDApp": {
+      "@id": "ping:canUsePingIDApp",
+      "@type": "xsd:boolean"
+    },
+    "canUsePingIdDesktop": {
+      "@id": "ping:canUsePingIdDesktop",
+      "@type": "xsd:boolean"
+    },
+    "canUsePingIdDesktopGen2": {
+      "@id": "ping:canUsePingIdDesktopGen2",
+      "@type": "xsd:boolean"
+    },
+    "canUsePingSmsAccount": {
+      "@id": "ping:canUsePingSmsAccount",
+      "@type": "xsd:boolean"
+    },
+    "canUsePlatform": {
+      "@id": "ping:canUsePlatform",
+      "@type": "xsd:boolean"
+    },
+    "canUseProtectTransactions": {
+      "@id": "ping:canUseProtectTransactions",
+      "@type": "xsd:boolean"
+    },
+    "canUseProvisioning": {
+      "@id": "ping:canUseProvisioning",
+      "@type": "xsd:boolean"
+    },
+    "canUseRadiusGateway": {
+      "@id": "ping:canUseRadiusGateway",
+      "@type": "xsd:boolean"
+    },
+    "canUseScheduledFlows": {
+      "@id": "ping:canUseScheduledFlows",
+      "@type": "xsd:boolean"
+    },
+    "canUseSmsOtp": {
+      "@id": "ping:canUseSmsOtp",
+      "@type": "xsd:boolean"
+    },
+    "canUseTotp": {
+      "@id": "ping:canUseTotp",
+      "@type": "xsd:boolean"
+    },
+    "canUseUniversalDeviceId": {
+      "@id": "ping:canUseUniversalDeviceId",
+      "@type": "xsd:boolean"
+    },
+    "canUseVerificationFlow": {
+      "@id": "ping:canUseVerificationFlow",
+      "@type": "xsd:boolean"
+    },
+    "canUseVerify": {
+      "@id": "ping:canUseVerify",
+      "@type": "xsd:boolean"
+    },
+    "canUseVerifyPushNotifications": {
+      "@id": "ping:canUseVerifyPushNotifications",
+      "@type": "xsd:boolean"
+    },
+    "canUseVerifyVoice": {
+      "@id": "ping:canUseVerifyVoice",
+      "@type": "xsd:boolean"
+    },
+    "canUseWhatsAppOtp": {
+      "@id": "ping:canUseWhatsAppOtp",
+      "@type": "xsd:boolean"
+    },
+    "canUseWinLogin": {
+      "@id": "ping:canUseWinLogin",
+      "@type": "xsd:boolean"
+    },
+    "canUseYubikey": {
+      "@id": "ping:canUseYubikey",
+      "@type": "xsd:boolean"
+    },
+    "canUsersUpdateSelf": {
+      "@id": "ping:canUsersUpdateSelf",
+      "@type": "xsd:boolean"
+    },
+    "environmentId": {
+      "@id": "ping:environmentId",
+      "@type": "xsd:string"
+    },
+    "getcanUseUniversalCapture": {
+      "@id": "ping:getcanUseUniversalCapture",
+      "@type": "xsd:boolean"
+    },
+    "licenseQuantities": {
+      "@id": "ping:licenseQuantities",
+      "@type": "@id"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentStatusValue": "ping:com.pingidentity.pingone.orgmgt.environments.data.EnvironmentStatusValue",
+    "com.pingidentity.pingone.orgmgt.environments.data.CreateEnvironment": "ping:com.pingidentity.pingone.orgmgt.environments.data.CreateEnvironment",
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentRegionCodeValue": "ping:com.pingidentity.pingone.orgmgt.environments.data.EnvironmentRegionCodeValue",
+    "com.pingidentity.pingone.orgmgt.environments.data.ReplaceEnvironment": "ping:com.pingidentity.pingone.orgmgt.environments.data.ReplaceEnvironment",
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Product": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.Product",
+    "bookmarks": {
+      "@id": "ping:bookmarks",
+      "@container": "@list"
+    },
+    "console": {
+      "@id": "ping:console",
+      "@type": "@id"
+    },
+    "deployment": {
+      "@id": "ping:deployment",
+      "@type": "@id"
+    },
+    "softwareLicense": {
+      "@id": "ping:softwareLicense",
+      "@type": "@id"
+    },
+    "tags": {
+      "@id": "ping:tags",
+      "@container": "@list"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.ApiLimit": "ping:com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.ApiLimit",
+    "limit": {
+      "@id": "ping:limit",
+      "@type": "xsd:integer"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentsResponse": "ping:com.pingidentity.pingone.orgmgt.environments.data.EnvironmentsResponse",
+    "com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.LicenseQuantities": "ping:com.pingidentity.pingone.orgmgt.environments.capabilities.api.model.LicenseQuantities",
+    "numberOfAadhaar": {
+      "@id": "ping:numberOfAadhaar",
+      "@type": "xsd:integer"
+    },
+    "numberOfAccountOwnership": {
+      "@id": "ping:numberOfAccountOwnership",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerificationGroup1": {
+      "@id": "ping:numberOfDataVerificationGroup1",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerificationGroup2": {
+      "@id": "ping:numberOfDataVerificationGroup2",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerificationGroup3": {
+      "@id": "ping:numberOfDataVerificationGroup3",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerificationGroup4": {
+      "@id": "ping:numberOfDataVerificationGroup4",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerificationGroup5": {
+      "@id": "ping:numberOfDataVerificationGroup5",
+      "@type": "xsd:integer"
+    },
+    "numberOfDataVerifications": {
+      "@id": "ping:numberOfDataVerifications",
+      "@type": "xsd:integer"
+    },
+    "numberOfDeviceReputationScoring": {
+      "@id": "ping:numberOfDeviceReputationScoring",
+      "@type": "xsd:integer"
+    },
+    "numberOfGlobalWatchlist": {
+      "@id": "ping:numberOfGlobalWatchlist",
+      "@type": "xsd:integer"
+    },
+    "numberOfLiveAgent": {
+      "@id": "ping:numberOfLiveAgent",
+      "@type": "xsd:integer"
+    },
+    "rlgAnalyticsRpm": {
+      "@id": "ping:rlgAnalyticsRpm",
+      "@type": "@id"
+    },
+    "rlgAppRegRpm": {
+      "@id": "ping:rlgAppRegRpm",
+      "@type": "@id"
+    },
+    "rlgAuditRps": {
+      "@id": "ping:rlgAuditRps",
+      "@type": "@id"
+    },
+    "rlgAuthnRps": {
+      "@id": "ping:rlgAuthnRps",
+      "@type": "@id"
+    },
+    "rlgAuthnStartRps": {
+      "@id": "ping:rlgAuthnStartRps",
+      "@type": "@id"
+    },
+    "rlgAuthzBulkRps": {
+      "@id": "ping:rlgAuthzBulkRps",
+      "@type": "@id"
+    },
+    "rlgAuthzRps": {
+      "@id": "ping:rlgAuthzRps",
+      "@type": "@id"
+    },
+    "rlgCatchAllRps": {
+      "@id": "ping:rlgCatchAllRps",
+      "@type": "@id"
+    },
+    "rlgConfigRpm": {
+      "@id": "ping:rlgConfigRpm",
+      "@type": "@id"
+    },
+    "rlgCredRpm": {
+      "@id": "ping:rlgCredRpm",
+      "@type": "@id"
+    },
+    "rlgDirAccessRps": {
+      "@id": "ping:rlgDirAccessRps",
+      "@type": "@id"
+    },
+    "rlgDirBulkRps": {
+      "@id": "ping:rlgDirBulkRps",
+      "@type": "@id"
+    },
+    "rlgDirFixedRps": {
+      "@id": "ping:rlgDirFixedRps",
+      "@type": "@id"
+    },
+    "rlgDirWriteRps": {
+      "@id": "ping:rlgDirWriteRps",
+      "@type": "@id"
+    },
+    "rlgDvFlowCallbackRps": {
+      "@id": "ping:rlgDvFlowCallbackRps",
+      "@type": "@id"
+    },
+    "rlgDvFlowExecRps": {
+      "@id": "ping:rlgDvFlowExecRps",
+      "@type": "@id"
+    },
+    "rlgDvFlowStartRps": {
+      "@id": "ping:rlgDvFlowStartRps",
+      "@type": "@id"
+    },
+    "rlgMfaFixedRps": {
+      "@id": "ping:rlgMfaFixedRps",
+      "@type": "@id"
+    },
+    "rlgMfaPollingRps": {
+      "@id": "ping:rlgMfaPollingRps",
+      "@type": "@id"
+    },
+    "rlgMfaRps": {
+      "@id": "ping:rlgMfaRps",
+      "@type": "@id"
+    },
+    "rlgPrivilegeRps": {
+      "@id": "ping:rlgPrivilegeRps",
+      "@type": "@id"
+    },
+    "rlgRiskEvalsRps": {
+      "@id": "ping:rlgRiskEvalsRps",
+      "@type": "@id"
+    },
+    "rlgTokenCheckRps": {
+      "@id": "ping:rlgTokenCheckRps",
+      "@type": "@id"
+    },
+    "rlgVerifyRpm": {
+      "@id": "ping:rlgVerifyRpm",
+      "@type": "@id"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.data.EnvironmentLicense": "ping:com.pingidentity.pingone.orgmgt.environments.data.EnvironmentLicense",
+    "package": {
+      "@id": "ping:package",
+      "@type": "xsd:string"
+    },
+    "com.pingidentity.pingone.orgmgt.environments.bom.api.model.Console": "ping:com.pingidentity.pingone.orgmgt.environments.bom.api.model.Console",
+    "com.pingidentity.pingone.flowpolicy.davinci.model.Trigger": "ping:com.pingidentity.pingone.flowpolicy.davinci.model.Trigger",
+    "com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowApplication": "ping:com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowApplication",
+    "com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowPolicyDTO": "ping:com.pingidentity.pingone.application.flowPolicyAssignment.model.FlowPolicyDTO",
+    "com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO": "ping:com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTO",
+    "date": {
+      "@id": "ping:date",
+      "@type": "xsd:integer"
+    },
+    "totalIdentities": {
+      "@id": "ping:totalIdentities",
+      "@type": "xsd:integer"
+    },
+    "com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTOCollectionResponse": "ping:com.pingidentity.pingone.directory.totalidentitiesdashboard.data.TotalIdentitiesCountDTOCollectionResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Ping Identity API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Ping Identity's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-03) from openapi/ping-identity-configuration-management-api-openapi.yml, openapi/ping-identity-davinci-admin-application-flow-policies-api-openapi.yml, openapi/ping-identity-davinci-admin-applications-api-openapi.yml.",
+  "dcterms:created": "2026-10-03",
+  "dcterms:source": [
+    "openapi/ping-identity-configuration-management-api-openapi.yml",
+    "openapi/ping-identity-davinci-admin-application-flow-policies-api-openapi.yml",
+    "openapi/ping-identity-davinci-admin-applications-api-openapi.yml",
+    "openapi/ping-identity-davinci-admin-connector-instances-api-openapi.yml",
+    "openapi/ping-identity-davinci-admin-connectors-api-openapi.yml"
+  ]
+}

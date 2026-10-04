@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/ping-identity/main/json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-response-applications-response-schema.json",
+  "title": "DaVinci Application Collection Response",
+  "x-generated": "2026-10-03",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/ping-identity-davinci-admin-applications-api-openapi.yml#/components/schemas/com.pingidentity.pingone.davinci.applications.response.ApplicationsResponse",
+  "type": "object",
+  "properties": {
+    "_links": {
+      "type": "object",
+      "properties": {
+        "environment": {
+          "$ref": "#/$defs/com.pingidentity.api.response.Link"
+        },
+        "self": {
+          "$ref": "#/$defs/com.pingidentity.api.response.Link"
+        }
+      },
+      "required": [
+        "environment",
+        "self"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/com.pingidentity.api.response.Link"
+      },
+      "title": "DaVinci Application Collection Response _links"
+    },
+    "_embedded": {
+      "type": "object",
+      "properties": {
+        "davinciApplications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/$defs/com.pingidentity.pingone.davinci.applications.response.ApplicationResponse"
+          },
+          "title": "DaVinci Application Collection Response _embedded Davinci Applications"
+        }
+      },
+      "required": [
+        "davinciApplications"
+      ],
+      "title": "DaVinci Application Collection Response _embedded"
+    }
+  },
+  "required": [
+    "_links",
+    "_embedded"
+  ],
+  "$defs": {
+    "com.pingidentity.api.Relationship.PingOne.RO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "readOnly": true,
+          "minLength": 1,
+          "title": "Resource Relationship Read-Only Id"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "Resource Relationship Read-Only"
+    },
+    "com.pingidentity.api.response.Link": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri",
+          "minLength": 1,
+          "title": "JSON HAL Link Href"
+        },
+        "name": {
+          "type": "string",
+          "title": "JSON HAL Link Name"
+        },
+        "profile": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Profile"
+        },
+        "title": {
+          "type": "string",
+          "format": "uri",
+          "title": "JSON HAL Link Title"
+        },
+        "type": {
+          "type": "string",
+          "title": "JSON HAL Link Type"
+        }
+      },
+      "required": [
+        "href"
+      ],
+      "readOnly": true,
+      "title": "JSON HAL Link"
+    },
+    "com.pingidentity.pingone.davinci.applications.response.ApplicationResponse": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "$ref": "#/$defs/com.pingidentity.api.response.Link"
+            },
+            "environment": {
+              "$ref": "#/$defs/com.pingidentity.api.response.Link"
+            },
+            "flowPolicies": {
+              "$ref": "#/$defs/com.pingidentity.api.response.Link"
+            },
+            "davinciApplication.rotateKey": {
+              "$ref": "#/$defs/com.pingidentity.api.response.Link"
+            },
+            "davinciApplication.rotateSecret": {
+              "$ref": "#/$defs/com.pingidentity.api.response.Link"
+            }
+          },
+          "required": [
+            "self",
+            "environment",
+            "flowPolicies",
+            "davinciApplication.rotateKey",
+            "davinciApplication.rotateSecret"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/com.pingidentity.api.response.Link"
+          },
+          "title": "DaVinci Application Response _links"
+        },
+        "apiKey": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "title": "DaVinci Application Response Api Key Enabled"
+            },
+            "value": {
+              "type": "string",
+              "format": "password",
+              "minLength": 1,
+              "title": "DaVinci Application Response Api Key Value"
+            }
+          },
+          "required": [
+            "enabled",
+            "value"
+          ],
+          "title": "DaVinci Application Response Api Key"
+        },
+        "environment": {
+          "$ref": "#/$defs/com.pingidentity.api.Relationship.PingOne.RO"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DaVinci Application Response Id"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "title": "DaVinci Application Response Name"
+        },
+        "oauth": {
+          "type": "object",
+          "properties": {
+            "clientSecret": {
+              "type": "string",
+              "format": "password",
+              "minLength": 1,
+              "title": "DaVinci Application Response OAuth Client Secret"
+            },
+            "enforceSignedRequestOpenid": {
+              "type": "boolean",
+              "title": "DaVinci Application Response OAuth Enforce Signed Request Openid"
+            },
+            "grantTypes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "authorizationCode",
+                  "clientCredentials",
+                  "implicit"
+                ],
+                "type": "string",
+                "title": "DaVinci Application Response OAuth Grant Type"
+              },
+              "default": [
+                "authorizationCode"
+              ],
+              "title": "DaVinci Application Response OAuth Grant Types"
+            },
+            "logoutUris": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "title": "DaVinci Application Response OAuth Logout Uri"
+              },
+              "title": "DaVinci Application Response OAuth Logout Uris"
+            },
+            "redirectUris": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "title": "DaVinci Application Response OAuth Redirect Uri"
+              },
+              "title": "DaVinci Application Response OAuth Redirect Uris"
+            },
+            "scopes": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "flow_analytics",
+                  "offline_access",
+                  "openid",
+                  "profile"
+                ],
+                "type": "string",
+                "title": "DaVinci Application Response OAuth Scope"
+              },
+              "default": [
+                "openid",
+                "profile"
+              ],
+              "title": "DaVinci Application Response OAuth Scopes"
+            },
+            "spJwksOpenid": {
+              "type": "string",
+              "title": "DaVinci Application Response OAuth Sp Jwks Openid"
+            },
+            "spjwksUrl": {
+              "type": "string",
+              "title": "DaVinci Application Response OAuth Spjwks Url"
+            }
+          },
+          "required": [
+            "clientSecret"
+          ],
+          "title": "DaVinci Application Response OAuth"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "title": "DaVinci Application Response Created At"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "title": "DaVinci Application Response Updated At"
+        }
+      },
+      "required": [
+        "_links",
+        "apiKey",
+        "environment",
+        "id",
+        "name",
+        "oauth"
+      ],
+      "title": "DaVinci Application Response"
+    }
+  }
+}
