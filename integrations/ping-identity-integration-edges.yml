@@ -905,23 +905,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Duo Security Integration Kit
-  app: Duo Security Integration Kit
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/duo-security-integration-kit
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Check Point Remote Access VPN
   app: Check Point Remote Access VPN
   partner: null
@@ -933,6 +916,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/check-point-remote-access-vpn
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Duo Security Integration Kit
+  app: Duo Security Integration Kit
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/duo-security-integration-kit
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -1959,23 +1959,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Microsoft Teams Connector
-  app: Microsoft Teams Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/microsoft-teams-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Atlassian Cloud Provisioner
   app: Atlassian Cloud Provisioner
   partner: null
@@ -1987,6 +1970,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/atlassian-cloud-provisioner
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Microsoft Teams Connector
+  app: Microsoft Teams Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/microsoft-teams-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2044,23 +2044,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: MuleSoft Integration Kit for PingAuthorize
-  app: MuleSoft Integration Kit for PingAuthorize
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/mulesoft-integration-kit-for-pingauthorize
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: PingOne for Customers Essentials
   app: PingOne for Customers Essentials
   partner: null
@@ -2089,6 +2072,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/id-dataweb-integration-kit
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: MuleSoft Integration Kit for PingAuthorize
+  app: MuleSoft Integration Kit for PingAuthorize
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/mulesoft-integration-kit-for-pingauthorize
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2163,23 +2163,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Token Management Connector
-  app: Token Management Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/token-management-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Flow Conductor Connector
   app: Flow Conductor Connector
   partner: null
@@ -2191,6 +2174,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/flow-conductor-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Token Management Connector
+  app: Token Management Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/token-management-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2367,6 +2367,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: WAM Integration Kit
+  app: WAM Integration Kit
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/wam-integration-kit
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Code Snippet Connector
   app: Code Snippet Connector
   partner: null
@@ -2418,23 +2435,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: WAM Integration Kit
-  app: WAM Integration Kit
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/wam-integration-kit
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: LDAP Connector
   app: LDAP Connector
   partner: null
@@ -2446,6 +2446,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/davinci-ldap-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: PingFederate IdP Discovery Authentication Selector
+  app: PingFederate IdP Discovery Authentication Selector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/pingfederate-idp-discovery-authentication-selector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2480,23 +2497,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/microsoft-dynamics-365-customer-insights-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: PingFederate IdP Discovery Authentication Selector
-  app: PingFederate IdP Discovery Authentication Selector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/pingfederate-idp-discovery-authentication-selector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2690,23 +2690,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: BeyondTrust Password Safe Connector
-  app: BeyondTrust Password Safe Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/beyondtrust-password-safe-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Akamai Account Protector Node
   app: Akamai Account Protector Node
   partner: null
@@ -2724,8 +2707,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Cookie Connector
-  app: Cookie Connector
+- partner_name: BeyondTrust Password Safe Connector
+  app: BeyondTrust Password Safe Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -2734,7 +2717,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/cookie-connector
+  evidence: https://marketplace.pingone.com/item/beyondtrust-password-safe-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2786,6 +2769,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/beyondtrust-remote-support-davinci-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Cookie Connector
+  app: Cookie Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/cookie-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2928,23 +2928,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Magic Link Integration Kit
-  app: Magic Link Integration Kit
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/magic-link-integration-kit
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: StatusPage.io
   app: StatusPage.io
   partner: null
@@ -2962,8 +2945,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Google Login Connector
-  app: Google Login Connector
+- partner_name: Magic Link Integration Kit
+  app: Magic Link Integration Kit
   partner: null
   partner_match: null
   partner_candidate: null
@@ -2972,7 +2955,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/google-login-connector
+  evidence: https://marketplace.pingone.com/item/magic-link-integration-kit
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -2990,6 +2973,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/aws-lambda-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Google Login Connector
+  app: Google Login Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/google-login-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3098,8 +3098,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Azure AD User Management Connector
-  app: Azure AD User Management Connector
+- partner_name: ETQ Reliance
+  app: ETQ Reliance
   partner: null
   partner_match: null
   partner_candidate: null
@@ -3108,7 +3108,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/azure-ad-user-management-connector
+  evidence: https://marketplace.pingone.com/item/etq-reliance
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3132,8 +3132,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: ETQ Reliance
-  app: ETQ Reliance
+- partner_name: Azure AD User Management Connector
+  app: Azure AD User Management Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -3142,7 +3142,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/etq-reliance
+  evidence: https://marketplace.pingone.com/item/azure-ad-user-management-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3183,23 +3183,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Concur
-  app: Concur
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/concur
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: PingID Provisioner
   app: PingID Provisioner
   partner: null
@@ -3228,6 +3211,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/servicenow-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Concur
+  app: Concur
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/concur
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3472,23 +3472,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Daon IDV Connector
-  app: Daon IDV Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/daon-idv-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Healthcare Patient Experience Flow Pack
   app: Healthcare Patient Experience Flow Pack
   partner: null
@@ -3506,8 +3489,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: iProov Authentication Node
-  app: iProov Authentication Node
+- partner_name: Daon IDV Connector
+  app: Daon IDV Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -3516,7 +3499,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/iproov-authentication-node
+  evidence: https://marketplace.pingone.com/item/daon-idv-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3534,6 +3517,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/pingone-application-catalog-for-oracle-fusion
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: iProov Authentication Node
+  app: iProov Authentication Node
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/iproov-authentication-node
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3846,23 +3846,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Apple Login Connector
-  app: Apple Login Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/apple-login-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Canvas
   app: Canvas
   partner: null
@@ -3908,6 +3891,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/microsoft-login-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Apple Login Connector
+  app: Apple Login Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/apple-login-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -3999,8 +3999,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Segment Connector
-  app: Segment Connector
+- partner_name: Duo Auth Node
+  app: Duo Auth Node
   partner: null
   partner_match: null
   partner_candidate: null
@@ -4009,7 +4009,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/segment-connector
+  evidence: https://marketplace.pingone.com/item/duo-auth-node
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4033,8 +4033,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Duo Auth Node
-  app: Duo Auth Node
+- partner_name: Segment Connector
+  app: Segment Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -4043,7 +4043,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/duo-auth-node
+  evidence: https://marketplace.pingone.com/item/segment-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4305,23 +4305,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Google Workspace Admin Connector
-  app: Google Workspace Admin Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/google-workspace-admin-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Mimecast Personal Portal
   app: Mimecast Personal Portal
   partner: null
@@ -4367,6 +4350,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/daptiv-ppm
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Google Workspace Admin Connector
+  app: Google Workspace Admin Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/google-workspace-admin-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4475,23 +4475,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: OneTrust DaVinci Connector
-  app: OneTrust DaVinci Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/onetrust-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Preceda
   app: Preceda
   partner: null
@@ -4503,6 +4486,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/preceda
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: OneTrust DaVinci Connector
+  app: OneTrust DaVinci Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/onetrust-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4577,23 +4577,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Veriff Connector
-  app: Veriff Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/veriff-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Zoho
   app: Zoho
   partner: null
@@ -4622,6 +4605,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/beyondtrust-privileged-remote-access
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Veriff Connector
+  app: Veriff Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/veriff-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4662,23 +4662,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Zscaler ZIA Connector
-  app: Zscaler ZIA Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/zscaler-zia-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Image Connector
   app: Image Connector
   partner: null
@@ -4707,6 +4690,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/pingaccess-admin-davinci-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Zscaler ZIA Connector
+  app: Zscaler ZIA Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/zscaler-zia-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4747,6 +4747,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Salesforce - With Just-in-time Provisioning
+  app: Salesforce - With Just-in-time Provisioning
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/salesforce-with-justintime-provisioning
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: HYPR Connector
   app: HYPR Connector
   partner: null
@@ -4775,23 +4792,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/id-dataweb-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Salesforce - With Just-in-time Provisioning
-  app: Salesforce - With Just-in-time Provisioning
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/salesforce-with-justintime-provisioning
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -4985,23 +4985,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Treasure Data Connector
-  app: Treasure Data Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/treasure-data-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Amazon AppStream 2.0
   app: Amazon AppStream 2.0
   partner: null
@@ -5047,6 +5030,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/string-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Treasure Data Connector
+  app: Treasure Data Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/treasure-data-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5104,23 +5104,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Jira Connector
-  app: Jira Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/jira-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: HackerOne
   app: HackerOne
   partner: null
@@ -5132,6 +5115,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/hackerone
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Jira Connector
+  app: Jira Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/jira-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5189,23 +5189,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Variable Connector
-  app: Variable Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/variable-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: VoiceStorm
   app: VoiceStorm
   partner: null
@@ -5257,8 +5240,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Prove International Connector
-  app: Prove International Connector
+- partner_name: Variable Connector
+  app: Variable Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -5267,7 +5250,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/prove-international-connector
+  evidence: https://marketplace.pingone.com/item/variable-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5302,6 +5285,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/pingone-credentials-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Prove International Connector
+  app: Prove International Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/prove-international-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5393,23 +5393,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: mParticle Connector
-  app: mParticle Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/mparticle-davinci-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Imaginatik
   app: Imaginatik
   partner: null
@@ -5421,6 +5404,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/imaginatik
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: mParticle Connector
+  app: mParticle Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/mparticle-davinci-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5648,6 +5648,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: BlackLine OnDemand
+  app: BlackLine OnDemand
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/blackline-ondemand
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Corestream
   app: Corestream
   partner: null
@@ -5733,57 +5750,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: SailPoint IdentityNow Connector
-  app: SailPoint IdentityNow Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/sailpoint-identitynow-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: BlackLine OnDemand
-  app: BlackLine OnDemand
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/blackline-ondemand
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Facebook Login Connector
-  app: Facebook Login Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/facebook-login-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Newsweaver Admin
   app: Newsweaver Admin
   partner: null
@@ -5795,6 +5761,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/newsweaver-admin
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: SailPoint IdentityNow Connector
+  app: SailPoint IdentityNow Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/sailpoint-identitynow-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5829,6 +5812,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/bluestar-retirement
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Facebook Login Connector
+  app: Facebook Login Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/facebook-login-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -5886,23 +5886,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Mailgun Connector
-  app: Mailgun Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/mailgun-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: PingFederate ISAM Service Provider Integration Kit
   app: PingFederate ISAM Service Provider Integration Kit
   partner: null
@@ -5948,6 +5931,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/egnyte-single-signon-integration
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Mailgun Connector
+  app: Mailgun Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/mailgun-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -6124,40 +6124,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Jira Service Management Connector
-  app: Jira Service Management Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/jira-service-management-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Zendesk Connector
-  app: Zendesk Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/zendesk-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Bigtincan Hub
   app: Bigtincan Hub
   partner: null
@@ -6192,6 +6158,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Jira Service Management Connector
+  app: Jira Service Management Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/jira-service-management-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: ThreatMetrix Auth Tree Nodes
   app: ThreatMetrix Auth Tree Nodes
   partner: null
@@ -6203,6 +6186,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/threatmetrix-auth-tree-nodes
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Zendesk Connector
+  app: Zendesk Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/zendesk-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -6345,23 +6345,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Circle Access Connector
-  app: Circle Access Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/circle-access-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Cvent Meeting Registration Status
   app: Cvent Meeting Registration Status
   partner: null
@@ -6407,6 +6390,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/tableau-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Circle Access Connector
+  app: Circle Access Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/circle-access-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7008,23 +7008,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Informatica Cloud Services
-  app: Informatica Cloud Services
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Small Improvements
   app: Small Improvements
   partner: null
@@ -7036,6 +7019,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/small-improvements
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Informatica Cloud Services
+  app: Informatica Cloud Services
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7076,6 +7076,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Newsweaver Microsite
+  app: Newsweaver Microsite
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/newsweaver-microsite
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Tableau Online
   app: Tableau Online
   partner: null
@@ -7110,8 +7127,8 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Newsweaver Microsite
-  app: Newsweaver Microsite
+- partner_name: Menlo
+  app: Menlo
   partner: null
   partner_match: null
   partner_candidate: null
@@ -7120,7 +7137,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/newsweaver-microsite
+  evidence: https://marketplace.pingone.com/item/menlo
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7138,23 +7155,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/datadog-sso
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Menlo
-  app: Menlo
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/menlo
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7365,23 +7365,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Digidentity Connector
-  app: Digidentity Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/digidentity-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Panopto
   app: Panopto
   partner: null
@@ -7427,6 +7410,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/cadency
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Digidentity Connector
+  app: Digidentity Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/digidentity-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7603,23 +7603,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Saviynt Connector
-  app: Saviynt Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/saviynt-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: SpyCloud Connector
   app: SpyCloud Connector
   partner: null
@@ -7682,6 +7665,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/salesforce-sandbox
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Saviynt Connector
+  app: Saviynt Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/saviynt-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -7875,6 +7875,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: TruSTAR
+  app: TruSTAR
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/trustar
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Bridge
   app: Bridge
   partner: null
@@ -8005,23 +8022,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/talentfirst-icoach
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: TruSTAR
-  app: TruSTAR
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/trustar
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -8708,23 +8708,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Informatica Cloud Services - Development
-  app: Informatica Cloud Services - Development
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-development
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Kenexa - Referral Talent Gateway
   app: Kenexa - Referral Talent Gateway
   partner: null
@@ -8855,6 +8838,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/hosted-graphite
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Informatica Cloud Services - Development
+  app: Informatica Cloud Services - Development
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-development
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -9473,6 +9473,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: EDCOR Data Services
+  app: EDCOR Data Services
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/edcor-data-services
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Freshdesk
   app: Freshdesk
   partner: null
@@ -9592,23 +9609,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: EDCOR Data Services
-  app: EDCOR Data Services
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/edcor-data-services
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: GitHub
   app: GitHub
   partner: null
@@ -9620,6 +9620,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/github
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Hype Software - Stage
+  app: Hype Software - Stage
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/hype-software-stage
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -9688,23 +9705,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/drift
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Hype Software - Stage
-  app: Hype Software - Stage
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/hype-software-stage
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -9864,6 +9864,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Openhire
+  app: Openhire
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/openhire
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Peoplefluent
   app: Peoplefluent
   partner: null
@@ -9994,23 +10011,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/oomnitza
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Openhire
-  app: Openhire
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/openhire
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -10442,6 +10442,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Loopio - Test
+  app: Loopio - Test
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/loopio-test
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: MindTouch
   app: MindTouch
   partner: null
@@ -10470,23 +10487,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/getabstract
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Loopio - Test
-  app: Loopio - Test
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/loopio-test
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -10782,23 +10782,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Cloudflare Connector
-  app: Cloudflare Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/cloudflare-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: CounselLink
   app: CounselLink
   partner: null
@@ -10963,6 +10946,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/ceridian-staging
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Cloudflare Connector
+  app: Cloudflare Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/cloudflare-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -11207,23 +11207,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Informatica Cloud Services - Test
-  app: Informatica Cloud Services - Test
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-test
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Kenexa - Staging Internal Talent Gateway
   app: Kenexa - Staging Internal Talent Gateway
   partner: null
@@ -11360,6 +11343,40 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: Host Analytics - Stage
+  app: Host Analytics - Stage
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/host-analytics-stage
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Informatica Cloud Services - Test
+  app: Informatica Cloud Services - Test
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-test
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Jive - UAT
   app: Jive - UAT
   partner: null
@@ -11490,23 +11507,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/cylanceprotect-eu
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: Host Analytics - Stage
-  app: Host Analytics - Stage
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/host-analytics-stage
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -12074,23 +12074,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Zscaler-Beta
-  app: Zscaler-Beta
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/zscalerbeta
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: CloudHealth
   app: CloudHealth
   partner: null
@@ -12187,6 +12170,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/webcore-production
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Zscaler-Beta
+  app: Zscaler-Beta
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/zscalerbeta
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -13094,23 +13094,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Concur Travel and Expense - Beta
-  app: Concur Travel and Expense - Beta
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/concur-travel-and-expense-beta
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: LiveHive
   app: LiveHive
   partner: null
@@ -13207,6 +13190,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/webcenter
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Concur Travel and Expense - Beta
+  app: Concur Travel and Expense - Beta
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/concur-travel-and-expense-beta
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -13553,6 +13553,23 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
+- partner_name: ScrambleID Connector
+  app: ScrambleID Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/scrambleid-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
 - partner_name: Securonix Connector
   app: Securonix Connector
   partner: null
@@ -13581,23 +13598,6 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/palo-alto-prisma-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
-- partner_name: ScrambleID Connector
-  app: ScrambleID Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/scrambleid-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -13774,23 +13774,6 @@ edges:
   detected: '2026-10-13'
   badges:
   - Ping Verified
-- partner_name: Island Connector
-  app: Island Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/island-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-  badges:
-  - Ping Verified
 - partner_name: Babel Street Connector
   app: Babel Street Connector
   partner: null
@@ -13802,6 +13785,23 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/babel-street-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+  badges:
+  - Ping Verified
+- partner_name: Island Connector
+  app: Island Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/island-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -15432,21 +15432,6 @@ edges:
   partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: LaunchDarkly API Connector
-  app: LaunchDarkly API Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/launchdarkly-api-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Lazy Migration - Google IdP to PingOne
   app: Lazy Migration - Google IdP to PingOne
   partner: null
@@ -15458,6 +15443,21 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/lazy-migration-google-idp-to-pingone
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: LaunchDarkly API Connector
+  app: LaunchDarkly API Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/launchdarkly-api-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -16107,21 +16107,6 @@ edges:
   partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Copper API Connector
-  app: Copper API Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/copper-api-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Email Notify Authentication Node
   app: Email Notify Authentication Node
   partner: null
@@ -16148,6 +16133,21 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/abuseipdb-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Copper API Connector
+  app: Copper API Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/copper-api-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -16407,21 +16407,6 @@ edges:
   partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Credova Connector
-  app: Credova Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/credova-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: IP Address Decision Auth Tree Node
   app: IP Address Decision Auth Tree Node
   partner: null
@@ -16448,6 +16433,21 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/talend-scim-api-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Credova Connector
+  app: Credova Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/credova-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -16722,21 +16722,6 @@ edges:
   partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Venafi API Connector
-  app: Venafi API Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  relationship: platform-app
-  direction: provider-built
-  evidence: https://marketplace.pingone.com/item/venafi-api-connector
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Change Password Form - Ping UX
   app: Change Password Form - Ping UX
   partner: null
@@ -16767,8 +16752,8 @@ edges:
   partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Dynamic Zero Trust for Remote Access
-  app: Dynamic Zero Trust for Remote Access
+- partner_name: Venafi API Connector
+  app: Venafi API Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -16777,7 +16762,7 @@ edges:
   channel: provider-built
   relationship: platform-app
   direction: provider-built
-  evidence: https://marketplace.pingone.com/item/dynamic-zero-trust-for-remote-access
+  evidence: https://marketplace.pingone.com/item/venafi-api-connector
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -16793,6 +16778,21 @@ edges:
   relationship: platform-app
   direction: provider-built
   evidence: https://marketplace.pingone.com/item/zoopone-connector
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Dynamic Zero Trust for Remote Access
+  app: Dynamic Zero Trust for Remote Access
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://marketplace.pingone.com/item/dynamic-zero-trust-for-remote-access
   category: null
   partner_domain: null
   detected_by: sweep-identity.py
@@ -18541,7 +18541,7 @@ edges:
   app: Amazon Q Developer
   partner: null
   partner_match: null
-  partner_candidate: shared:amazon.com(216)
+  partner_candidate: shared:amazon.com(215)
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -18550,21 +18550,6 @@ edges:
   evidence: https://marketplace.pingone.com/item/amazon-q-developer
   category: null
   partner_domain: amazon.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Private Identity
-  app: PrivateID Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/privateid-connector
-  category: null
-  partner_domain: privateid.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -18580,6 +18565,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/cyberark-provisioning-connector
   category: null
   partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Private Identity
+  app: PrivateID Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/privateid-connector
+  category: null
+  partner_domain: privateid.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -18689,8 +18689,8 @@ edges:
   detected: '2026-10-13'
 - partner_name: HYPR Corp.
   app: HYPR + PingFederate True Passwordless Security
-  partner: null
-  partner_match: null
+  partner: hypr
+  partner_match: domain
   partner_candidate: null
   type: marketplace
   marketplace: own
@@ -19062,21 +19062,6 @@ edges:
   partner_domain: datazoo.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Keyri
-  app: Keyri QR Login Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/keyri-qr-login-connector
-  category: null
-  partner_domain: keyri.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Aquera
   app: OpenLDAP Provisioning Connector
   partner: null
@@ -19090,6 +19075,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/openldap-provisioning-connector
   category: null
   partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Keyri
+  app: Keyri QR Login Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/keyri-qr-login-connector
+  category: null
+  partner_domain: keyri.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -19198,21 +19198,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Sumo Logic Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/sumo-logic-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Relias Provisioning Connector
   partner: null
   partner_match: null
@@ -19223,6 +19208,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/relias-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Sumo Logic Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/sumo-logic-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -19302,21 +19302,6 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: IDlayr
-  app: tru.ID Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/truid-connector
-  category: null
-  partner_domain: idlayr.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Zimperium
   app: Zimperium
   partner: zimperium
@@ -19330,6 +19315,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/zimperium
   category: null
   partner_domain: zimperium.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: IDlayr
+  app: tru.ID Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/truid-connector
+  category: null
+  partner_domain: idlayr.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Bage Inc.
@@ -19633,21 +19633,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: TravelBank Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/travelbank-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Apigee Provisioning Connector
   partner: null
   partner_match: null
@@ -19675,6 +19660,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/iproov-davinci-connector
   category: null
   partner_domain: iproov.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: TravelBank Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/travelbank-provisioning-connector
+  category: null
+  partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -19828,7 +19828,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Stripe Provisioning Connector
+  app: Jamf Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -19837,7 +19837,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/stripe-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/jamf-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -19858,6 +19858,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: Stripe Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/stripe-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: Cornerstone OnDemand HR Suite Inbound Provisioning Connector
   partner: null
   partner_match: null
@@ -19868,21 +19883,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/cornerstone-ondemand-hr-suite-inbound-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Jamf Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/jamf-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20007,6 +20007,21 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: Axiad
+  app: Axiad SCIM Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/axiad-scim-connector
+  category: null
+  partner_domain: axiad.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: Aquera
   app: Five9 Provisioning Connector
   partner: null
@@ -20035,21 +20050,6 @@ edges:
   evidence: https://marketplace.pingone.com/item/typingdna-auth-tree-node
   category: null
   partner_domain: typingdna.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Axiad
-  app: Axiad SCIM Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/axiad-scim-connector
-  category: null
-  partner_domain: axiad.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Crowdstrike
@@ -20203,21 +20203,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Smartsheet Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/smartsheet-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Agiloft Provisioning Connector
   partner: null
   partner_match: null
@@ -20258,6 +20243,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/ca-acf2-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Smartsheet Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/smartsheet-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20323,21 +20323,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: ICIMS Inbound Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/icims-inbound-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: FreeIPA Provisioning Connector
   partner: null
   partner_match: null
@@ -20348,6 +20333,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/freeipa-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: ICIMS Inbound Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/icims-inbound-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20623,21 +20623,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: SelectorPro Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/selectorpro-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Braintree Provisioning Connector
   partner: null
   partner_match: null
@@ -20708,6 +20693,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/provisioning-connector-for-oracle-unified-directory
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: SelectorPro Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/selectorpro-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20833,21 +20833,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Gusto Inbound Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/gusto-inbound-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: IBM Cloud Identity Provisioning Connector
   partner: null
   partner_match: null
@@ -20878,7 +20863,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: StatusPage Provisioning Connector
+  app: Gusto Inbound Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -20887,7 +20872,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/statuspage-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/gusto-inbound-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20903,6 +20888,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/paylocity-inbound-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: StatusPage Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/statuspage-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -20938,21 +20938,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: JD Edwards World Inbound Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/jd-edwards-world-inbound-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Looker Provisioning Connector
   partner: null
   partner_match: null
@@ -20963,36 +20948,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/looker-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: TestRail Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/testrail-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: TigerConnect Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/tigerconnect-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -21088,6 +21043,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: JD Edwards World Inbound Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/jd-edwards-world-inbound-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: MySQL Provisioning Connector
   partner: null
   partner_match: null
@@ -21115,6 +21085,36 @@ edges:
   evidence: https://marketplace.pingone.com/item/sinch-auth-tree-nodes
   category: null
   partner_domain: sinch.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: TestRail Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/testrail-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: TigerConnect Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/tigerconnect-provisioning-connector
+  category: null
+  partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -21207,6 +21207,21 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: IDmission
+  app: IDmission OIDC Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/idmission-connector
+  category: null
+  partner_domain: idmission.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: Aquera
   app: LogMeIn Rescue Provisioning Connector
   partner: null
@@ -21233,36 +21248,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/retool-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Signicat
-  app: Signicat Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/signicat-davinci-connector
-  category: null
-  partner_domain: signicat.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Thousand Eyes Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/thousand-eyes-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -21297,21 +21282,6 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: IDmission
-  app: IDmission OIDC Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/idmission-connector
-  category: null
-  partner_domain: idmission.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Aquera
   app: OrangeHRM Inbound Provisioning Connector
   partner: null
@@ -21327,8 +21297,8 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Aquera
-  app: xMatters Provisioning Connector
+- partner_name: Signicat
+  app: Signicat Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -21337,7 +21307,22 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/xmatters-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/signicat-davinci-connector
+  category: null
+  partner_domain: signicat.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Thousand Eyes Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/thousand-eyes-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -21417,6 +21402,21 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: Aquera
+  app: xMatters Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/xmatters-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: 1Kosmos
   app: 1Kosmos Connector
   partner: 1kosmos
@@ -21430,21 +21430,6 @@ edges:
   evidence: https://marketplace.pingone.com/item/1kosmos-connector
   category: null
   partner_domain: 1kosmos.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Beyond Identity
-  app: Beyond Identity Connector
-  partner: beyond-identity
-  partner_match: domain
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/beyond-identity-connector
-  category: null
-  partner_domain: beyondidentity.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -21505,6 +21490,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/app-annie-provisioning-connector
   category: null
   partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Beyond Identity
+  app: Beyond Identity Connector
+  partner: beyond-identity
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/beyond-identity-connector
+  category: null
+  partner_domain: beyondidentity.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: OLOID
@@ -21628,21 +21628,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: SurveyMonkey Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/surveymonkey-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Cvent CC Provisioning Connector
   partner: null
   partner_match: null
@@ -21653,6 +21638,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/cvent-cc-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: SurveyMonkey Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/surveymonkey-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -21852,6 +21852,36 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: Marketplace Community
+  app: Display Node State Variables
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/display-node-state-variables
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Thales
+  app: Gemalto Auth Tree Node
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/gemalto-auth-tree-node
+  category: null
+  partner_domain: thalestct.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: Aquera
   app: Teem Provisioning Connector
   partner: null
@@ -21882,21 +21912,6 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Thales
-  app: Gemalto Auth Tree Node
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/gemalto-auth-tree-node
-  category: null
-  partner_domain: thalestct.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Aquera
   app: CloudHealth Provisioning Connector
   partner: null
@@ -21910,21 +21925,6 @@ edges:
   evidence: https://marketplace.pingone.com/item/cloudhealth-provisioning-connector
   category: null
   partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Marketplace Community
-  app: Display Node State Variables
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/display-node-state-variables
-  category: null
-  partner_domain: null
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -21972,21 +21972,6 @@ edges:
   partner_domain: aquera.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
-- partner_name: Aquera
-  app: Synapse Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/synapse-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
 - partner_name: Marketplace Community
   app: Extract Email Domain Node
   partner: null
@@ -22015,21 +22000,6 @@ edges:
   evidence: https://marketplace.pingone.com/item/maas360-provisioning-connector
   category: null
   partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Optiv Security Inc.
-  app: Netskope Integration Kit by Optiv Inc.
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/netskope-integration-kit-by-optiv-inc
-  category: null
-  partner_domain: optiv.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Marketplace Community
@@ -22063,6 +22033,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: Synapse Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/synapse-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: TickTrade Provisioning Connector
   partner: null
   partner_match: null
@@ -22075,6 +22060,21 @@ edges:
   evidence: https://marketplace.pingone.com/item/ticktrade-provisioning-connector
   category: null
   partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Optiv Security Inc.
+  app: Netskope Integration Kit by Optiv Inc.
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/netskope-integration-kit-by-optiv-inc
+  category: null
+  partner_domain: optiv.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
@@ -22153,6 +22153,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: CapsuleCRM Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/capsulecrm-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: JumpCloud Provisioning Connector
   partner: null
   partner_match: null
@@ -22178,36 +22193,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/reward-gateway-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Sharepoint 2016 Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/sharepoint-2016-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: CapsuleCRM Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/capsulecrm-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22243,7 +22228,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: SQL Server Provisioning Connector
+  app: Sharepoint 2016 Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -22252,7 +22237,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/sql-server-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/sharepoint-2016-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22363,7 +22348,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Zoho People Inbound Provisioning Connector
+  app: SQL Server Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -22372,7 +22357,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/zoho-people-inbound-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/sql-server-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22403,6 +22388,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/gusto-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Zoho People Inbound Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/zoho-people-inbound-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22508,36 +22508,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/opsgenie-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Spoke Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/spoke-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Vend Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/vend-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22678,6 +22648,36 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: Spoke Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/spoke-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Vend Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/vend-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: Birst Provisioning Connector
   partner: null
   partner_match: null
@@ -22703,21 +22703,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/forio-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: SpringCM Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/springcm-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22783,7 +22768,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Signal Sciences Provisioning Connector
+  app: SpringCM Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -22792,22 +22777,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/signal-sciences-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: ToutApp Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/toutapp-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/springcm-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22903,6 +22873,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: Signal Sciences Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/signal-sciences-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: SumTotal Provisioning Connector
   partner: null
   partner_match: null
@@ -22913,6 +22898,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/sumtotal-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: ToutApp Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/toutapp-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -22978,36 +22978,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: ShotGun Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/shotgun-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Signal Fx Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/signal-fx-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: 4me Provisioning Connector
   partner: null
   partner_match: null
@@ -23033,6 +23003,36 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/quandora-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: ShotGun Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/shotgun-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Signal Fx Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/signal-fx-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23083,21 +23083,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Teamwork Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/teamwork-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: CloudPassage Provisioning Connector
   partner: null
   partner_match: null
@@ -23113,7 +23098,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Siterra Provisioning Connector
+  app: Teamwork Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23122,7 +23107,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/siterra-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/teamwork-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23188,7 +23173,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: TimeTrade Provisioning Connector
+  app: Sageworks Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23197,7 +23182,22 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/timetrade-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/sageworks-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Siterra Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/siterra-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23278,36 +23278,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Sageworks Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/sageworks-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Taplytics Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/taplytics-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: TimeTarget Provisioning Connector
   partner: null
   partner_match: null
@@ -23323,7 +23293,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Vimeo Provisioning Connector
+  app: TimeTrade Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23332,22 +23302,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/vimeo-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Zuora Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/zuora-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/timetrade-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23413,7 +23368,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: TSheets Provisioning Connector
+  app: Taplytics Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23422,7 +23377,22 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/tsheets-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/taplytics-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Vimeo Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/vimeo-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23438,6 +23408,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/zeplin-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Zuora Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/zuora-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23532,6 +23517,21 @@ edges:
   partner_domain: silverfort.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: Aquera
+  app: TSheets Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/tsheets-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
 - partner_name: TypingDNA
   app: TypingDNA Subflow
   partner: typingdna
@@ -23593,36 +23593,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Veeva Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/veeva-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Volusion Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/volusion-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
   app: Rigor Provisioning Connector
   partner: null
   partner_match: null
@@ -23653,7 +23623,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: VividCortex Provisioning Connector
+  app: Veeva Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23662,7 +23632,22 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/vividcortex-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/veeva-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Volusion Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/volusion-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23713,6 +23698,21 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
+  app: VividCortex Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/vividcortex-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
   app: Workgrid Provisioning Connector
   partner: null
   partner_match: null
@@ -23723,21 +23723,6 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/workgrid-provisioning-connector
-  category: null
-  partner_domain: aquera.com
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Aquera
-  app: Zopim Provisioning Connector
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/zopim-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23803,7 +23788,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: VersionOne Provisioning Connector
+  app: Zopim Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23812,7 +23797,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/versionone-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/zopim-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23878,7 +23863,7 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Aquera
-  app: Talend Cloud Provisioning Connector
+  app: VersionOne Provisioning Connector
   partner: null
   partner_match: null
   partner_candidate: null
@@ -23887,7 +23872,7 @@ edges:
   channel: partner-built
   relationship: platform-app
   direction: partner-built
-  evidence: https://marketplace.pingone.com/item/talend-cloud-provisioning-connector
+  evidence: https://marketplace.pingone.com/item/versionone-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -23918,6 +23903,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/my-esri-provisioning-connector
+  category: null
+  partner_domain: aquera.com
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Aquera
+  app: Talend Cloud Provisioning Connector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/talend-cloud-provisioning-connector
   category: null
   partner_domain: aquera.com
   detected_by: sweep-identity.py
@@ -24149,8 +24149,8 @@ edges:
   detected: '2026-10-13'
 - partner_name: HYPR Corp.
   app: HYPR Adapt Connector
-  partner: null
-  partner_match: null
+  partner: hypr
+  partner_match: domain
   partner_candidate: null
   type: marketplace
   marketplace: own
@@ -24451,7 +24451,7 @@ edges:
   app: Tableau SSO to Amazon Redshift with PingFederate
   partner: null
   partner_match: null
-  partner_candidate: shared:amazon.com(216)
+  partner_candidate: shared:amazon.com(215)
   type: marketplace
   marketplace: own
   channel: partner-built
@@ -24763,21 +24763,6 @@ edges:
   detected_by: sweep-identity.py
   detected: '2026-10-13'
 - partner_name: Marketplace Community
-  app: Terms And Conditions Node
-  partner: null
-  partner_match: null
-  partner_candidate: null
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  relationship: platform-app
-  direction: partner-built
-  evidence: https://marketplace.pingone.com/item/terms-and-conditions-node
-  category: null
-  partner_domain: null
-  detected_by: sweep-identity.py
-  detected: '2026-10-13'
-- partner_name: Marketplace Community
   app: OpenAPI 3 Specifications for PingOne APIs
   partner: null
   partner_match: null
@@ -24788,6 +24773,21 @@ edges:
   relationship: platform-app
   direction: partner-built
   evidence: https://marketplace.pingone.com/item/openapi-3-specifications-for-pingone-apis
+  category: null
+  partner_domain: null
+  detected_by: sweep-identity.py
+  detected: '2026-10-13'
+- partner_name: Marketplace Community
+  app: Terms And Conditions Node
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://marketplace.pingone.com/item/terms-and-conditions-node
   category: null
   partner_domain: null
   detected_by: sweep-identity.py

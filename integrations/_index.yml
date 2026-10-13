@@ -594,17 +594,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-duo-security-integration-kit
-  label: Duo Security Integration Kit
-  partner_name: Duo Security Integration Kit
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/duo-security-integration-kit
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-check-point-remote-access-vpn
   label: Check Point Remote Access VPN
   partner_name: Check Point Remote Access VPN
@@ -612,6 +601,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/check-point-remote-access-vpn
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-duo-security-integration-kit
+  label: Duo Security Integration Kit
+  partner_name: Duo Security Integration Kit
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/duo-security-integration-kit
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1276,17 +1276,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-microsoft-teams-connector
-  label: Microsoft Teams Connector
-  partner_name: Microsoft Teams Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/microsoft-teams-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-atlassian-cloud-provisioner
   label: Atlassian Cloud Provisioner
   partner_name: Atlassian Cloud Provisioner
@@ -1294,6 +1283,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/atlassian-cloud-provisioner
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-microsoft-teams-connector
+  label: Microsoft Teams Connector
+  partner_name: Microsoft Teams Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/microsoft-teams-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1331,17 +1331,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-mulesoft-integration-kit-for-pingauthorize
-  label: MuleSoft Integration Kit for PingAuthorize
-  partner_name: MuleSoft Integration Kit for PingAuthorize
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/mulesoft-integration-kit-for-pingauthorize
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-pingone-for-customers-essentials
   label: PingOne for Customers Essentials
   partner_name: PingOne for Customers Essentials
@@ -1360,6 +1349,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/id-dataweb-integration-kit
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-mulesoft-integration-kit-for-pingauthorize
+  label: MuleSoft Integration Kit for PingAuthorize
+  partner_name: MuleSoft Integration Kit for PingAuthorize
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/mulesoft-integration-kit-for-pingauthorize
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1408,17 +1408,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-token-management-connector
-  label: Token Management Connector
-  partner_name: Token Management Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/token-management-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-flow-conductor-connector
   label: Flow Conductor Connector
   partner_name: Flow Conductor Connector
@@ -1426,6 +1415,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/flow-conductor-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-token-management-connector
+  label: Token Management Connector
+  partner_name: Token Management Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/token-management-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1540,6 +1540,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-wam-integration-kit
+  label: WAM Integration Kit
+  partner_name: WAM Integration Kit
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/wam-integration-kit
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-code-snippet-connector
   label: Code Snippet Connector
   partner_name: Code Snippet Connector
@@ -1573,17 +1584,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-wam-integration-kit
-  label: WAM Integration Kit
-  partner_name: WAM Integration Kit
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/wam-integration-kit
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-ldap-connector
   label: LDAP Connector
   partner_name: LDAP Connector
@@ -1591,6 +1591,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/davinci-ldap-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-pingfederate-idp-discovery-authentication-selector
+  label: PingFederate IdP Discovery Authentication Selector
+  partner_name: PingFederate IdP Discovery Authentication Selector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/pingfederate-idp-discovery-authentication-selector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1613,17 +1624,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/microsoft-dynamics-365-customer-insights-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-pingfederate-idp-discovery-authentication-selector
-  label: PingFederate IdP Discovery Authentication Selector
-  partner_name: PingFederate IdP Discovery Authentication Selector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/pingfederate-idp-discovery-authentication-selector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1749,17 +1749,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-beyondtrust-password-safe-connector
-  label: BeyondTrust Password Safe Connector
-  partner_name: BeyondTrust Password Safe Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/beyondtrust-password-safe-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-akamai-account-protector-node
   label: Akamai Account Protector Node
   partner_name: Akamai Account Protector Node
@@ -1771,13 +1760,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-cookie-connector
-  label: Cookie Connector
-  partner_name: Cookie Connector
+- slug: ping-identity-beyondtrust-password-safe-connector
+  label: BeyondTrust Password Safe Connector
+  partner_name: BeyondTrust Password Safe Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/cookie-connector
+  evidence: https://marketplace.pingone.com/item/beyondtrust-password-safe-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1811,6 +1800,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/beyondtrust-remote-support-davinci-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-cookie-connector
+  label: Cookie Connector
+  partner_name: Cookie Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/cookie-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1903,17 +1903,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-magic-link-integration-kit
-  label: Magic Link Integration Kit
-  partner_name: Magic Link Integration Kit
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/magic-link-integration-kit
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-statuspage-io
   label: StatusPage.io
   partner_name: StatusPage.io
@@ -1925,13 +1914,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-google-login-connector
-  label: Google Login Connector
-  partner_name: Google Login Connector
+- slug: ping-identity-magic-link-integration-kit
+  label: Magic Link Integration Kit
+  partner_name: Magic Link Integration Kit
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/google-login-connector
+  evidence: https://marketplace.pingone.com/item/magic-link-integration-kit
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -1943,6 +1932,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/aws-lambda-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-google-login-connector
+  label: Google Login Connector
+  partner_name: Google Login Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/google-login-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2013,13 +2013,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-azure-ad-user-management-connector
-  label: Azure AD User Management Connector
-  partner_name: Azure AD User Management Connector
+- slug: ping-identity-etq-reliance
+  label: ETQ Reliance
+  partner_name: ETQ Reliance
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/azure-ad-user-management-connector
+  evidence: https://marketplace.pingone.com/item/etq-reliance
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2035,13 +2035,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-etq-reliance
-  label: ETQ Reliance
-  partner_name: ETQ Reliance
+- slug: ping-identity-azure-ad-user-management-connector
+  label: Azure AD User Management Connector
+  partner_name: Azure AD User Management Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/etq-reliance
+  evidence: https://marketplace.pingone.com/item/azure-ad-user-management-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2068,17 +2068,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-concur
-  label: Concur
-  partner_name: Concur
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/concur
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-pingid-provisioner
   label: PingID Provisioner
   partner_name: PingID Provisioner
@@ -2097,6 +2086,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/servicenow-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-concur
+  label: Concur
+  partner_name: Concur
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/concur
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2255,17 +2255,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-daon-idv-connector
-  label: Daon IDV Connector
-  partner_name: Daon IDV Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/daon-idv-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-healthcare-patient-experience-flow-pack
   label: Healthcare Patient Experience Flow Pack
   partner_name: Healthcare Patient Experience Flow Pack
@@ -2277,13 +2266,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-iproov-authentication-node
-  label: iProov Authentication Node
-  partner_name: iProov Authentication Node
+- slug: ping-identity-daon-idv-connector
+  label: Daon IDV Connector
+  partner_name: Daon IDV Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/iproov-authentication-node
+  evidence: https://marketplace.pingone.com/item/daon-idv-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2295,6 +2284,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/pingone-application-catalog-for-oracle-fusion
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-iproov-authentication-node
+  label: iProov Authentication Node
+  partner_name: iProov Authentication Node
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/iproov-authentication-node
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2497,17 +2497,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-apple-login-connector
-  label: Apple Login Connector
-  partner_name: Apple Login Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/apple-login-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-canvas
   label: Canvas
   partner_name: Canvas
@@ -2537,6 +2526,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/microsoft-login-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-apple-login-connector
+  label: Apple Login Connector
+  partner_name: Apple Login Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/apple-login-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2596,13 +2596,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-segment-connector
-  label: Segment Connector
-  partner_name: Segment Connector
+- slug: ping-identity-duo-auth-node
+  label: Duo Auth Node
+  partner_name: Duo Auth Node
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/segment-connector
+  evidence: https://marketplace.pingone.com/item/duo-auth-node
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2618,13 +2618,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-duo-auth-node
-  label: Duo Auth Node
-  partner_name: Duo Auth Node
+- slug: ping-identity-segment-connector
+  label: Segment Connector
+  partner_name: Segment Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/duo-auth-node
+  evidence: https://marketplace.pingone.com/item/segment-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2794,17 +2794,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-google-workspace-admin-connector
-  label: Google Workspace Admin Connector
-  partner_name: Google Workspace Admin Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/google-workspace-admin-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-mimecast-personal-portal
   label: Mimecast Personal Portal
   partner_name: Mimecast Personal Portal
@@ -2834,6 +2823,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/daptiv-ppm
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-google-workspace-admin-connector
+  label: Google Workspace Admin Connector
+  partner_name: Google Workspace Admin Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/google-workspace-admin-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2904,17 +2904,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-onetrust-davinci-connector
-  label: OneTrust DaVinci Connector
-  partner_name: OneTrust DaVinci Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/onetrust-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-preceda
   label: Preceda
   partner_name: Preceda
@@ -2922,6 +2911,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/preceda
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-onetrust-davinci-connector
+  label: OneTrust DaVinci Connector
+  partner_name: OneTrust DaVinci Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/onetrust-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -2970,17 +2970,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-veriff-connector
-  label: Veriff Connector
-  partner_name: Veriff Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/veriff-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-zoho
   label: Zoho
   partner_name: Zoho
@@ -2999,6 +2988,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/beyondtrust-privileged-remote-access
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-veriff-connector
+  label: Veriff Connector
+  partner_name: Veriff Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/veriff-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3025,17 +3025,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-zscaler-zia-connector
-  label: Zscaler ZIA Connector
-  partner_name: Zscaler ZIA Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/zscaler-zia-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-image-connector
   label: Image Connector
   partner_name: Image Connector
@@ -3054,6 +3043,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/pingaccess-admin-davinci-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-zscaler-zia-connector
+  label: Zscaler ZIA Connector
+  partner_name: Zscaler ZIA Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/zscaler-zia-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3080,6 +3080,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-salesforce-with-just-in-time-provisioning
+  label: Salesforce - With Just-in-time Provisioning
+  partner_name: Salesforce - With Just-in-time Provisioning
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/salesforce-with-justintime-provisioning
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-hypr-connector
   label: HYPR Connector
   partner_name: HYPR Connector
@@ -3098,17 +3109,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/id-dataweb-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-salesforce-with-just-in-time-provisioning
-  label: Salesforce - With Just-in-time Provisioning
-  partner_name: Salesforce - With Just-in-time Provisioning
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/salesforce-with-justintime-provisioning
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3234,17 +3234,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-treasure-data-connector
-  label: Treasure Data Connector
-  partner_name: Treasure Data Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/treasure-data-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-amazon-appstream-2-0
   label: Amazon AppStream 2.0
   partner_name: Amazon AppStream 2.0
@@ -3274,6 +3263,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/string-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-treasure-data-connector
+  label: Treasure Data Connector
+  partner_name: Treasure Data Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/treasure-data-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3311,17 +3311,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-jira-connector
-  label: Jira Connector
-  partner_name: Jira Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/jira-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-hackerone
   label: HackerOne
   partner_name: HackerOne
@@ -3329,6 +3318,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/hackerone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-jira-connector
+  label: Jira Connector
+  partner_name: Jira Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/jira-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3366,17 +3366,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-variable-connector
-  label: Variable Connector
-  partner_name: Variable Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/variable-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-voicestorm
   label: VoiceStorm
   partner_name: VoiceStorm
@@ -3410,13 +3399,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-prove-international-connector
-  label: Prove International Connector
-  partner_name: Prove International Connector
+- slug: ping-identity-variable-connector
+  label: Variable Connector
+  partner_name: Variable Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/prove-international-connector
+  evidence: https://marketplace.pingone.com/item/variable-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3439,6 +3428,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/pingone-credentials-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-prove-international-connector
+  label: Prove International Connector
+  partner_name: Prove International Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/prove-international-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3498,17 +3498,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-mparticle-connector
-  label: mParticle Connector
-  partner_name: mParticle Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/mparticle-davinci-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-imaginatik
   label: Imaginatik
   partner_name: Imaginatik
@@ -3516,6 +3505,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/imaginatik
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-mparticle-connector
+  label: mParticle Connector
+  partner_name: mParticle Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/mparticle-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3663,6 +3663,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-blackline-ondemand
+  label: BlackLine OnDemand
+  partner_name: BlackLine OnDemand
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/blackline-ondemand
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-corestream
   label: Corestream
   partner_name: Corestream
@@ -3718,39 +3729,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-sailpoint-identitynow-connector
-  label: SailPoint IdentityNow Connector
-  partner_name: SailPoint IdentityNow Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/sailpoint-identitynow-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-blackline-ondemand
-  label: BlackLine OnDemand
-  partner_name: BlackLine OnDemand
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/blackline-ondemand
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-facebook-login-connector
-  label: Facebook Login Connector
-  partner_name: Facebook Login Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/facebook-login-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-newsweaver-admin
   label: Newsweaver Admin
   partner_name: Newsweaver Admin
@@ -3758,6 +3736,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/newsweaver-admin
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-sailpoint-identitynow-connector
+  label: SailPoint IdentityNow Connector
+  partner_name: SailPoint IdentityNow Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/sailpoint-identitynow-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3780,6 +3769,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/bluestar-retirement
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-facebook-login-connector
+  label: Facebook Login Connector
+  partner_name: Facebook Login Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/facebook-login-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3817,17 +3817,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-mailgun-connector
-  label: Mailgun Connector
-  partner_name: Mailgun Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/mailgun-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-pingfederate-isam-service-provider-integration-kit
   label: PingFederate ISAM Service Provider Integration Kit
   partner_name: PingFederate ISAM Service Provider Integration Kit
@@ -3857,6 +3846,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/egnyte-single-signon-integration
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-mailgun-connector
+  label: Mailgun Connector
+  partner_name: Mailgun Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/mailgun-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -3971,28 +3971,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-jira-service-management-connector
-  label: Jira Service Management Connector
-  partner_name: Jira Service Management Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/jira-service-management-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-zendesk-connector
-  label: Zendesk Connector
-  partner_name: Zendesk Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/zendesk-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-bigtincan-hub
   label: Bigtincan Hub
   partner_name: Bigtincan Hub
@@ -4015,6 +3993,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-jira-service-management-connector
+  label: Jira Service Management Connector
+  partner_name: Jira Service Management Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/jira-service-management-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-threatmetrix-auth-tree-nodes
   label: ThreatMetrix Auth Tree Nodes
   partner_name: ThreatMetrix Auth Tree Nodes
@@ -4022,6 +4011,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/threatmetrix-auth-tree-nodes
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-zendesk-connector
+  label: Zendesk Connector
+  partner_name: Zendesk Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/zendesk-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4114,17 +4114,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-circle-access-connector
-  label: Circle Access Connector
-  partner_name: Circle Access Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/circle-access-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-cvent-meeting-registration-status
   label: Cvent Meeting Registration Status
   partner_name: Cvent Meeting Registration Status
@@ -4154,6 +4143,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/tableau-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-circle-access-connector
+  label: Circle Access Connector
+  partner_name: Circle Access Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/circle-access-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4543,17 +4543,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-informatica-cloud-services
-  label: Informatica Cloud Services
-  partner_name: Informatica Cloud Services
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-small-improvements
   label: Small Improvements
   partner_name: Small Improvements
@@ -4561,6 +4550,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/small-improvements
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-informatica-cloud-services
+  label: Informatica Cloud Services
+  partner_name: Informatica Cloud Services
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4587,6 +4587,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-newsweaver-microsite
+  label: Newsweaver Microsite
+  partner_name: Newsweaver Microsite
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/newsweaver-microsite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-tableau-online
   label: Tableau Online
   partner_name: Tableau Online
@@ -4609,13 +4620,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-newsweaver-microsite
-  label: Newsweaver Microsite
-  partner_name: Newsweaver Microsite
+- slug: ping-identity-menlo
+  label: Menlo
+  partner_name: Menlo
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/newsweaver-microsite
+  evidence: https://marketplace.pingone.com/item/menlo
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4627,17 +4638,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/datadog-sso
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-menlo
-  label: Menlo
-  partner_name: Menlo
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/menlo
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4774,17 +4774,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-digidentity-connector
-  label: Digidentity Connector
-  partner_name: Digidentity Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/digidentity-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-panopto
   label: Panopto
   partner_name: Panopto
@@ -4814,6 +4803,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/cadency
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-digidentity-connector
+  label: Digidentity Connector
+  partner_name: Digidentity Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/digidentity-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -4928,17 +4928,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-saviynt-connector
-  label: Saviynt Connector
-  partner_name: Saviynt Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/saviynt-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-spycloud-connector
   label: SpyCloud Connector
   partner_name: SpyCloud Connector
@@ -4979,6 +4968,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/salesforce-sandbox
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-saviynt-connector
+  label: Saviynt Connector
+  partner_name: Saviynt Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/saviynt-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -5104,6 +5104,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-trustar
+  label: TruSTAR
+  partner_name: TruSTAR
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/trustar
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-bridge
   label: Bridge
   partner_name: Bridge
@@ -5188,17 +5199,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/talentfirst-icoach
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-trustar
-  label: TruSTAR
-  partner_name: TruSTAR
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/trustar
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -5643,17 +5643,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-informatica-cloud-services-development
-  label: Informatica Cloud Services - Development
-  partner_name: Informatica Cloud Services - Development
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-development
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-kenexa-referral-talent-gateway
   label: Kenexa - Referral Talent Gateway
   partner_name: Kenexa - Referral Talent Gateway
@@ -5738,6 +5727,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/hosted-graphite
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-informatica-cloud-services-development
+  label: Informatica Cloud Services - Development
+  partner_name: Informatica Cloud Services - Development
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-development
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -6138,6 +6138,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-edcor-data-services
+  label: EDCOR Data Services
+  partner_name: EDCOR Data Services
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/edcor-data-services
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-freshdesk
   label: Freshdesk
   partner_name: Freshdesk
@@ -6215,17 +6226,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-edcor-data-services
-  label: EDCOR Data Services
-  partner_name: EDCOR Data Services
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/edcor-data-services
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-github
   label: GitHub
   partner_name: GitHub
@@ -6233,6 +6233,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/github
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-hype-software-stage
+  label: Hype Software - Stage
+  partner_name: Hype Software - Stage
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/hype-software-stage
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -6277,17 +6288,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/drift
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-hype-software-stage
-  label: Hype Software - Stage
-  partner_name: Hype Software - Stage
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/hype-software-stage
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -6391,6 +6391,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-openhire
+  label: Openhire
+  partner_name: Openhire
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/openhire
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-peoplefluent
   label: Peoplefluent
   partner_name: Peoplefluent
@@ -6475,17 +6486,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/oomnitza
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-openhire
-  label: Openhire
-  partner_name: Openhire
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/openhire
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -6765,6 +6765,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-loopio-test
+  label: Loopio - Test
+  partner_name: Loopio - Test
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/loopio-test
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-mindtouch
   label: MindTouch
   partner_name: MindTouch
@@ -6783,17 +6794,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/getabstract
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-loopio-test
-  label: Loopio - Test
-  partner_name: Loopio - Test
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/loopio-test
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -6985,17 +6985,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-cloudflare-connector
-  label: Cloudflare Connector
-  partner_name: Cloudflare Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/cloudflare-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-counsellink
   label: CounselLink
   partner_name: CounselLink
@@ -7102,6 +7091,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/ceridian-staging
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-cloudflare-connector
+  label: Cloudflare Connector
+  partner_name: Cloudflare Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/cloudflare-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -7260,17 +7260,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-informatica-cloud-services-test
-  label: Informatica Cloud Services - Test
-  partner_name: Informatica Cloud Services - Test
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-test
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-kenexa-staging-internal-talent-gateway
   label: Kenexa - Staging Internal Talent Gateway
   partner_name: Kenexa - Staging Internal Talent Gateway
@@ -7359,6 +7348,28 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-host-analytics-stage
+  label: Host Analytics - Stage
+  partner_name: Host Analytics - Stage
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/host-analytics-stage
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-informatica-cloud-services-test
+  label: Informatica Cloud Services - Test
+  partner_name: Informatica Cloud Services - Test
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/informatica-cloud-services-test
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-jive-uat
   label: Jive - UAT
   partner_name: Jive - UAT
@@ -7443,17 +7454,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/cylanceprotect-eu
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-host-analytics-stage
-  label: Host Analytics - Stage
-  partner_name: Host Analytics - Stage
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/host-analytics-stage
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -7821,17 +7821,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-zscaler-beta
-  label: Zscaler-Beta
-  partner_name: Zscaler-Beta
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/zscalerbeta
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-cloudhealth
   label: CloudHealth
   partner_name: CloudHealth
@@ -7894,6 +7883,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/webcore-production
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-zscaler-beta
+  label: Zscaler-Beta
+  partner_name: Zscaler-Beta
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/zscalerbeta
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -8481,17 +8481,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-concur-travel-and-expense-beta
-  label: Concur Travel and Expense - Beta
-  partner_name: Concur Travel and Expense - Beta
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/concur-travel-and-expense-beta
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-livehive
   label: LiveHive
   partner_name: LiveHive
@@ -8554,6 +8543,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/webcenter
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-concur-travel-and-expense-beta
+  label: Concur Travel and Expense - Beta
+  partner_name: Concur Travel and Expense - Beta
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/concur-travel-and-expense-beta
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -8767,6 +8767,17 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: ping-identity-scrambleid-connector
+  label: ScrambleID Connector
+  partner_name: ScrambleID Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/scrambleid-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: ping-identity-securonix-connector
   label: Securonix Connector
   partner_name: Securonix Connector
@@ -8785,17 +8796,6 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/palo-alto-prisma-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-scrambleid-connector
-  label: ScrambleID Connector
-  partner_name: ScrambleID Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/scrambleid-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -8910,17 +8910,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-island-connector
-  label: Island Connector
-  partner_name: Island Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/island-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-babel-street-connector
   label: Babel Street Connector
   partner_name: Babel Street Connector
@@ -8928,6 +8917,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/babel-street-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-island-connector
+  label: Island Connector
+  partner_name: Island Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/island-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -10047,17 +10047,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-launchdarkly-api-connector
-  label: LaunchDarkly API Connector
-  partner_name: LaunchDarkly API Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/launchdarkly-api-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-lazy-migration-google-idp-to-pingone
   label: Lazy Migration - Google IdP to PingOne
   partner_name: Lazy Migration - Google IdP to PingOne
@@ -10065,6 +10054,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/lazy-migration-google-idp-to-pingone
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-launchdarkly-api-connector
+  label: LaunchDarkly API Connector
+  partner_name: LaunchDarkly API Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/launchdarkly-api-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -10542,17 +10542,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-copper-api-connector
-  label: Copper API Connector
-  partner_name: Copper API Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/copper-api-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-email-notify-authentication-node
   label: Email Notify Authentication Node
   partner_name: Email Notify Authentication Node
@@ -10571,6 +10560,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/abuseipdb-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-copper-api-connector
+  label: Copper API Connector
+  partner_name: Copper API Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/copper-api-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -10762,17 +10762,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-credova-connector
-  label: Credova Connector
-  partner_name: Credova Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/credova-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-ip-address-decision-auth-tree-node
   label: IP Address Decision Auth Tree Node
   partner_name: IP Address Decision Auth Tree Node
@@ -10791,6 +10780,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/talend-scim-api-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-credova-connector
+  label: Credova Connector
+  partner_name: Credova Connector
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/credova-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -10993,17 +10993,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-venafi-api-connector
-  label: Venafi API Connector
-  partner_name: Venafi API Connector
-  type: marketplace
-  marketplace: own
-  channel: provider-built
-  evidence: https://marketplace.pingone.com/item/venafi-api-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-change-password-form-ping-ux
   label: Change Password Form - Ping UX
   partner_name: Change Password Form - Ping UX
@@ -11026,13 +11015,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-dynamic-zero-trust-for-remote-access
-  label: Dynamic Zero Trust for Remote Access
-  partner_name: Dynamic Zero Trust for Remote Access
+- slug: ping-identity-venafi-api-connector
+  label: Venafi API Connector
+  partner_name: Venafi API Connector
   type: marketplace
   marketplace: own
   channel: provider-built
-  evidence: https://marketplace.pingone.com/item/dynamic-zero-trust-for-remote-access
+  evidence: https://marketplace.pingone.com/item/venafi-api-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -11044,6 +11033,17 @@
   marketplace: own
   channel: provider-built
   evidence: https://marketplace.pingone.com/item/zoopone-connector
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-dynamic-zero-trust-for-remote-access
+  label: Dynamic Zero Trust for Remote Access
+  partner_name: Dynamic Zero Trust for Remote Access
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  evidence: https://marketplace.pingone.com/item/dynamic-zero-trust-for-remote-access
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -12306,6 +12306,7 @@
   arazzo: null
 - slug: ping-identity-hypr-corp
   label: HYPR Corp.
+  partner: hypr
   partner_name: HYPR Corp.
   type: marketplace
   marketplace: own
@@ -12495,17 +12496,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-idlayr
-  label: IDlayr
-  partner_name: IDlayr
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.pingone.com/item/truid-connector
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-zimperium
   label: Zimperium
   partner: zimperium
@@ -12514,6 +12504,17 @@
   marketplace: own
   channel: partner-built
   evidence: https://marketplace.pingone.com/item/zimperium
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-idlayr
+  label: IDlayr
+  partner_name: IDlayr
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.pingone.com/item/truid-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -12767,13 +12768,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-signicat
-  label: Signicat
-  partner_name: Signicat
+- slug: ping-identity-idmission
+  label: IDmission
+  partner_name: IDmission
   type: marketplace
   marketplace: own
   channel: partner-built
-  evidence: https://marketplace.pingone.com/item/signicat-davinci-connector
+  evidence: https://marketplace.pingone.com/item/idmission-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -12789,13 +12790,13 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-idmission
-  label: IDmission
-  partner_name: IDmission
+- slug: ping-identity-signicat
+  label: Signicat
+  partner_name: Signicat
   type: marketplace
   marketplace: own
   channel: partner-built
-  evidence: https://marketplace.pingone.com/item/idmission-connector
+  evidence: https://marketplace.pingone.com/item/signicat-davinci-connector
   source: edge
   relationship: platform-app
   status: not-a-workflow
