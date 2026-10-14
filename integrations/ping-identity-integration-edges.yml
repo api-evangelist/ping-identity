@@ -1,9 +1,11 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- crowdstrike/integrations/crowdstrike-integration-edges.yml
 - https://marketplace-api.pingone.com/v1/items
 - https://marketplace.pingone.com/
 - https://openid.net/developers/certified-openid-connect-implementations/
+- palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
 marketplace_apps:
 - marketplace: own
   channel: partner-built
@@ -25662,3 +25664,41 @@ edges:
   partner_domain: catonetworks.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: CrowdStrike (own)
+  partner: crowdstrike
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.crowdstrike.com/listings/ping-identity-pingone-for-falcon-logscale/
+  mirror_of: crowdstrike/integrations/crowdstrike-integration-edges.yml
+  apps:
+  - Ping Identity PingOne for Falcon LogScale
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+- partner_name: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity/
+  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+  apps:
+  - PingIdentity
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Identity and Access Management
+  badges:
+  - support:partner
+source:
+- crowdstrike/integrations/crowdstrike-integration-edges.yml
+- palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
