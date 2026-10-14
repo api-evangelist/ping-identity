@@ -13137,31 +13137,6 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: ping-identity-crowdstrike-own
-  label: CrowdStrike (own)
-  partner: crowdstrike
-  partner_name: CrowdStrike (own)
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://marketplace.crowdstrike.com/listings/ping-identity-pingone-for-falcon-logscale/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ping-identity-palo-alto-networks-own
-  label: Palo Alto Networks (own)
-  partner: palo-alto-networks
-  partner_name: Palo Alto Networks (own)
-  category: Identity and Access Management
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ping-identity-fdx-financial-data-exchange
   label: FDX (Financial Data Exchange)
   partner: fdx
@@ -13186,5 +13161,30 @@
     matched_by: domain+name-among-holders:pingidentity.com
     detected_by: sweep-fdx.py
     detected: '2026-10-14'
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-crowdstrike-own
+  label: CrowdStrike (own)
+  partner: crowdstrike
+  partner_name: CrowdStrike (own)
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://marketplace.crowdstrike.com/listings/ping-identity-pingone-for-falcon-logscale/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ping-identity-palo-alto-networks-own
+  label: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_name: Palo Alto Networks (own)
+  category: Identity and Access Management
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity/
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null

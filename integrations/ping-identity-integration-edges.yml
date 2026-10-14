@@ -25665,6 +25665,30 @@ edges:
   partner_domain: catonetworks.com
   detected_by: sweep-identity.py
   detected: '2026-10-13'
+- partner_name: FDX (Financial Data Exchange)
+  partner: fdx
+  type: contract
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.financialdataexchange.org/
+  contract_reference:
+    register: FDX Registry
+    standard: FDX API
+    spec_file: null
+    register_api: https://registry.financialdataexchange.org/fdxregistryapi/organizations/search/listingTags
+    role: data-recipient
+    member_type: MEMBER
+    registered_name: Ping Identity
+    register_id: 246
+    registered_website: https://www.pingidentity.com/
+    country: United States
+    fdx_version: null
+    matched_by: domain+name-among-holders:pingidentity.com
+    detected_by: sweep-fdx.py
+    detected: '2026-10-14'
+  detected_by: sweep-fdx.py
+  first_seen: '2026-10-14'
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
   partner_match: mirror
@@ -25700,30 +25724,6 @@ edges:
   category: Identity and Access Management
   badges:
   - support:partner
-- partner_name: FDX (Financial Data Exchange)
-  partner: fdx
-  type: contract
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registry.financialdataexchange.org/
-  contract_reference:
-    register: FDX Registry
-    standard: FDX API
-    spec_file: null
-    register_api: https://registry.financialdataexchange.org/fdxregistryapi/organizations/search/listingTags
-    role: data-recipient
-    member_type: MEMBER
-    registered_name: Ping Identity
-    register_id: 246
-    registered_website: https://www.pingidentity.com/
-    country: United States
-    fdx_version: null
-    matched_by: domain+name-among-holders:pingidentity.com
-    detected_by: sweep-fdx.py
-    detected: '2026-10-14'
-  detected_by: sweep-fdx.py
-  first_seen: '2026-10-14'
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
