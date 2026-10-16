@@ -2,12 +2,15 @@
   "repo": "ping-identity",
   "feeds": [
     {
-      "source": "https://www.pingidentity.com/en/platform/capabilities/pricing.html",
-      "error": "HTTPError"
+      "source": "https://www.pingidentity.com/en/resources/blog.html",
+      "feed_url": "https://www.pingidentity.com/en/resources/blog.html",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 2,
-  "fetched": "2026-10-03T12:30:02Z",
+  "fetched": "2026-10-10T13:15:00Z",
   "agent_pulled": "2026-07-04",
   "feed_nature": "vendor-blog",
   "feed_nature_basis": "path_blog",
