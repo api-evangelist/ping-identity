@@ -13,6 +13,8 @@ checked:
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
 - docker-hub/integrations/docker-hub-integration-edges.yml
+- opentofu/integrations/opentofu-integration-edges.yml
+- terraform/integrations/terraform-integration-edges.yml
 marketplace_apps:
 - marketplace: own
   channel: partner-built
@@ -25822,6 +25824,50 @@ edges:
   category: Docker Verified Publisher
   badges:
   - Docker Verified Publisher
+- partner_name: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: opentofu-registry
+  evidence: https://search.opentofu.org/provider/pingidentity/pingdirectory
+  mirror_of: opentofu/integrations/opentofu-integration-edges.yml
+  apps:
+  - pingidentity/pingdirectory
+  - pingidentity/pingfederate
+  - pingidentity/pingone
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (GitHub domain-verified organization)
+- partner_name: Terraform (terraform-registry)
+  partner: terraform
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: terraform-registry
+  evidence: https://registry.terraform.io/providers/pingidentity/pingone
+  mirror_of: terraform/integrations/terraform-integration-edges.yml
+  apps:
+  - pingidentity/pingone
+  - pingidentity/pingfederate
+  - pingidentity/davinci
+  - pingidentity/pingdirectory
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: infrastructure-as-code provider registry listing
+  badges:
+  - Verified publisher (Terraform partner tier)
+  - Verified publisher (GitHub domain-verified organization)
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
