@@ -12,6 +12,7 @@ checked:
 - https://registry.financialdataexchange.org/
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+- docker-hub/integrations/docker-hub-integration-edges.yml
 marketplace_apps:
 - marketplace: own
   channel: partner-built
@@ -22,41 +23,6 @@ marketplace_apps:
   adapter: sweep-identity.py:pingone-marketplace
   listed: 1592
 edges:
-- partner_name: CrowdStrike (own)
-  partner: crowdstrike
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.crowdstrike.com/listings/ping-identity-pingone-for-falcon-logscale/
-  mirror_of: crowdstrike/integrations/crowdstrike-integration-edges.yml
-  apps:
-  - Ping Identity PingOne for Falcon LogScale
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-- partner_name: Palo Alto Networks (own)
-  partner: palo-alto-networks
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity/
-  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
-  apps:
-  - PingIdentity
-  listing_count: 1
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: Identity and Access Management
-  badges:
-  - support:partner
 - partner_name: FDX (Financial Data Exchange)
   partner: fdx
   type: contract
@@ -25788,6 +25754,74 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-compliance-assurance.py
   first_seen: '2026-10-20'
+- partner_name: CrowdStrike (own)
+  partner: crowdstrike
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.crowdstrike.com/listings/ping-identity-pingone-for-falcon-logscale/
+  mirror_of: crowdstrike/integrations/crowdstrike-integration-edges.yml
+  apps:
+  - Ping Identity PingOne for Falcon LogScale
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+- partner_name: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity/
+  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+  apps:
+  - PingIdentity
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Identity and Access Management
+  badges:
+  - support:partner
+- partner_name: Docker Hub (docker-verified-publisher)
+  partner: docker-hub
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: docker-verified-publisher
+  evidence: https://hub.docker.com/u/pingidentity
+  mirror_of: docker-hub/integrations/docker-hub-integration-edges.yml
+  apps:
+  - pingidentity/pingfederate
+  - pingidentity/pingdirectory
+  - pingidentity/pingaccess
+  - pingidentity/pingone-ldap-gateway
+  - pingidentity/pingdatasync
+  - pingidentity/pingtoolkit
+  - pingidentity/pingdataconsole
+  - pingidentity/pingauthorize
+  - pingidentity/pingauthorizepap
+  - pingidentity/pingone-authorize-gateway
+  - pingidentity/ldap-sdk-tools
+  - pingidentity/pingdelegator
+  - pingidentity/pingcentral
+  - pingidentity/pingdirectoryproxy
+  - pingidentity/pingone-radius-gateway
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Docker Verified Publisher
+  badges:
+  - Docker Verified Publisher
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
