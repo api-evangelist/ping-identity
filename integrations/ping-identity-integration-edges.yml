@@ -16,6 +16,9 @@ checked:
 - opentofu/integrations/opentofu-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
 - https://openid.net/foundation/sponsoring-members/
+- https://api.first.org/data/v1/teams
+- https://raw.githubusercontent.com/CVEProject/cve-website/dev/src/assets/data/CNAsList.json
+- https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
 marketplace_apps:
 - marketplace: own
   channel: partner-built
@@ -25894,6 +25897,48 @@ edges:
     detected_by: sweep-openid-certified-implementations.py
     detected: '2026-10-22'
   detected_by: sweep-openid-certified-implementations.py
+  first_seen: '2026-10-22'
+- partner_name: CVE Program (CVE Numbering Authorities)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/PingIdentity
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: Ping Identity Corporation
+    matched_domain: pingidentity.com
+    matched_by: domain+name-among-holders
+    cna_id: CNA-2021-0042
+    cna_short_name: PingIdentity
+    cna_types:
+    - Hosted Service
+    - Researcher
+    - Bug Bounty Provider
+    cna_roles:
+    - CNA
+    scope: All Ping Identity and ForgeRock products (supported products and end-of-life/end-of-service products),
+      as well as vulnerabilities in third-party software discovered by Ping Identity or ForgeRock that are not in
+      another CNA’s scope.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://docs.pingidentity.com/pingam/latest/release-notes/security-advisories.html
+    disclosure_policy:
+    - https://www.pingidentity.com/en/company/security-at-ping-identity.html
+    - https://www.pingidentity.com/.well-known/security.txt
+    country: USA
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  detected_by: sweep-vulnerability-disclosure-cna.py
   first_seen: '2026-10-22'
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
