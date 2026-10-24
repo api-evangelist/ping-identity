@@ -9,6 +9,9 @@ artifacts:
   authentication/ping-identity-authentication.yml:
     method: derived
     evidence: declared in the artifact
+  capabilities/ping-identity-capability-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/ping-identity-configuration-management-api.opencollection.json:
     method: derived
     evidence: openapi/ping-identity-configuration-management-api
@@ -105,133 +108,169 @@ artifacts:
   collections/ping-identity-total-identities-api.postman_collection.json:
     method: derived
     evidence: openapi/ping-identity-total-identities-api
+  conformance/ping-identity-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/ping-identity-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  errors/ping-identity-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   finops/ping-identity-finops.yml:
     method: generated
     evidence: declared in the artifact
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
+  hosts/ping-identity-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
+  integrations/_index.yml:
     method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+    evidence: carries an API Evangelist house phrase
+  integrations/ping-identity-integration-edges.yml:
+    method: searched
+    evidence: declared in the artifact
+  json-ld/ping-identity-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-application-flow-policy-assignment-model-flow-policy-dto-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-configmanagement-snapshots-data-snapshot-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-configmanagement-snapshots-data-snapshot-view-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-configmanagement-snapshots-data-snapshots-versions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-create-application-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-rotate-application-key-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-rotate-application-secret-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-data-update-application-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-response-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-applications-response-applications-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectorinstances-data-clone-connector-instance-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectorinstances-data-create-connector-instance-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectorinstances-data-update-connector-instance-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  ? json-schema/ping-identity-com-pingidentity-pingone-davinci-connectorinstances-response-connector-instance-response-schema.json
+  : method: unknown
+    evidence: no authorship recorded
+  ? json-schema/ping-identity-com-pingidentity-pingone-davinci-connectorinstances-response-connector-instances-response-schema.json
+  : method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectors-response-connector-details-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectors-response-connector-minimal-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-connectors-response-connectors-minimal-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowpolicies-data-create-flow-policy-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowpolicies-data-update-flow-policy-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowpolicies-response-flow-policies-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowpolicies-response-flow-policy-events-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowpolicies-response-flow-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-data-create-flow-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-data-update-flow-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-data-validate-flow-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-response-flow-enabled-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-response-flow-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flows-response-flows-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowversions-data-flow-version-alias-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowversions-response-flow-version-alias-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowversions-response-flow-version-detail-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowversions-response-flow-version-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-flowversions-response-flow-versions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-variables-data-create-variable-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-variables-data-update-variable-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-variables-response-variable-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-davinci-variables-response-variables-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  ? json-schema/ping-identity-com-pingidentity-pingone-directory-totalidentitiesdashboard-data-total-identities-count-dtocollection-response-schema.json
+  : method: unknown
+    evidence: no authorship recorded
+  ? json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-bom-api-model-bill-of-materials-api-response-schema.json
+  : method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-bom-api-model-replace-bill-of-materials-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-data-create-environment-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-data-environment-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-data-environments-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/ping-identity-com-pingidentity-pingone-orgmgt-environments-data-replace-environment-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -315,6 +354,30 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  llms/ping-identity-llms-provenance.yml:
+    method: searched
+    evidence: 'derive-llms-provenance.py: harvested'
+  llms/ping-identity-llms.txt:
+    method: searched
+    evidence: 'derive-llms-provenance.py: harvested'
+  mcp/ping-identity-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   onboarding/ping-identity-api-auth.mjs:
     method: unknown
     evidence: no authorship recorded
@@ -355,10 +418,19 @@ artifacts:
   openapi/ping-identity-total-identities-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  packages/ping-identity-packages.yml:
+    method: unknown
+    evidence: no authorship recorded
   plans/ping-identity-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   rate-limits/ping-identity-rate-limits.yml:
+    method: generated
+    evidence: declared in the artifact
+  regulatory/ping-identity-regulatory-posture.yml:
+    method: unknown
+    evidence: no authorship recorded
+  rules/ping-identity-rules.yml:
     method: generated
     evidence: declared in the artifact
   scopes/ping-identity-scopes.yml:
@@ -373,3 +445,30 @@ artifacts:
   security/ping-identity-vulnerability-disclosure.yml:
     method: searched
     evidence: declared in the artifact
+  skills/_index.yml:
+    method: generated
+    evidence: declared in the artifact
+  skills/ping-identity-create-and-retrieve-connector-instance.md:
+    method: generated
+    evidence: declared in the artifact
+  skills/ping-identity-manage-davinci-admin-variables.md:
+    method: generated
+    evidence: declared in the artifact
+  vendors/ping-identity-vendors.yml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/ping-identity-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/ping-identity-status-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/ping-identity-support-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/ping-identity-uptime-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/ping-identity-well-known.yml:
+    method: unknown
+    evidence: no authorship recorded
